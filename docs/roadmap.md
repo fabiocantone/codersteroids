@@ -30,6 +30,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - [x] Add web/browser/GitHub similar-project research workflow.
 - [x] Add skill ecosystem improvement research benchmark prompt.
 - [x] Run skill ecosystem improvement research benchmark.
+- [x] Add known-issues gate for stack and runtime recommendations.
 - [ ] Compare results against Superpowers.
 
 ## Deferred Phases
@@ -49,7 +50,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - Do not commit a hardcoded Context7 MCP config or API key.
 - Add global-memory and subagent support as skills, but require live testing before claiming behavioral superiority.
 - After ecosystem research, prioritize skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, and cross-agent exports before adding broad workflow breadth.
+- Stack, language, runtime, and library recommendations must check known issues and mitigations when the choice affects rendering, performance, deployment, security, or data durability.
 
 ## Next Action
 
-Compare recorded CoderSteroids benchmark results against Superpowers, then decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner`.
+Run `benchmarks/prompts/known-issues-stack-recommendation.md` against a Tauri AI chat scenario, then compare recorded CoderSteroids benchmark results against Superpowers and decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner`.

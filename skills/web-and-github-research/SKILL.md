@@ -27,6 +27,18 @@ When evaluating a project idea, search GitHub before recommending direction:
 - Inspect top repos for stars, recency, license, language, and scope.
 - Identify whether they are competitors, inspiration, or unrelated false positives.
 
+## Known-Issue Search
+
+When recommending languages, frameworks, runtimes, UI stacks, storage layers, deployment targets, or libraries, research likely failure modes before presenting the recommendation:
+
+- Search official docs for platform/runtime constraints.
+- Search GitHub issues/discussions for recent bugs, performance regressions, compatibility problems, and maintainer guidance.
+- Search implementation examples or adjacent projects when the issue is architecture-sensitive.
+- Record issue state, recency, affected version/platform, and whether a workaround exists.
+- Prefer recommendations with a mitigation plan over recommendations that only list benefits.
+
+Example: for a Tauri AI chat app, check Tauri webview versions and platform-specific WebView/WKWebView/WebKitGTK behavior, then search Tauri issues for rendering/performance problems before recommending Tauri, Electron, native, or hybrid alternatives.
+
 ## Date And Version Gate
 
 Every research summary must include:
@@ -35,6 +47,7 @@ Every research summary must include:
 - Source and URL/API.
 - Version or recency indicator when available.
 - What was confirmed.
+- Known issues and mitigations checked when recommending a stack.
 - What remains unverified.
 
 ## Playwright Gate
@@ -58,6 +71,8 @@ Do not use Playwright just to read simple static docs.
 **Sources checked:** ...
 **Confirmed:** ...
 **Similar projects:** ...
+**Known issues:** ...
+**Mitigations:** ...
 **Limitations:** ...
 **Recommendation:** ...
 ```
@@ -68,4 +83,3 @@ Do not use Playwright just to read simple static docs.
 - Citing undated blog posts as current truth.
 - Treating GitHub popularity as product-market proof.
 - Using search snippets without opening primary sources.
-

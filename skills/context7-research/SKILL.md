@@ -14,8 +14,9 @@ Use current documentation before planning or coding against external APIs. Conte
 1. If Context7 MCP tools are available, resolve the library and query docs for the exact task.
 2. If the `ctx7` CLI is available, use `ctx7 library` and `ctx7 docs`.
 3. If Context7 is unavailable or incomplete, use official online documentation.
-4. If broader web/project research is needed, use `web-and-github-research`.
-5. If docs conflict with repo source or tests, inspect the repo and record the conflict.
+4. If the choice affects architecture, runtime behavior, rendering, performance, deployment, security, or data durability, use `web-and-github-research` to check known issues and mitigations.
+5. If broader web/project research is needed, use `web-and-github-research`.
+6. If docs conflict with repo source or tests, inspect the repo and record the conflict.
 
 ## Source Ledger Gate
 
@@ -34,6 +35,7 @@ State:
 - Version or version assumption.
 - Source channel used.
 - Implementation-relevant conclusion.
+- Known issue search performed or why it was unnecessary.
 - Any uncertainty.
 
 ## Common Mistakes

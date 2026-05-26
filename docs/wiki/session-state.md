@@ -30,9 +30,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran the skill ecosystem improvement research benchmark using current web docs, GitHub API metadata, and public issue searches. Saved `benchmarks/results/2026-05-26-skill-ecosystem-improvement-research.md`. Main conclusion: CoderSteroids should not chase breadth; the highest-value next work is skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, cross-agent exports, repo/docs mapping, and stricter current-doc checks. Public pain points repeatedly involved lost context after compaction, stale/conflicting memory, instruction non-adherence, duplicate/ambiguous skill loading, weak versioning/locking, cross-agent rule duplication, and missing memory/skill evals.
 
+2026-05-26: Added a known-issues gate after the user reported a Tauri AI chat rendering/performance problem. `recommendation-verification`, `web-and-github-research`, `context7-research`, and `using-methodology` now require known-issue and mitigation checks when stack/runtime/library choices affect performance, rendering, deployment, security, or data durability. Added `benchmarks/prompts/known-issues-stack-recommendation.md` to test a Tauri AI chat stack recommendation workflow.
+
 ## Next Action
 
-Run the direct Superpowers comparison, then decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner` as the next CoderSteroids expansion.
+Run the known-issues stack recommendation benchmark, then run the direct Superpowers comparison and decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner` as the next CoderSteroids expansion.
 
 ## Risks
 

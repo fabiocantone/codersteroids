@@ -30,7 +30,7 @@ Before any non-trivial coding task:
 ## Skill Routing
 
 - External library/API/configuration: use `context7-research`.
-- Current web research, Google/search-engine use, browser inspection, or similar-project discovery: use `web-and-github-research`.
+- Current web research, Google/search-engine use, browser inspection, known-issue research, or similar-project discovery: use `web-and-github-research`.
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Existing project context or durable decision: use `llm-wiki-memory`.
@@ -44,6 +44,7 @@ Before any non-trivial coding task:
 
 - Do not rely on memory for volatile APIs.
 - Do not suggest availability-dependent options without checking and filtering them.
+- Do not recommend a stack or runtime without checking known issues when the choice affects performance, rendering, deployment, security, or data durability.
 - Do not implement non-trivial work without a plan.
 - Do not claim success without fresh verification.
 - Do not leave roadmap or wiki stale after structural or decision-level changes.

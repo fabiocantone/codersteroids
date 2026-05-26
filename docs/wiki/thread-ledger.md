@@ -113,3 +113,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
 
 **Next:** Complete the direct Superpowers comparison.
+
+## 2026-05-26: Known-Issues Gate For Stack Recommendations
+
+**Intent:** Add the user's Tauri AI chat rendering/performance lesson to CoderSteroids so stack recommendations check known problems before proposing a language/runtime/library.
+
+**Completed:** Researched Tauri webview/version docs and GitHub issue signals, then updated recommendation, web research, Context7, and methodology routing skills. Added a benchmark prompt for Tauri AI chat stack recommendations.
+
+**Changed:** `skills/recommendation-verification/SKILL.md`, `skills/web-and-github-research/SKILL.md`, `skills/context7-research/SKILL.md`, `skills/using-methodology/SKILL.md`, `benchmarks/prompts/known-issues-stack-recommendation.md`, `docs/plans/2026-05-26-known-issues-gate.md`, `docs/wiki/sources.md`, `docs/wiki/decisions.md`, `docs/wiki/session-state.md`, `docs/wiki/thread-ledger.md`, `docs/roadmap.md`, and `scripts/validate.sh`.
+
+**Decisions:** Stack and runtime recommendations now need known-issue and mitigation research when they affect rendering, performance, deployment, security, or data durability.
+
+**Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after edits and cache sync.
+
+**Next:** Run the known-issues stack recommendation benchmark, then complete the direct Superpowers comparison.

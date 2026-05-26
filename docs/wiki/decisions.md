@@ -75,3 +75,13 @@
 **Alternatives:** Expand CoderSteroids with many new specialized skills, fork Superpowers, or replace host-native memory/rules systems.
 
 **Consequence:** CoderSteroids should stay small and evidence-first, acting as a Codex-focused source of truth plus diagnostics/export layer rather than competing with broader host platforms or runtime memory databases.
+
+## 2026-05-26: Add Known-Issues Gate To Stack Recommendations
+
+**Decision:** CoderSteroids recommendations for languages, frameworks, runtimes, UI stacks, storage layers, deployment targets, and libraries must include known-issue and mitigation research when the choice affects performance, rendering, deployment, security, or data durability.
+
+**Context:** The user reported a real Tauri AI chat problem where rendering can block or become slow. Current Tauri evidence shows the risk is not only app code: Tauri depends on platform webviews, with platform-specific WebView/WKWebView/WebKitGTK behavior and public performance/rendering issue signals. A recommendation that lists Tauri benefits without checking known webview constraints would recreate the same laziness pattern CoderSteroids is meant to prevent.
+
+**Alternatives:** Treat known issues as optional research, add a separate large risk-analysis skill, or only check official docs.
+
+**Consequence:** `recommendation-verification`, `web-and-github-research`, and `context7-research` now require known-issue checks for meaningful stack choices, and a Tauri AI chat benchmark prompt was added to test the behavior.
