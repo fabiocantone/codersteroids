@@ -299,29 +299,18 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 ## 2026-05-26: Updated Superpowers Repo Plugin Gap Analysis
 
 **Intent:** Re-run the CoderSteroids vs Superpowers analysis without relying on chat history, using local memory, installed plugin files, benchmark results, plugin/memory health, and live GitHub/web evidence.
-
-**Completed:** Loaded roadmap, session state, thread ledger, decisions, sources, benchmark results, installed CoderSteroids files, active curated Superpowers cache, older full local Superpowers checkout, and live `obra/superpowers` API/web data. Saved `benchmarks/results/2026-05-26-superpowers-repo-plugin-gap-analysis.md`.
-
+**Completed:** Loaded project memory, installed plugin files, active curated Superpowers cache, older full local Superpowers checkout, and live `obra/superpowers` API/web data. Saved `benchmarks/results/2026-05-26-superpowers-repo-plugin-gap-analysis.md`.
 **Changed:** Added the benchmark result and updated roadmap, session state, decisions, sources, and this ledger.
-
-**Decisions:** Continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer. Selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas; do not copy full breadth or always-on rigidity.
-
-**Verification:** `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after updates. Independent web spot-check confirmed the live `obra/superpowers` repo metadata remains consistent in direction, with star count already slightly drifted because GitHub counters are point-in-time.
-
+**Decisions:** Continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer. Selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas.
+**Verification:** `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after updates.
 **Next:** Add pragmatic CoderSteroids TDD/code-review gap-closing, then continue with the Electron `bench:chat-render` harness.
 
 ## 2026-05-26: Pragmatic TDD Code Review Gap Closing
-
 **Intent:** Close the highest-priority Superpowers gap without copying Superpowers wholesale.
-
 **Completed:** Added `test-first-development`, `code-review-discipline`, a TDD/code-review benchmark prompt, validation wiring, and roadmap/wiki updates.
-
 **Changed:** `skills/test-first-development/SKILL.md`, `skills/code-review-discipline/SKILL.md`, `benchmarks/prompts/tdd-code-review-gap-closing.md`, `docs/plans/2026-05-26-tdd-code-review-gap-closing.md`, validation scripts, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
-
 **Decisions:** Use pragmatic failing-test-first discipline for testable behavior changes and severity/evidence-based review discipline for readiness checks. Do not claim parity with Superpowers until a live benchmark passes.
-
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after cache sync.
-
 **Next:** Run the TDD/code-review gap-closing benchmark, then continue with Electron `bench:chat-render`.
 
 ## 2026-05-26: TDD Code Review Benchmark Run
@@ -346,4 +335,12 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Changed:** Benchmark checker, lifecycle result artifact, roadmap, session state, and this ledger.
 **Decisions:** Treat the clean-worktree finish path as improved, but keep dirty-worktree preservation as a remaining benchmark gap.
 **Verification:** Focused negative test confirmed a malformed lifecycle result now fails with missing `## Workspace Lifecycle`; standard suite passed after the benchmark artifact was corrected.
+**Next:** Continue with Electron `bench:chat-render`.
+
+## 2026-05-26: Remaining Superpowers Gap Coverage
+**Intent:** Cover the remaining local workflow gaps: small-task overhead, subagent execution control, benchmark automation, and dirty-worktree proof.
+**Completed:** Added `small-task-fast-path`, `subagent-execution-controller`, `benchmark-runner.sh --check`, small-task/subagent result shape checks, and dirty-worktree lifecycle result evidence.
+**Changed:** New skills/prompts/results, benchmark runner/checker, validation/doctor wiring, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
+**Decisions:** Treat local practical gaps as covered; keep public adoption, multi-harness maturity, and real external multi-agent execution as honest residual Superpowers advantages.
+**Verification:** Full suite passed after cache sync and benchmark checker fix.
 **Next:** Continue with Electron `bench:chat-render`.

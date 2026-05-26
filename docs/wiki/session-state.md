@@ -76,6 +76,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran the branch/workspace lifecycle benchmark on the clean-worktree finish path. Before the checker change, a malformed worktree/branch lifecycle result containing only metadata and `Improved` passed; after the change, it fails with missing `## Workspace Lifecycle`. Saved `benchmarks/results/2026-05-26-worktree-branch-lifecycle.md`. Remaining limitation: still needs a dirty-worktree preservation benchmark.
 
+2026-05-26: Added `small-task-fast-path`, `subagent-execution-controller`, `benchmark-runner.sh --check`, shape checks for small-task/subagent benchmark results, and dirty-worktree lifecycle benchmark evidence. Saved `benchmarks/results/2026-05-26-small-task-fast-path.md`, `benchmarks/results/2026-05-26-subagent-execution-controller.md`, and `benchmarks/results/2026-05-26-worktree-branch-lifecycle-dirty.md`.
+
 ## Next Action
 
 Continue with `bench:chat-render` in `local-first-personal-assistant`.
@@ -87,4 +89,5 @@ Continue with `bench:chat-render` in `local-first-personal-assistant`.
 - Benchmark artifact checks validate required result shape, not the factual truth of manually recorded evidence.
 - CoderSteroids remains weaker than Superpowers for broad software-development workflow breadth: TDD, code review, worktrees, branch finishing, subagent execution, multi-harness packaging, and public adoption.
 - New TDD/code-review skills are structural until benchmarked on a real code change.
-- Branch/workspace lifecycle is benchmarked for a clean branch-finish path, but not yet for dirty-worktree preservation.
+- Real multi-agent execution is still limited by the host environment; the controller skill covers workflow discipline but does not launch workers by itself.
+- Public adoption and multi-harness maturity remain Superpowers advantages until CoderSteroids is packaged and tested beyond Codex.

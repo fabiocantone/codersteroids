@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, skill ecosystem improvement research, and updated Superpowers repo/plugin gap analysis complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, self-improvement loop, pragmatic test-first development, code review discipline, and branch/workspace lifecycle implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers. The self-improvement benchmark passed one narrow loop by turning missing before/after evidence in self-improvement result artifacts into a runnable benchmark artifact check. Latest strategic position: continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer while selectively adapting Superpowers' TDD, review, worktree, and subagent rigor.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, skill ecosystem improvement research, and updated Superpowers repo/plugin gap analysis complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, self-improvement loop, pragmatic test-first development, code review discipline, branch/workspace lifecycle, small-task fast path, and subagent execution controller implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers. Latest strategic position: continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer while keeping Superpowers-style execution rigor where it matters.
 
 ## Milestones
 
@@ -47,6 +47,10 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Run updated Superpowers repository/plugin/methodology gap analysis.
 - [x] Add pragmatic TDD/code-review gap-closing path.
 - [x] Add branch/workspace lifecycle gap-closing path.
+- [x] Add small-task fast path to reduce overhead.
+- [x] Add subagent execution controller.
+- [x] Add dirty-worktree lifecycle benchmark evidence.
+- [x] Add benchmark runner `--check` path.
 
 ## Deferred Phases
 
@@ -72,7 +76,9 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Self-improvement benchmark results must include gap, change, expected behavior, before evidence, after evidence, and an explicit verdict; the benchmark artifact checker enforces this shape.
 - CoderSteroids should selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas, but should not copy Superpowers' full breadth or always-on rigidity.
 - Test-first and code-review workflows are now structurally implemented, but still need a live benchmark run before claiming field parity with Superpowers.
-- Branch/workspace lifecycle is implemented and benchmarked on a clean-worktree finish path; a dirty-worktree preservation scenario still needs a future benchmark before claiming full parity with Superpowers' worktree/branch finishing discipline.
+- Branch/workspace lifecycle is implemented and benchmarked on clean finish and dirty-parent isolation paths.
+- Subagent execution controller is implemented and structurally benchmarked, but real multi-agent execution still depends on host tooling.
+- Public adoption, issue volume, and multi-harness maturity remain outside the scope of a local plugin implementation.
 
 ## Next Action
 

@@ -42,6 +42,8 @@ required_files=(
   "$ROOT/benchmarks/prompts/self-improvement-loop.md"
   "$ROOT/benchmarks/prompts/tdd-code-review-gap-closing.md"
   "$ROOT/benchmarks/prompts/worktree-branch-lifecycle.md"
+  "$ROOT/benchmarks/prompts/small-task-fast-path.md"
+  "$ROOT/benchmarks/prompts/subagent-execution-controller.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -54,11 +56,13 @@ required_skills=(
   context7-research
   web-and-github-research
   recommendation-verification
+  small-task-fast-path
   prompt-briefing
   self-improvement-loop
   test-first-development
   code-review-discipline
   branch-workspace-lifecycle
+  subagent-execution-controller
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner

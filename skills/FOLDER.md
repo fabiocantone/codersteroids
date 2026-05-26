@@ -10,11 +10,13 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 - `context7-research/SKILL.md`: current documentation and source ledger discipline.
 - `web-and-github-research/SKILL.md`: web, browser, Google/search-engine, and similar-project research.
 - `recommendation-verification/SKILL.md`: verified and filtered recommendations.
+- `small-task-fast-path/SKILL.md`: lightweight path for tiny local tasks without losing verification discipline.
 - `prompt-briefing/SKILL.md`: convert short user briefs into execution-ready prompts with assumptions, missing context, and approval gates.
 - `self-improvement-loop/SKILL.md`: evidence-backed methodology improvement loop with before/after checks.
 - `test-first-development/SKILL.md`: pragmatic red/green/refactor discipline for testable behavior changes.
 - `code-review-discipline/SKILL.md`: request and receive review with severity, evidence, and technical verification.
 - `branch-workspace-lifecycle/SKILL.md`: branch/worktree start and finish workflow with dirty-state, verification, and cleanup gates.
+- `subagent-execution-controller/SKILL.md`: controller workflow for delegated work, worker packets, result decisions, integration, and global verification.
 - `skill-lifecycle-doctor/SKILL.md`: install, cache, manifest, and skill lifecycle diagnostics.
 - `memory-hygiene-audit/SKILL.md`: roadmap/wiki/source/ledger quality diagnostics.
 - `benchmark-runner/SKILL.md`: repeatable benchmark result scaffolding and recording workflow.

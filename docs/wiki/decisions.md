@@ -255,3 +255,13 @@
 **Alternatives:** Copy Superpowers' separate worktree and branch-finishing skills, keep this as generic planning guidance, or build full branch/PR automation first.
 
 **Consequence:** CoderSteroids now requires explicit branch/dirty-state inspection before risky work, an isolation decision, preservation of unrelated user changes, verification before finish, memory/docs flush, and user approval before push, merge, delete, or cleanup operations. The workflow is structural until validated in a live benchmark.
+
+## 2026-05-26: Cover Remaining Practical Superpowers Gaps
+
+**Decision:** Add `small-task-fast-path`, `subagent-execution-controller`, benchmark runner `--check`, stricter result shape checks, and dirty-worktree lifecycle evidence.
+
+**Context:** After TDD/review and branch/workspace lifecycle work, the remaining practical gaps were excessive overhead for tiny tasks, subagent orchestration beyond packing/verifying, benchmark automation, and dirty-worktree proof. Public adoption and broad multi-harness maturity are real Superpowers advantages but cannot be closed by local skill edits alone.
+
+**Alternatives:** Keep adding broad Superpowers-like skills without benchmark hooks, or stop after structural parity.
+
+**Consequence:** CoderSteroids now covers the practical workflow gaps locally while keeping its evidence/memory/current-doc niche. Remaining Superpowers advantages are distribution, adoption, and live multi-agent execution maturity.

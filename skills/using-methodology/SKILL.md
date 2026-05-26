@@ -29,6 +29,7 @@ Before any non-trivial coding task:
 
 ## Skill Routing
 
+- Tiny, local, low-risk, docs-only, formatting-only, mechanical, or direct-command tasks: use `small-task-fast-path`.
 - External library/API/configuration: use `context7-research`.
 - Current web research, Google/search-engine use, browser inspection, known-issue research, or similar-project discovery: use `web-and-github-research`.
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
@@ -37,6 +38,7 @@ Before any non-trivial coding task:
 - Testable behavior change, bugfix, regression fix, or refactor with observable behavior: use `test-first-development`.
 - Requesting review, receiving review feedback, evaluating review suggestions, or deciding readiness after implementation: use `code-review-discipline`.
 - Isolated feature work, dirty worktree handling, branch finishing, PR preparation, merge decisions, or cleanup: use `branch-workspace-lifecycle`.
+- Coordinating one or more subagents, parallel workers, reviewers, or separate agent sessions: use `subagent-execution-controller`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Real-code behavior analysis, performance issue, architecture tradeoff, or production bug: use `field-engineering-depth`.
 - Runtime diagnosis, performance issue, flaky behavior, or production bug: use `observability-logging`.
@@ -50,6 +52,7 @@ Before any non-trivial coding task:
 ## Anti-Laziness Rules
 
 - Do not rely on memory for volatile APIs.
+- Do not force full ceremony on trivial local work when the fast path criteria are met.
 - Do not suggest availability-dependent options without checking and filtering them.
 - Do not recommend a stack or runtime without checking known issues when the choice affects performance, rendering, deployment, security, or data durability.
 - Do not stop field analysis at the first plausible cause; map the local flow, check secondary bottlenecks, and define falsification checks.
@@ -59,6 +62,7 @@ Before any non-trivial coding task:
 - Do not implement a testable behavior change without a failing test first, unless the skip reason and substitute evidence are explicit.
 - Do not execute broad ambiguous work before expanding the request into an approved or internally recorded prompt brief.
 - Do not accept review feedback blindly; verify it against the codebase and recorded decisions.
+- Do not accept subagent completion reports without controller verification.
 - Do not claim success without fresh verification.
 - Do not push, merge, delete branches, or clean up worktrees without explicit user approval.
 - Do not leave roadmap or wiki stale after structural or decision-level changes.

@@ -17,6 +17,8 @@ required=(
   "$ROOT/benchmarks/prompts/self-improvement-loop.md"
   "$ROOT/benchmarks/prompts/tdd-code-review-gap-closing.md"
   "$ROOT/benchmarks/prompts/worktree-branch-lifecycle.md"
+  "$ROOT/benchmarks/prompts/small-task-fast-path.md"
+  "$ROOT/benchmarks/prompts/subagent-execution-controller.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -50,7 +52,7 @@ require_section_content() {
 }
 
 while IFS= read -r -d '' file; do
-  if ! grep -q 'benchmarks/prompts/self-improvement-loop.md' "$file" &&
+  if ! grep -q -- '- Prompt: `benchmarks/prompts/self-improvement-loop.md`' "$file" &&
     [[ "$(basename "$file")" != *self-improvement-loop* ]]; then
     continue
   fi
@@ -73,7 +75,7 @@ while IFS= read -r -d '' file; do
 done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
 
 while IFS= read -r -d '' file; do
-  if ! grep -q 'benchmarks/prompts/tdd-code-review-gap-closing.md' "$file" &&
+  if ! grep -q -- '- Prompt: `benchmarks/prompts/tdd-code-review-gap-closing.md`' "$file" &&
     [[ "$(basename "$file")" != *tdd-code-review-gap-closing* ]]; then
     continue
   fi
@@ -100,7 +102,7 @@ while IFS= read -r -d '' file; do
 done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
 
 while IFS= read -r -d '' file; do
-  if ! grep -q 'benchmarks/prompts/worktree-branch-lifecycle.md' "$file" &&
+  if ! grep -q -- '- Prompt: `benchmarks/prompts/worktree-branch-lifecycle.md`' "$file" &&
     [[ "$(basename "$file")" != *worktree-branch-lifecycle* ]]; then
     continue
   fi
@@ -120,6 +122,56 @@ while IFS= read -r -d '' file; do
 
   grep -Eq '^(Improved|Inconclusive|Worse)([[:space:]].*)?$' "$file" || {
     echo "Worktree/branch lifecycle result must record a verdict of Improved, Inconclusive, or Worse: $file"
+    exit 1
+  }
+done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
+
+while IFS= read -r -d '' file; do
+  if ! grep -q -- '- Prompt: `benchmarks/prompts/small-task-fast-path.md`' "$file" &&
+    [[ "$(basename "$file")" != *small-task-fast-path* ]]; then
+    continue
+  fi
+
+  require_heading "$file" "## Fast Path Qualification"
+  require_heading "$file" "## Work Summary"
+  require_heading "$file" "## Verification Evidence"
+  require_heading "$file" "## Memory Update Decision"
+  require_heading "$file" "## Verdict"
+
+  require_section_content "$file" "## Fast Path Qualification"
+  require_section_content "$file" "## Verification Evidence"
+  require_section_content "$file" "## Memory Update Decision"
+
+  grep -Eq '^(Improved|Inconclusive|Worse)([[:space:]].*)?$' "$file" || {
+    echo "Small-task fast-path result must record a verdict of Improved, Inconclusive, or Worse: $file"
+    exit 1
+  }
+done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
+
+while IFS= read -r -d '' file; do
+  if ! grep -q -- '- Prompt: `benchmarks/prompts/subagent-execution-controller.md`' "$file" &&
+    [[ "$(basename "$file")" != *subagent-execution-controller* ]]; then
+    continue
+  fi
+
+  require_heading "$file" "## Worker Packets"
+  require_heading "$file" "## Worker Result Decisions"
+  require_heading "$file" "## Integration Evidence"
+  require_heading "$file" "## Global Verification Evidence"
+  require_heading "$file" "## Memory Docs Evidence"
+  require_heading "$file" "## Verdict"
+
+  require_section_content "$file" "## Worker Packets"
+  require_section_content "$file" "## Worker Result Decisions"
+  require_section_content "$file" "## Global Verification Evidence"
+
+  grep -q '| Worker | Status | Decision | Evidence | Follow-up |' "$file" || {
+    echo "Subagent controller result must include worker decision table: $file"
+    exit 1
+  }
+
+  grep -Eq '^(Improved|Inconclusive|Worse)([[:space:]].*)?$' "$file" || {
+    echo "Subagent controller result must record a verdict of Improved, Inconclusive, or Worse: $file"
     exit 1
   }
 done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)

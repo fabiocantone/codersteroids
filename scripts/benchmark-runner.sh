@@ -9,6 +9,7 @@ usage() {
   cat <<'USAGE'
 Usage:
   ./scripts/benchmark-runner.sh --list
+  ./scripts/benchmark-runner.sh --check
   ./scripts/benchmark-runner.sh <prompt-slug> [result-slug]
 
 Examples:
@@ -26,6 +27,11 @@ if test "${1:-}" = "--list"; then
   find "$PROMPTS_DIR" -maxdepth 1 -type f -name '*.md' -print |
     sed "s#^$PROMPTS_DIR/##; s#\\.md\$##" |
     sort
+  exit 0
+fi
+
+if test "${1:-}" = "--check"; then
+  "$ROOT/scripts/check-benchmark-artifacts.sh"
   exit 0
 fi
 

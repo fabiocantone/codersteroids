@@ -10,11 +10,13 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `context7-research`
 - `web-and-github-research`
 - `recommendation-verification`
+- `small-task-fast-path`
 - `prompt-briefing`
 - `self-improvement-loop`
 - `test-first-development`
 - `code-review-discipline`
 - `branch-workspace-lifecycle`
+- `subagent-execution-controller`
 - `skill-lifecycle-doctor`
 - `memory-hygiene-audit`
 - `benchmark-runner`
@@ -86,6 +88,7 @@ Benchmark result scaffolds can be created with:
 
 ```bash
 ./scripts/benchmark-runner.sh --list
+./scripts/benchmark-runner.sh --check
 ./scripts/benchmark-runner.sh <prompt-slug>
 ```
 
