@@ -42,9 +42,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Implemented `benchmark-runner` and `scripts/benchmark-runner.sh`. The runner lists prompt slugs and creates non-overwriting benchmark result scaffolds with metadata, preflight checks, scorecard, notes, and embedded prompt.
 
+2026-05-26: Updated strategy after user feedback: CoderSteroids should not merely stay narrow defensively; it must beat Superpowers in real field tasks. Added `docs/specs/superpowers-field-benchmark.md` and `benchmarks/prompts/superpowers-field-battle.md` to force paired fresh-session comparisons and gap-closing work.
+
 ## Next Action
 
-Run the full verification suite in a fresh session, then consider `cross-agent-export` or `repo-docs-map`.
+Run `benchmarks/prompts/superpowers-field-battle.md` in paired fresh sessions against Superpowers, then build the first gap-closing capability shown by the field result.
 
 ## Risks
 

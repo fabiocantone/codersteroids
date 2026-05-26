@@ -58,4 +58,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 
 ## Next Action
 
-Run the full verification suite in a fresh session, then consider `cross-agent-export` or `repo-docs-map` as the next focused expansion.
+Run `benchmarks/prompts/superpowers-field-battle.md` in paired fresh sessions against Superpowers, then build the first gap-closing capability shown by the field result.

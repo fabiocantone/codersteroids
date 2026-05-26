@@ -96,6 +96,16 @@
 
 **Consequence:** The next work should be `memory-hygiene-audit` and `benchmark-runner`, not a large set of unrelated workflow skills.
 
+## 2026-05-26: CoderSteroids Must Beat Superpowers In Field Tests
+
+**Decision:** CoderSteroids must be evaluated against Superpowers through paired real coding tasks and should aim to win on aggregate field outcomes, not only on its initial continuity/documentation niche.
+
+**Context:** The user explicitly rejected a purely defensive positioning. Superpowers is currently stronger in TDD, review, worktrees, and broad workflow coverage. CoderSteroids is stronger in current docs, known issues, roadmap/wiki continuity, recommendation verification, and diagnostics. The product goal is to turn those strengths into better end-to-end programming outcomes and close the losing dimensions.
+
+**Alternatives:** Stay narrow and avoid direct competition, or try to copy all Superpowers skills immediately.
+
+**Consequence:** Add a field-battle benchmark and treat losses as roadmap input. Future claims must distinguish artifact inspection from live/replayable field wins.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

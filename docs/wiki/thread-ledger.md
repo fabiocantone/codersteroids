@@ -141,3 +141,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
 
 **Next:** Run the full verification suite in a fresh session, then consider `cross-agent-export` or `repo-docs-map`.
+
+## 2026-05-26: Superpowers Field Battle Strategy
+
+**Intent:** Incorporate user feedback that CoderSteroids should beat Superpowers in field usage, not merely occupy a narrower niche.
+
+**Completed:** Updated the Superpowers benchmark skill, added `benchmarks/prompts/superpowers-field-battle.md`, added `docs/specs/superpowers-field-benchmark.md`, and updated roadmap/session/decisions to make paired fresh-session field wins the target.
+
+**Changed:** `skills/benchmark-against-superpowers/SKILL.md`, benchmark prompt/spec, validation scripts, roadmap, decisions, session state, and this ledger.
+
+**Decisions:** CoderSteroids must aim to win aggregate real-task outcomes against Superpowers; losses become gap-closing roadmap items.
+
+**Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
+
+**Next:** Run paired CoderSteroids vs Superpowers field benchmark sessions.
