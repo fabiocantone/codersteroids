@@ -253,3 +253,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
 
 **Next:** Run the prompt-briefing benchmark, then use the approved-prompt workflow for the Electron field benchmark.
+
+## 2026-05-26: Prompt Briefing Electron Field Run
+
+**Intent:** Verify the prompt-briefing workflow on the real Electron chat rendering analysis.
+
+**Completed:** Reviewed the user-reported field analysis from `/Users/fabio/Projects/local-first-personal-assistant` and independently checked the target report with the target-local field-depth validator.
+
+**Changed:** Added `benchmarks/results/2026-05-26-prompt-briefing-electron-field.md`, updated roadmap and session state.
+
+**Decisions:** Treat the Electron field report as a valid analysis result but not a solved performance claim. The next engineering step must be `bench:chat-render` with real Electron `BrowserWindow` console/performance capture.
+
+**Verification:** `scripts/codersteroids/check-field-depth-report.sh docs/plans/2026-05-26-electron-chat-rendering-field-report.md` passed in the target repo. In CoderSteroids, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed.
+
+**Next:** Implement or request the Electron-aware chat render benchmark harness.

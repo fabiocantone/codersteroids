@@ -66,4 +66,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 
 ## Next Action
 
-Run the prompt-briefing benchmark, then use the approved prompt workflow for the current Electron-based `local-first-personal-assistant` field benchmark.
+Use the Electron field report result to implement or request a deterministic `bench:chat-render` harness for browser preview and Electron `BrowserWindow`, then rerun product-scale profiles.

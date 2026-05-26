@@ -60,9 +60,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Implemented `prompt-briefing` so users can write short natural requests and have CoderSteroids produce execution-ready prompts for Codex, Claude, subagents, reviewers, or benchmarks. The skill requires a draft prompt, assumptions, missing context, and approval/edit request for broad or risky work. Added a prompt-briefing benchmark prompt and routed ambiguous short task briefs through the skill.
 
+2026-05-26: User ran the prompt-briefing-driven Electron chat rendering field analysis in `/Users/fabio/Projects/local-first-personal-assistant`. Target report `docs/plans/2026-05-26-electron-chat-rendering-field-report.md` passed the target-local CoderSteroids field-depth validator. Conclusion: the small Electron/Chromium path works, but product-scale Electron rendering is not proven until a deterministic `bench:chat-render` harness captures Electron `BrowserWindow` console/performance data.
+
 ## Next Action
 
-Run the prompt-briefing benchmark, then use that approval flow to define and run the Electron field benchmark for `local-first-personal-assistant`.
+Implement or request `bench:chat-render` in `local-first-personal-assistant`, covering browser preview and Electron `BrowserWindow` profiles for `tiny`, `long-markdown`, `large-scrollback`, `streaming-4k`, `code-heavy`, and `mermaid-heavy`.
 
 ## Risks
 
