@@ -1,0 +1,38 @@
+{
+  "name": "codersteroids",
+  "version": "0.1.0",
+  "description": "Coding-agent methodology with Context7 research, living roadmaps, Markdown wiki memory, and benchmark discipline.",
+  "author": {
+    "name": "Fabio"
+  },
+  "homepage": "https://github.com/fabiocantone/codersteroids",
+  "repository": "https://github.com/fabiocantone/codersteroids",
+  "license": "MIT",
+  "keywords": [
+    "context7",
+    "planning",
+    "roadmap",
+    "llm-wiki",
+    "memory",
+    "verification",
+    "coding-standards"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CoderSteroids",
+    "shortDescription": "Context7-backed planning, roadmap, verification, and LLM Wiki memory for coding agents.",
+    "longDescription": "CoderSteroids guides coding agents to research current documentation before using external APIs, keep a written roadmap and plan, maintain Markdown wiki memory, document folder responsibilities, package context for subagents, verify delegated work, and benchmark against Superpowers before claiming superiority.",
+    "developerName": "Fabio",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use CoderSteroids for this task.",
+      "Continue from the roadmap and wiki memory.",
+      "Research current docs before implementing."
+    ]
+  }
+}

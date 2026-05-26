@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PLUGIN_VALIDATOR="/Users/fabio/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py"
+
+python3 "$PLUGIN_VALIDATOR" "$ROOT"
+
+required_files=(
+  "$ROOT/README.md"
+  "$ROOT/.codex-plugin/plugin.json"
+  "$ROOT/docs/roadmap.md"
+  "$ROOT/docs/context7-setup.md"
+  "$ROOT/docs/specs/plugin-methodology-validation.md"
+  "$ROOT/docs/wiki/index.md"
+  "$ROOT/docs/wiki/session-state.md"
+  "$ROOT/docs/wiki/architecture.md"
+  "$ROOT/docs/wiki/decisions.md"
+  "$ROOT/docs/wiki/sources.md"
+  "$ROOT/docs/wiki/code-standards.md"
+  "$ROOT/docs/wiki/open-questions.md"
+  "$ROOT/benchmarks/README.md"
+  "$ROOT/benchmarks/prompts/external-library-feature.md"
+  "$ROOT/benchmarks/prompts/multi-step-bugfix.md"
+  "$ROOT/benchmarks/prompts/interrupted-session-recovery.md"
+  "$ROOT/benchmarks/results/template.md"
+)
+
+for file in "${required_files[@]}"; do
+  test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+done
+
+required_skills=(
+  using-methodology
+  context7-research
+  recommendation-verification
+  roadmap-first-planning
+  llm-wiki-memory
+  coding-standards
+  folder-docs
+  systematic-debugging
+  verification-before-completion
+  post-task-memory-flush
+  global-memory
+  subagent-context-packing
+  subagent-result-verification
+  benchmark-against-superpowers
+)
+
+for skill in "${required_skills[@]}"; do
+  file="$ROOT/skills/$skill/SKILL.md"
+  test -f "$file" || { echo "Missing skill: $skill"; exit 1; }
+  grep -q '^---$' "$file" || { echo "Missing frontmatter fence: $file"; exit 1; }
+  grep -q "^name: $skill$" "$file" || { echo "Wrong skill name in $file"; exit 1; }
+  grep -q '^description: Use when ' "$file" || { echo "Description must start with 'Use when': $file"; exit 1; }
+done
+
+test -x "$ROOT/scripts/check-benchmark-artifacts.sh" || {
+  echo "Benchmark checker is not executable: $ROOT/scripts/check-benchmark-artifacts.sh"
+  exit 1
+}
+
+echo "Validation passed."
