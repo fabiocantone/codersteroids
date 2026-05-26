@@ -50,6 +50,7 @@ required_skills=(
   context7-research
   web-and-github-research
   recommendation-verification
+  prompt-briefing
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner

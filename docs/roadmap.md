@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, and project bootstrap implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, and prompt briefing implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
 
 ## Milestones
 
@@ -41,6 +41,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Rerun CoderSteroids Tauri chat rendering analysis with field-depth gate.
 - [x] Add project bootstrap/export for CoderSteroids validation helpers.
 - [x] Add observability/logging gate for runtime diagnosis.
+- [x] Add prompt briefing for short request to execution-prompt workflows.
 
 ## Deferred Phases
 
@@ -61,7 +62,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - After ecosystem research, prioritize skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, and cross-agent exports before adding broad workflow breadth.
 - Stack, language, runtime, and library recommendations must check known issues and mitigations when the choice affects rendering, performance, deployment, security, or data durability.
 - `/Users/fabio/Projects/local-first-personal-assistant` is no longer a valid Tauri rendering test target because the app is moving to Electron. Use it for Electron rendering validation only; use a separate Tauri fixture or historical result for Tauri-specific comparisons.
+- Short user briefs for broad work should be compiled into an execution prompt with assumptions, missing context, and approval before running in Codex, Claude, subagents, or benchmark sessions.
 
 ## Next Action
 
-Define the next field benchmark against the current Electron-based `local-first-personal-assistant` app, with observability/logging and render benchmarks. If a Tauri comparison is still needed, create or pick a separate Tauri fixture before running it.
+Run the prompt-briefing benchmark, then use the approved prompt workflow for the current Electron-based `local-first-personal-assistant` field benchmark.

@@ -182,6 +182,7 @@ check_benchmarks() {
     "$ROOT/benchmarks/prompts/skill-ecosystem-improvement-research.md"
     "$ROOT/benchmarks/prompts/known-issues-stack-recommendation.md"
     "$ROOT/benchmarks/prompts/superpowers-field-battle.md"
+    "$ROOT/benchmarks/prompts/prompt-briefing.md"
     "$ROOT/benchmarks/results/template.md"
   )
 

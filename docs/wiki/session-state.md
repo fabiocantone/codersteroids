@@ -58,9 +58,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: User clarified that `/Users/fabio/Projects/local-first-personal-assistant` is moving from Tauri to Electron, so it is no longer valid for fresh Tauri rendering tests. Keep prior Tauri findings as historical evidence only. Future tests in that repo should validate Electron rendering behavior; any new Tauri-specific comparison needs a separate Tauri fixture or target repo.
 
+2026-05-26: Implemented `prompt-briefing` so users can write short natural requests and have CoderSteroids produce execution-ready prompts for Codex, Claude, subagents, reviewers, or benchmarks. The skill requires a draft prompt, assumptions, missing context, and approval/edit request for broad or risky work. Added a prompt-briefing benchmark prompt and routed ambiguous short task briefs through the skill.
+
 ## Next Action
 
-Define and run the next field benchmark against the current Electron-based `local-first-personal-assistant` app using target-local CoderSteroids validators, observability/logging, and render benchmarks. Create or select a separate Tauri fixture only if a fresh Tauri comparison is still required.
+Run the prompt-briefing benchmark, then use that approval flow to define and run the Electron field benchmark for `local-first-personal-assistant`.
 
 ## Risks
 

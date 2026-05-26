@@ -32,6 +32,7 @@ Before any non-trivial coding task:
 - External library/API/configuration: use `context7-research`.
 - Current web research, Google/search-engine use, browser inspection, known-issue research, or similar-project discovery: use `web-and-github-research`.
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
+- Short ambiguous request, prompt rewrite, Claude/Codex handoff, subagent task brief, or approval-before-execution prompt: use `prompt-briefing`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Real-code behavior analysis, performance issue, architecture tradeoff, or production bug: use `field-engineering-depth`.
 - Runtime diagnosis, performance issue, flaky behavior, or production bug: use `observability-logging`.
@@ -50,6 +51,7 @@ Before any non-trivial coding task:
 - Do not stop field analysis at the first plausible cause; map the local flow, check secondary bottlenecks, and define falsification checks.
 - Do not treat runtime behavior as proven without logs, metrics, traces, profiles, benchmark reports, or an explicit instrumentation plan.
 - Do not implement non-trivial work without a plan.
+- Do not execute broad ambiguous work before expanding the request into an approved or internally recorded prompt brief.
 - Do not claim success without fresh verification.
 - Do not leave roadmap or wiki stale after structural or decision-level changes.
 - Do not rely on chat history when a project memory artifact exists.

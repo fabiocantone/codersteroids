@@ -13,6 +13,7 @@ Subagents should receive enough context to succeed without inheriting the full c
 
 Include:
 
+- A prompt brief when the source request is short, broad, or ambiguous.
 - Task goal and non-goals.
 - Relevant plan section.
 - Relevant roadmap state.
@@ -39,4 +40,3 @@ Require the subagent to report:
 - Verification run.
 - Wiki/roadmap/folder docs updated.
 - Open risks.
-

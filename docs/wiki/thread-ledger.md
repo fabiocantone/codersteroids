@@ -239,3 +239,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
 
 **Next:** Define the next field benchmark for the Electron app with observability/logging and render benchmark evidence.
+
+## 2026-05-26: Prompt Briefing Skill
+
+**Intent:** Let users write short natural requests while CoderSteroids produces execution-ready prompts for Codex, Claude, subagents, reviewers, or benchmarks.
+
+**Completed:** Added `prompt-briefing`, routed short ambiguous task briefs through it, added a prompt-briefing benchmark prompt, and updated subagent context packing to include a prompt brief when the source request is underspecified.
+
+**Changed:** `skills/prompt-briefing/SKILL.md`, `skills/using-methodology/SKILL.md`, `skills/subagent-context-packing/SKILL.md`, `benchmarks/prompts/prompt-briefing.md`, validation scripts, README, skills docs, architecture, roadmap, decisions, and session state.
+
+**Decisions:** Broad or risky work can be converted from a short brief into a draft prompt with assumptions, missing context, and approval/edit request before execution.
+
+**Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
+
+**Next:** Run the prompt-briefing benchmark, then use the approved-prompt workflow for the Electron field benchmark.

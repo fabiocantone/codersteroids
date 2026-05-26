@@ -166,6 +166,16 @@
 
 **Consequence:** Prior Tauri analysis remains historical evidence. Future work in that repo should benchmark Electron rendering, Chromium process behavior, IPC/security, and chat-render performance. Fresh Tauri-specific comparisons require a separate Tauri fixture or another repository that still uses Tauri.
 
+## 2026-05-26: Add Prompt Briefing Before Broad Execution
+
+**Decision:** Add `prompt-briefing` so short user requests can be compiled into execution-ready prompts with assumptions, missing context, and approval gates.
+
+**Context:** The user does not want to write long methodology prompts manually. They often know the intent in two lines, while the agent needs a structured prompt for Codex, Claude, subagents, benchmarks, documentation lookup, observability, verification, and memory updates.
+
+**Alternatives:** Keep giving long prompts manually, let agents infer missing constraints silently, or require every short request to run immediately.
+
+**Consequence:** For broad, risky, delegated, or ambiguous work, CoderSteroids should draft the prompt first and let the user approve or edit it before execution unless the user explicitly asks to proceed autonomously.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

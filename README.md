@@ -10,6 +10,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `context7-research`
 - `web-and-github-research`
 - `recommendation-verification`
+- `prompt-briefing`
 - `skill-lifecycle-doctor`
 - `memory-hygiene-audit`
 - `benchmark-runner`
