@@ -12,9 +12,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `recommendation-verification` to prevent unverified suggestions for names, tools, services, libraries, domains, and other availability-dependent options.
 
+2026-05-26: `./scripts/validate.sh` initially failed because the external plugin validator imports PyYAML and bare `python3` had no `yaml` module. Added a bootstrap fallback through `uv run --with PyYAML`; `./scripts/validate.sh` and `./scripts/check-benchmark-artifacts.sh` now pass. The recommendation-verification naming dry run filtered unavailable/conflicting names before presenting recommendations, but it was partial because GitHub account/org availability was out of scope; see `benchmarks/results/2026-05-26-recommendation-verification.md`.
+
 ## Next Action
 
-Run validation after the new skill, then test a naming prompt to confirm the agent filters suggestions before presenting them.
+Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
 
 ## Risks
 

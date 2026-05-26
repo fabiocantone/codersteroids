@@ -4,7 +4,14 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PLUGIN_VALIDATOR="/Users/fabio/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py"
 
-python3 "$PLUGIN_VALIDATOR" "$ROOT"
+if python3 -c 'import yaml' >/dev/null 2>&1; then
+  python3 "$PLUGIN_VALIDATOR" "$ROOT"
+elif command -v uv >/dev/null 2>&1; then
+  uv run --with PyYAML python "$PLUGIN_VALIDATOR" "$ROOT"
+else
+  echo "PyYAML is required to run the plugin validator. Install PyYAML or uv, then retry."
+  exit 1
+fi
 
 required_files=(
   "$ROOT/README.md"

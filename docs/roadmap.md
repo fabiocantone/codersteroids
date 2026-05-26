@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; live benchmark still pending.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test and partial recommendation-verification dry run complete; live benchmark still pending.
 
 ## Milestones
 
@@ -20,8 +20,10 @@ Phase 8-10 artifact implementation complete; live benchmark still pending.
 - [x] Add benchmark artifact checker.
 - [x] Run local structural validation.
 - [x] Add recommendation verification gate after naming workflow failure.
-- [ ] Run validation in a real Codex plugin install.
+- [x] Run recommendation-verification naming dry run.
+- [x] Run validation in a real Codex plugin install.
 - [ ] Run the three benchmark scenarios from `docs/specs/plugin-methodology-validation.md`.
+- [ ] Run full recommendation-verification test with GitHub account/org checks.
 - [ ] Compare results against Superpowers.
 
 ## Deferred Phases
@@ -43,4 +45,4 @@ Phase 8-10 artifact implementation complete; live benchmark still pending.
 
 ## Next Action
 
-Install or load the plugin in Codex, then run the benchmark prompts in `benchmarks/prompts/` and save scorecards under `benchmarks/results/`.
+Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
