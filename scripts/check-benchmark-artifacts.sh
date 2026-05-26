@@ -8,6 +8,10 @@ required=(
   "$ROOT/benchmarks/prompts/external-library-feature.md"
   "$ROOT/benchmarks/prompts/multi-step-bugfix.md"
   "$ROOT/benchmarks/prompts/interrupted-session-recovery.md"
+  "$ROOT/benchmarks/prompts/chat-continuity.md"
+  "$ROOT/benchmarks/prompts/web-similar-project-research.md"
+  "$ROOT/benchmarks/prompts/skill-ecosystem-improvement-research.md"
+  "$ROOT/benchmarks/prompts/known-issues-stack-recommendation.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -16,4 +20,3 @@ for file in "${required[@]}"; do
 done
 
 echo "Benchmark artifacts present."
-

@@ -127,3 +127,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after edits and cache sync.
 
 **Next:** Run the known-issues stack recommendation benchmark, then complete the direct Superpowers comparison.
+
+## 2026-05-26: Benchmark, Superpowers Comparison, And Lifecycle Doctor
+
+**Intent:** Continue from the roadmap and start turning CoderSteroids into a stronger programming tool through benchmark evidence and lifecycle diagnostics.
+
+**Completed:** Ran and recorded the known-issues stack recommendation benchmark. Compared recorded CoderSteroids evidence against local installed Superpowers skills and GitHub metadata. Implemented `skill-lifecycle-doctor` plus `scripts/doctor.sh`, `memory-hygiene-audit` plus `scripts/memory-audit.sh`, and `benchmark-runner` plus `scripts/benchmark-runner.sh`.
+
+**Changed:** `skills/skill-lifecycle-doctor/SKILL.md`, `skills/memory-hygiene-audit/SKILL.md`, `skills/benchmark-runner/SKILL.md`, `scripts/doctor.sh`, `scripts/memory-audit.sh`, `scripts/benchmark-runner.sh`, `scripts/validate.sh`, `scripts/check-benchmark-artifacts.sh`, benchmark results, README, skills folder docs, roadmap, architecture, sources, decisions, session state, and this ledger.
+
+**Decisions:** Continue CoderSteroids narrowly as a Codex-first continuity/evidence/memory/diagnostics layer. Superpowers remains stronger for broad TDD/review/worktree/subagent workflows.
+
+**Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
+
+**Next:** Run the full verification suite in a fresh session, then consider `cross-agent-export` or `repo-docs-map`.

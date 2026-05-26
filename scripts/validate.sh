@@ -47,6 +47,9 @@ required_skills=(
   context7-research
   web-and-github-research
   recommendation-verification
+  skill-lifecycle-doctor
+  memory-hygiene-audit
+  benchmark-runner
   roadmap-first-planning
   llm-wiki-memory
   chat-continuity
@@ -71,6 +74,21 @@ done
 
 test -x "$ROOT/scripts/check-benchmark-artifacts.sh" || {
   echo "Benchmark checker is not executable: $ROOT/scripts/check-benchmark-artifacts.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/doctor.sh" || {
+  echo "Doctor script is not executable: $ROOT/scripts/doctor.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/memory-audit.sh" || {
+  echo "Memory audit script is not executable: $ROOT/scripts/memory-audit.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/benchmark-runner.sh" || {
+  echo "Benchmark runner script is not executable: $ROOT/scripts/benchmark-runner.sh"
   exit 1
 }
 

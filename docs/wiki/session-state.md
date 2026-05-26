@@ -32,9 +32,19 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added a known-issues gate after the user reported a Tauri AI chat rendering/performance problem. `recommendation-verification`, `web-and-github-research`, `context7-research`, and `using-methodology` now require known-issue and mitigation checks when stack/runtime/library choices affect performance, rendering, deployment, security, or data durability. Added `benchmarks/prompts/known-issues-stack-recommendation.md` to test a Tauri AI chat stack recommendation workflow.
 
+2026-05-26: Ran the known-issues stack recommendation benchmark for a Tauri AI chat desktop app and saved `benchmarks/results/2026-05-26-known-issues-stack-recommendation.md`. Main result: recommend Electron first when smooth cross-platform chat rendering is core, unless Tauri's smaller/Rust/security profile matters more and a target-platform prototype validates rendering. Wails does not remove native-webview risk.
+
+2026-05-26: Completed direct Superpowers comparison in `benchmarks/results/2026-05-26-superpowers-comparison.md`. Verdict: continue CoderSteroids narrowly for continuity/evidence/memory/diagnostics; do not try to beat Superpowers on broad TDD/review/worktree/subagent breadth.
+
+2026-05-26: Implemented `skill-lifecycle-doctor` and `scripts/doctor.sh`. The first run correctly detected stale cached skills after adding the new skill, proving the diagnostic catches a real failure mode.
+
+2026-05-26: Implemented `memory-hygiene-audit` and `scripts/memory-audit.sh`. The first run checked required wiki files, roadmap/session next actions, source row shape, duplicate decision headings, thread-ledger fields, page sizes, and stale markers.
+
+2026-05-26: Implemented `benchmark-runner` and `scripts/benchmark-runner.sh`. The runner lists prompt slugs and creates non-overwriting benchmark result scaffolds with metadata, preflight checks, scorecard, notes, and embedded prompt.
+
 ## Next Action
 
-Run the known-issues stack recommendation benchmark, then run the direct Superpowers comparison and decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner` as the next CoderSteroids expansion.
+Run the full verification suite in a fresh session, then consider `cross-agent-export` or `repo-docs-map`.
 
 ## Risks
 

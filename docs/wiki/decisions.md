@@ -85,3 +85,43 @@
 **Alternatives:** Treat known issues as optional research, add a separate large risk-analysis skill, or only check official docs.
 
 **Consequence:** `recommendation-verification`, `web-and-github-research`, and `context7-research` now require known-issue checks for meaningful stack choices, and a Tauri AI chat benchmark prompt was added to test the behavior.
+
+## 2026-05-26: Continue Narrowly After Superpowers Comparison
+
+**Decision:** Continue CoderSteroids development, but keep the product narrow: continuity, evidence, memory, known-issue checks, and diagnostics before adding broad coding workflows.
+
+**Context:** The direct comparison found Superpowers stronger for broad software-development methodology: TDD, review workflows, worktrees, branch finishing, and subagent breadth. CoderSteroids is stronger only in its explicit niche: roadmap/wiki/source-ledger continuity, current-doc and known-issue checks, recommendation verification, cross-chat handoff, and lifecycle diagnostics.
+
+**Alternatives:** Stop development, try to out-breadth Superpowers, or fork Superpowers.
+
+**Consequence:** The next work should be `memory-hygiene-audit` and `benchmark-runner`, not a large set of unrelated workflow skills.
+
+## 2026-05-26: Add Skill Lifecycle Doctor
+
+**Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.
+
+**Context:** CoderSteroids already hit a practical install/cache problem: the repo had newer skills than the Codex installed cache. This can make behavior tests invalid because Codex may load stale skill instructions even when the repository is correct.
+
+**Alternatives:** Keep manually running `diff -qr`, document cache refresh only, or fold lifecycle checks into generic validation.
+
+**Consequence:** Plugin health checks now cover manifest, skills, duplicate names, cached skills, cached manifest, marketplace entry, Codex config, obsolete plugin name, and benchmark artifacts without printing full config contents or secrets.
+
+## 2026-05-26: Add Memory Hygiene Audit
+
+**Decision:** Add `memory-hygiene-audit` plus `scripts/memory-audit.sh` as a first-class project memory quality check.
+
+**Context:** CoderSteroids relies on Markdown memory more than competing broad workflow systems. That memory can become harmful if next actions are stale, decision headings duplicate, source rows are incomplete, thread-ledger handoffs are partial, or old validation placeholders remain.
+
+**Alternatives:** Rely on agents to manually inspect memory, fold checks into `doctor.sh`, or wait for a full benchmark runner.
+
+**Consequence:** Memory health can now be checked independently from plugin install health, and future benchmark/completion flows should run both doctor and memory audit.
+
+## 2026-05-26: Add Benchmark Runner Scaffold
+
+**Decision:** Add `benchmark-runner` plus `scripts/benchmark-runner.sh` to list benchmark prompts and create consistent result scaffolds.
+
+**Context:** Previous benchmarks were useful but manually created. A full automated dual-agent benchmark runner is larger work, but the immediate failure mode is missing or inconsistent result artifacts.
+
+**Alternatives:** Leave benchmarks fully manual, or overbuild a live Codex launcher before artifact discipline is solid.
+
+**Consequence:** Benchmark runs now have a repeatable artifact entry point. The script does not pretend to execute a fresh Codex chat; it prepares the file, preflight checklist, scorecard, and embedded prompt for evidence-based completion.

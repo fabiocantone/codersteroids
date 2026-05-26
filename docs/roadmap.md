@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, partial recommendation-verification dry run, chat-continuity benchmark, local plugin cache skill refresh, three live benchmark scenarios, and skill ecosystem improvement research complete. Direct Superpowers comparison remains pending.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, and benchmark runner implemented.
 
 ## Milestones
 
@@ -31,7 +31,11 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - [x] Add skill ecosystem improvement research benchmark prompt.
 - [x] Run skill ecosystem improvement research benchmark.
 - [x] Add known-issues gate for stack and runtime recommendations.
-- [ ] Compare results against Superpowers.
+- [x] Run known-issues stack recommendation benchmark.
+- [x] Compare results against Superpowers.
+- [x] Implement `skill-lifecycle-doctor`.
+- [x] Implement `memory-hygiene-audit`.
+- [x] Implement `benchmark-runner`.
 
 ## Deferred Phases
 
@@ -54,4 +58,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 
 ## Next Action
 
-Run `benchmarks/prompts/known-issues-stack-recommendation.md` against a Tauri AI chat scenario, then compare recorded CoderSteroids benchmark results against Superpowers and decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner`.
+Run the full verification suite in a fresh session, then consider `cross-agent-export` or `repo-docs-map` as the next focused expansion.

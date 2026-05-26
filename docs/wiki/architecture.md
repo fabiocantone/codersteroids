@@ -10,11 +10,19 @@ The plugin is a Codex plugin with:
 - `benchmarks/`: repeatable validation prompts and score templates.
 - `scripts/validate.sh`: structural validation.
 - `scripts/check-benchmark-artifacts.sh`: benchmark artifact validation.
+- `scripts/doctor.sh`: plugin install, cache, manifest, and lifecycle diagnostics.
+- `scripts/memory-audit.sh`: wiki, source ledger, decision, and handoff hygiene diagnostics.
+- `scripts/benchmark-runner.sh`: benchmark prompt listing and result scaffold creation.
 
 ## Skill Responsibilities
 
 - `using-methodology`: session bootstrap and skill routing.
 - `context7-research`: documentation lookup discipline.
+- `web-and-github-research`: web/current-source, known-issue, and similar-project research.
+- `recommendation-verification`: availability, status, risk, and known-issue filtering before recommendations.
+- `skill-lifecycle-doctor`: plugin install/cache/manifest/config diagnostics.
+- `memory-hygiene-audit`: roadmap/wiki/source/ledger quality checks.
+- `benchmark-runner`: benchmark result scaffold and recording workflow.
 - `roadmap-first-planning`: roadmap and plan gates.
 - `llm-wiki-memory`: project memory read/write rules.
 - `chat-continuity`: cross-chat handoff and resume behavior.

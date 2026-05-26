@@ -2,6 +2,8 @@
 
 These prompts validate whether CoderSteroids is worth expanding beyond MVP.
 
+Run `./scripts/doctor.sh` before behavior benchmarks when plugin installation or cache state could affect the result.
+
 ## How To Run
 
 1. Run each prompt once with this plugin active.

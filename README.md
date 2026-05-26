@@ -10,6 +10,9 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `context7-research`
 - `web-and-github-research`
 - `recommendation-verification`
+- `skill-lifecycle-doctor`
+- `memory-hygiene-audit`
+- `benchmark-runner`
 - `roadmap-first-planning`
 - `llm-wiki-memory`
 - `chat-continuity`
@@ -57,4 +60,23 @@ Benchmark artifacts can be checked with:
 
 ```bash
 ./scripts/check-benchmark-artifacts.sh
+```
+
+Installation and cache health can be checked with:
+
+```bash
+./scripts/doctor.sh
+```
+
+Project memory hygiene can be checked with:
+
+```bash
+./scripts/memory-audit.sh
+```
+
+Benchmark result scaffolds can be created with:
+
+```bash
+./scripts/benchmark-runner.sh --list
+./scripts/benchmark-runner.sh <prompt-slug>
 ```
