@@ -155,3 +155,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
 
 **Next:** Run paired CoderSteroids vs Superpowers field benchmark sessions.
+
+## 2026-05-26: First Superpowers Field Battle Result
+
+**Intent:** Score the pasted CoderSteroids vs Superpowers outputs for the Tauri AI chat rendering/performance analysis.
+
+**Completed:** Reviewed the pasted outputs and specific documents left in `/Users/fabio/Projects/local-first-personal-assistant`: `docs/plans/2026-05-26-chat-rendering-performance.md`, `docs/benchmarks/chat-rendering-performance.md`, `docs/work-memory.md`, and `docs/architecture/final-roadmap.md`.
+
+**Changed:** Added `benchmarks/results/2026-05-26-superpowers-field-battle-chat-rendering.md` and updated roadmap, session state, decisions, and this ledger.
+
+**Decisions:** Treat the battle as a numeric tie but not a CoderSteroids win. Superpowers was technically deeper; CoderSteroids had better memory/handoff. Next gap to close is field engineering depth.
+
+**Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed.
+
+**Next:** Add a field engineering depth gate.

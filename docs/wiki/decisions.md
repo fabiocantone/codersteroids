@@ -106,6 +106,16 @@
 
 **Consequence:** Add a field-battle benchmark and treat losses as roadmap input. Future claims must distinguish artifact inspection from live/replayable field wins.
 
+## 2026-05-26: Add Field Engineering Depth Gate After First Battle
+
+**Decision:** Add a field engineering depth gate before the next Superpowers field battle.
+
+**Context:** The first field battle on Tauri chat rendering showed CoderSteroids preserved memory and handoff better, but Superpowers produced deeper technical analysis: more local bottlenecks, broader verification, and more implementation-library research. Numeric score tied, but CoderSteroids did not clearly win.
+
+**Alternatives:** Declare tie good enough, focus only on cross-agent export, or copy Superpowers broadly.
+
+**Consequence:** The next CoderSteroids capability should require broader local flow inspection, secondary bottleneck discovery, affected-slice verification, implementation-library research, and falsification checks while preserving durable memory updates.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

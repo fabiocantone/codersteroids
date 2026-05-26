@@ -44,9 +44,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Updated strategy after user feedback: CoderSteroids should not merely stay narrow defensively; it must beat Superpowers in real field tasks. Added `docs/specs/superpowers-field-benchmark.md` and `benchmarks/prompts/superpowers-field-battle.md` to force paired fresh-session comparisons and gap-closing work.
 
+2026-05-26: Recorded first Superpowers field battle on `/Users/fabio/Projects/local-first-personal-assistant` Tauri chat rendering performance. Result: numeric tie, but Superpowers wins technical-analysis depth. CoderSteroids wins durable memory and handoff. Next gap to close: add a field engineering depth gate requiring broader local flow inspection, secondary bottleneck pass, implementation-library research, and affected-slice verification.
+
 ## Next Action
 
-Run `benchmarks/prompts/superpowers-field-battle.md` in paired fresh sessions against Superpowers, then build the first gap-closing capability shown by the field result.
+Add a field engineering depth gate so CoderSteroids can beat Superpowers in the next field battle.
 
 ## Risks
 

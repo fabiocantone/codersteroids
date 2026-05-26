@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, and benchmark runner implemented.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, and benchmark runner implemented. First Superpowers field battle completed: CoderSteroids tied numerically but did not clearly beat Superpowers because Superpowers produced deeper technical analysis and broader verification.
 
 ## Milestones
 
@@ -36,6 +36,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Implement `skill-lifecycle-doctor`.
 - [x] Implement `memory-hygiene-audit`.
 - [x] Implement `benchmark-runner`.
+- [x] Run first Superpowers field battle on Tauri chat rendering.
+- [ ] Add field engineering depth gate.
 
 ## Deferred Phases
 
@@ -58,4 +60,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 
 ## Next Action
 
-Run `benchmarks/prompts/superpowers-field-battle.md` in paired fresh sessions against Superpowers, then build the first gap-closing capability shown by the field result.
+Add a field engineering depth gate so CoderSteroids matches Superpowers' technical-analysis breadth while keeping its memory and evidence advantages.
