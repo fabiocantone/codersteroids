@@ -62,9 +62,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: User ran the prompt-briefing-driven Electron chat rendering field analysis in `/Users/fabio/Projects/local-first-personal-assistant`. Target report `docs/plans/2026-05-26-electron-chat-rendering-field-report.md` passed the target-local CoderSteroids field-depth validator. Conclusion: the small Electron/Chromium path works, but product-scale Electron rendering is not proven until a deterministic `bench:chat-render` harness captures Electron `BrowserWindow` console/performance data.
 
+2026-05-26: Added `self-improvement-loop` and `benchmarks/prompts/self-improvement-loop.md` to test whether CoderSteroids can improve itself from evidence. The loop requires a concrete gap, source artifact, scoped change, expected behavior improvement, verification, before/after evidence, and a verdict.
+
 ## Next Action
 
-Implement or request `bench:chat-render` in `local-first-personal-assistant`, covering browser preview and Electron `BrowserWindow` profiles for `tiny`, `long-markdown`, `large-scrollback`, `streaming-4k`, `code-heavy`, and `mermaid-heavy`.
+Run the self-improvement benchmark against a recent real gap. If it passes, continue with `bench:chat-render` in `local-first-personal-assistant`.
 
 ## Risks
 

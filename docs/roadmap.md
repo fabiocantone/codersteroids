@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, and prompt briefing implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, and self-improvement loop implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
 
 ## Milestones
 
@@ -42,6 +42,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add project bootstrap/export for CoderSteroids validation helpers.
 - [x] Add observability/logging gate for runtime diagnosis.
 - [x] Add prompt briefing for short request to execution-prompt workflows.
+- [x] Add self-improvement loop benchmark and skill.
 
 ## Deferred Phases
 
@@ -63,7 +64,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Stack, language, runtime, and library recommendations must check known issues and mitigations when the choice affects rendering, performance, deployment, security, or data durability.
 - `/Users/fabio/Projects/local-first-personal-assistant` is no longer a valid Tauri rendering test target because the app is moving to Electron. Use it for Electron rendering validation only; use a separate Tauri fixture or historical result for Tauri-specific comparisons.
 - Short user briefs for broad work should be compiled into an execution prompt with assumptions, missing context, and approval before running in Codex, Claude, subagents, or benchmark sessions.
+- Self-improvement must be evidence-backed: choose one gap, implement one scoped change, verify, and record before/after behavior.
 
 ## Next Action
 
-Use the Electron field report result to implement or request a deterministic `bench:chat-render` harness for browser preview and Electron `BrowserWindow`, then rerun product-scale profiles.
+Run the self-improvement benchmark on a real recent gap, then continue with the Electron `bench:chat-render` harness.

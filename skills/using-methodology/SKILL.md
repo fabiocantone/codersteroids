@@ -33,6 +33,7 @@ Before any non-trivial coding task:
 - Current web research, Google/search-engine use, browser inspection, known-issue research, or similar-project discovery: use `web-and-github-research`.
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
 - Short ambiguous request, prompt rewrite, Claude/Codex handoff, subagent task brief, or approval-before-execution prompt: use `prompt-briefing`.
+- Self-improvement, benchmark gap closure, methodology change, or plugin behavior evaluation: use `self-improvement-loop`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Real-code behavior analysis, performance issue, architecture tradeoff, or production bug: use `field-engineering-depth`.
 - Runtime diagnosis, performance issue, flaky behavior, or production bug: use `observability-logging`.

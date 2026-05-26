@@ -14,6 +14,7 @@ required=(
   "$ROOT/benchmarks/prompts/known-issues-stack-recommendation.md"
   "$ROOT/benchmarks/prompts/superpowers-field-battle.md"
   "$ROOT/benchmarks/prompts/prompt-briefing.md"
+  "$ROOT/benchmarks/prompts/self-improvement-loop.md"
   "$ROOT/benchmarks/results/template.md"
 )
 

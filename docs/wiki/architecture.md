@@ -23,6 +23,7 @@ The plugin is a Codex plugin with:
 - `web-and-github-research`: web/current-source, known-issue, and similar-project research.
 - `recommendation-verification`: availability, status, risk, and known-issue filtering before recommendations.
 - `prompt-briefing`: short-brief to execution-prompt compiler for Codex, Claude, subagents, benchmarks, and approval gates.
+- `self-improvement-loop`: benchmark/user-correction to scoped methodology change with before/after evidence.
 - `skill-lifecycle-doctor`: plugin install/cache/manifest/config diagnostics.
 - `memory-hygiene-audit`: roadmap/wiki/source/ledger quality checks.
 - `benchmark-runner`: benchmark result scaffold and recording workflow.

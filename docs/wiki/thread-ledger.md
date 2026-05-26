@@ -267,3 +267,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `scripts/codersteroids/check-field-depth-report.sh docs/plans/2026-05-26-electron-chat-rendering-field-report.md` passed in the target repo. In CoderSteroids, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed.
 
 **Next:** Implement or request the Electron-aware chat render benchmark harness.
+
+## 2026-05-26: Self Improvement Loop
+
+**Intent:** Verify whether CoderSteroids can improve itself from evidence instead of ad hoc suggestions.
+
+**Completed:** Added `self-improvement-loop`, a benchmark prompt, routing, validation coverage, benchmark artifact checks, and wiki/roadmap entries.
+
+**Changed:** `skills/self-improvement-loop/SKILL.md`, `benchmarks/prompts/self-improvement-loop.md`, `docs/plans/2026-05-26-self-improvement-loop.md`, validation scripts, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
+
+**Decisions:** A self-improvement loop must choose one evidence-backed gap, implement one scoped change, run validation, and record before/after behavior before claiming improvement.
+
+**Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after cache sync.
+
+**Next:** Run the self-improvement benchmark against a real recent gap.

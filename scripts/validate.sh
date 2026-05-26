@@ -38,6 +38,8 @@ required_files=(
   "$ROOT/benchmarks/prompts/skill-ecosystem-improvement-research.md"
   "$ROOT/benchmarks/prompts/known-issues-stack-recommendation.md"
   "$ROOT/benchmarks/prompts/superpowers-field-battle.md"
+  "$ROOT/benchmarks/prompts/prompt-briefing.md"
+  "$ROOT/benchmarks/prompts/self-improvement-loop.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -51,6 +53,7 @@ required_skills=(
   web-and-github-research
   recommendation-verification
   prompt-briefing
+  self-improvement-loop
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner

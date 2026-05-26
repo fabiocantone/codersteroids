@@ -176,6 +176,16 @@
 
 **Consequence:** For broad, risky, delegated, or ambiguous work, CoderSteroids should draft the prompt first and let the user approve or edit it before execution unless the user explicitly asks to proceed autonomously.
 
+## 2026-05-26: Add Evidence-Backed Self Improvement Loop
+
+**Decision:** Add `self-improvement-loop` and a dedicated benchmark prompt to test whether CoderSteroids can improve itself from real evidence.
+
+**Context:** The user asked whether the methodology can verify that it is able to self-improve. A self-improvement claim is only meaningful if it starts from a concrete gap, makes one scoped change, and records before/after behavior.
+
+**Alternatives:** Treat self-improvement as brainstorming, manually add improvements without tests, or rely on general benchmark comparisons only.
+
+**Consequence:** Future methodology changes should be tied to an artifact proving the gap, an expected behavior improvement, fresh validation, and a saved verdict of improved, inconclusive, or worse.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.
