@@ -323,3 +323,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after cache sync.
 
 **Next:** Run the TDD/code-review gap-closing benchmark, then continue with Electron `bench:chat-render`.
+
+## 2026-05-26: TDD Code Review Benchmark Run
+
+**Intent:** Validate the new TDD/code-review skills with a small real behavior change.
+
+**Completed:** Used test-first discipline on `scripts/check-benchmark-artifacts.sh`. A malformed TDD/code-review result passed before the change, then failed after the checker required failing-test evidence, passing-test evidence, broader verification, review table, and verdict. Recorded the run in `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`.
+
+**Changed:** `scripts/check-benchmark-artifacts.sh`, `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`, roadmap, session state, and this ledger.
+
+**Decisions:** TDD/code-review benchmark results must include red/green evidence, broader verification, review result table, and explicit verdict.
+
+**Verification:** Focused negative test confirmed a malformed TDD/code-review result now fails with missing `## Failing Test Evidence`. `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed.
+
+**Next:** Continue with Electron `bench:chat-render`.

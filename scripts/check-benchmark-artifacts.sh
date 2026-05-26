@@ -71,4 +71,31 @@ while IFS= read -r -d '' file; do
   }
 done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
 
+while IFS= read -r -d '' file; do
+  if ! grep -q 'benchmarks/prompts/tdd-code-review-gap-closing.md' "$file" &&
+    [[ "$(basename "$file")" != *tdd-code-review-gap-closing* ]]; then
+    continue
+  fi
+
+  require_heading "$file" "## Failing Test Evidence"
+  require_heading "$file" "## Passing Test Evidence"
+  require_heading "$file" "## Broader Verification"
+  require_heading "$file" "## Review Result"
+  require_heading "$file" "## Verdict"
+
+  require_section_content "$file" "## Failing Test Evidence"
+  require_section_content "$file" "## Passing Test Evidence"
+  require_section_content "$file" "## Broader Verification"
+
+  grep -q '| Severity | Finding | Evidence | Decision | Verification |' "$file" || {
+    echo "TDD/code-review result must include review result table: $file"
+    exit 1
+  }
+
+  grep -Eq '^(Improved|Inconclusive|Worse)([[:space:]].*)?$' "$file" || {
+    echo "TDD/code-review result must record a verdict of Improved, Inconclusive, or Worse: $file"
+    exit 1
+  }
+done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
+
 echo "Benchmark artifacts present."

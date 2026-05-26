@@ -74,4 +74,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 
 ## Next Action
 
-Run the TDD/code-review gap-closing benchmark, then continue with the Electron `bench:chat-render` harness.
+Continue with the Electron `bench:chat-render` harness.

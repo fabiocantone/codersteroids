@@ -70,9 +70,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `test-first-development` and `code-review-discipline` as pragmatic gap-closing skills after the updated Superpowers comparison. Added `benchmarks/prompts/tdd-code-review-gap-closing.md` to test failing-test evidence plus grounded review evidence. These are structurally implemented but not yet field-validated.
 
+2026-05-26: Ran the TDD/code-review gap-closing benchmark against a small checker behavior change. Before implementation, a malformed TDD/code-review result with only `Improved` passed `scripts/check-benchmark-artifacts.sh`; after the change, the same malformed result fails with missing `## Failing Test Evidence`. Saved `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`.
+
 ## Next Action
 
-Run the TDD/code-review gap-closing benchmark, then continue with `bench:chat-render` in `local-first-personal-assistant`.
+Continue with `bench:chat-render` in `local-first-personal-assistant`.
 
 ## Risks
 
