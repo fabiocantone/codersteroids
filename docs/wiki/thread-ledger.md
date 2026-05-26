@@ -99,3 +99,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after file updates.
 
 **Next:** Run validation, then execute the new benchmark prompt in a fresh Codex chat.
+
+## 2026-05-26: Skill Ecosystem Improvement Research Run
+
+**Intent:** Execute the skill ecosystem improvement benchmark using current web and GitHub evidence.
+
+**Completed:** Checked official docs for OpenAI Codex AGENTS.md/skills/evals, Claude Code memory/skills, Agent Skills, AGENTS.md, Continue rules, Cline Memory Bank, and Cursor docs where available. Verified GitHub metadata for major adjacent systems and searched public issues for recurring pain points.
+
+**Changed:** `benchmarks/results/2026-05-26-skill-ecosystem-improvement-research.md`, `docs/plans/2026-05-26-skill-ecosystem-improvement-research.md`, `docs/wiki/sources.md`, `docs/wiki/decisions.md`, `docs/wiki/session-state.md`, `docs/wiki/thread-ledger.md`, and `docs/roadmap.md`.
+
+**Decisions:** Prioritize skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, and cross-agent exports before adding broad new workflow skills.
+
+**Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
+
+**Next:** Complete the direct Superpowers comparison.

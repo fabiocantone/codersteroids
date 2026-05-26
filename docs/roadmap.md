@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, partial recommendation-verification dry run, chat-continuity benchmark, and local plugin cache skill refresh complete. Three live benchmark scenarios and comparison still pending.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, partial recommendation-verification dry run, chat-continuity benchmark, local plugin cache skill refresh, three live benchmark scenarios, and skill ecosystem improvement research complete. Direct Superpowers comparison remains pending.
 
 ## Milestones
 
@@ -29,6 +29,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - [x] Run full recommendation-verification test with GitHub account/org checks.
 - [x] Add web/browser/GitHub similar-project research workflow.
 - [x] Add skill ecosystem improvement research benchmark prompt.
+- [x] Run skill ecosystem improvement research benchmark.
 - [ ] Compare results against Superpowers.
 
 ## Deferred Phases
@@ -47,7 +48,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - Treat Context7 as preferred but not mandatory; official docs are the fallback.
 - Do not commit a hardcoded Context7 MCP config or API key.
 - Add global-memory and subagent support as skills, but require live testing before claiming behavioral superiority.
+- After ecosystem research, prioritize skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, and cross-agent exports before adding broad workflow breadth.
 
 ## Next Action
 
-Run `benchmarks/prompts/skill-ecosystem-improvement-research.md`, then compare recorded CoderSteroids benchmark results against Superpowers and decide whether to expand beyond MVP.
+Compare recorded CoderSteroids benchmark results against Superpowers, then decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner`.

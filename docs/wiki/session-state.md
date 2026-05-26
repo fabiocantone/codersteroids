@@ -28,9 +28,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `benchmarks/prompts/skill-ecosystem-improvement-research.md` to test whether CoderSteroids can research popular coding-agent skill systems, public user pain points, and improvement opportunities before proposing roadmap changes.
 
+2026-05-26: Ran the skill ecosystem improvement research benchmark using current web docs, GitHub API metadata, and public issue searches. Saved `benchmarks/results/2026-05-26-skill-ecosystem-improvement-research.md`. Main conclusion: CoderSteroids should not chase breadth; the highest-value next work is skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, cross-agent exports, repo/docs mapping, and stricter current-doc checks. Public pain points repeatedly involved lost context after compaction, stale/conflicting memory, instruction non-adherence, duplicate/ambiguous skill loading, weak versioning/locking, cross-agent rule duplication, and missing memory/skill evals.
+
 ## Next Action
 
-Run `benchmarks/prompts/skill-ecosystem-improvement-research.md`, then compare recorded CoderSteroids benchmark results against Superpowers and decide whether to expand beyond MVP.
+Run the direct Superpowers comparison, then decide whether to implement `skill-lifecycle-doctor`, `memory-hygiene-audit`, and `benchmark-runner` as the next CoderSteroids expansion.
 
 ## Risks
 

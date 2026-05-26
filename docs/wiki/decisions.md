@@ -65,3 +65,13 @@
 **Context:** Current GitHub/web checks found active overlaps: Superpowers and ADD cover agent methodology, SpecMem/Jumbo/agentmemory cover project memory and context, AGENTS.md covers portable agent instructions, and skill libraries/adaptations cover reusable agent workflows.
 
 **Consequence:** Position CoderSteroids around its narrower thesis: a Codex plugin that combines lightweight skills, living roadmap, Markdown LLM Wiki memory, current-doc verification, and benchmark gates for long-running projects.
+
+## 2026-05-26: Prioritize Skill Lifecycle And Memory Hygiene
+
+**Decision:** The next CoderSteroids expansion should prioritize skill lifecycle diagnostics, memory hygiene auditing, benchmark execution, and cross-agent exports before adding more workflow breadth.
+
+**Context:** Current ecosystem research found mature systems already cover many primitives: AGENTS.md for simple cross-agent instructions, Agent Skills/Codex/Claude for progressive-disclosure skills, Claude/Cursor/Continue for rules and memory, Cline Memory Bank for structured Markdown memory, Aider for repo maps, and Mem0/Graphiti for runtime memory. Public issues still show unresolved friction around compaction, stale/conflicting memory, instruction non-adherence, duplicate/ambiguous skill loading, versioning/locking, and cross-agent rule duplication.
+
+**Alternatives:** Expand CoderSteroids with many new specialized skills, fork Superpowers, or replace host-native memory/rules systems.
+
+**Consequence:** CoderSteroids should stay small and evidence-first, acting as a Codex-focused source of truth plus diagnostics/export layer rather than competing with broader host platforms or runtime memory databases.
