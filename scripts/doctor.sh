@@ -184,6 +184,7 @@ check_benchmarks() {
     "$ROOT/benchmarks/prompts/superpowers-field-battle.md"
     "$ROOT/benchmarks/prompts/prompt-briefing.md"
     "$ROOT/benchmarks/prompts/self-improvement-loop.md"
+    "$ROOT/benchmarks/prompts/tdd-code-review-gap-closing.md"
     "$ROOT/benchmarks/results/template.md"
   )
 

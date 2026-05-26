@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, skill ecosystem improvement research, and updated Superpowers repo/plugin gap analysis complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, and self-improvement loop implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers. The self-improvement benchmark passed one narrow loop by turning missing before/after evidence in self-improvement result artifacts into a runnable benchmark artifact check. Latest strategic position: continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer while selectively adapting Superpowers' TDD, review, worktree, and subagent rigor.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, skill ecosystem improvement research, and updated Superpowers repo/plugin gap analysis complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, self-improvement loop, pragmatic test-first development, and code review discipline implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers. The self-improvement benchmark passed one narrow loop by turning missing before/after evidence in self-improvement result artifacts into a runnable benchmark artifact check. Latest strategic position: continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer while selectively adapting Superpowers' TDD, review, worktree, and subagent rigor.
 
 ## Milestones
 
@@ -45,6 +45,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add self-improvement loop benchmark and skill.
 - [x] Run the self-improvement benchmark against a real recent gap.
 - [x] Run updated Superpowers repository/plugin/methodology gap analysis.
+- [x] Add pragmatic TDD/code-review gap-closing path.
 
 ## Deferred Phases
 
@@ -69,7 +70,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Self-improvement must be evidence-backed: choose one gap, implement one scoped change, verify, and record before/after behavior.
 - Self-improvement benchmark results must include gap, change, expected behavior, before evidence, after evidence, and an explicit verdict; the benchmark artifact checker enforces this shape.
 - CoderSteroids should selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas, but should not copy Superpowers' full breadth or always-on rigidity.
+- Test-first and code-review workflows are now structurally implemented, but still need a live benchmark run before claiming field parity with Superpowers.
 
 ## Next Action
 
-Add a pragmatic CoderSteroids TDD/code-review gap-closing path, then continue with the Electron `bench:chat-render` harness.
+Run the TDD/code-review gap-closing benchmark, then continue with the Electron `bench:chat-render` harness.

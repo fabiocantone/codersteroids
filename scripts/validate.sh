@@ -40,6 +40,7 @@ required_files=(
   "$ROOT/benchmarks/prompts/superpowers-field-battle.md"
   "$ROOT/benchmarks/prompts/prompt-briefing.md"
   "$ROOT/benchmarks/prompts/self-improvement-loop.md"
+  "$ROOT/benchmarks/prompts/tdd-code-review-gap-closing.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -54,6 +55,8 @@ required_skills=(
   recommendation-verification
   prompt-briefing
   self-improvement-loop
+  test-first-development
+  code-review-discipline
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner

@@ -68,9 +68,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran an updated Superpowers repository/plugin/methodology gap analysis using local CoderSteroids memory, installed CoderSteroids files, active curated Superpowers `5.1.0` cache, older full local Superpowers checkout `5.0.7`, and live GitHub API/web checks for `obra/superpowers`. Saved `benchmarks/results/2026-05-26-superpowers-repo-plugin-gap-analysis.md`. Live Superpowers facts checked: 207,643 stars, 18,496 forks, latest release `v5.1.0` published 2026-05-04, main at `f2cbfbe`, 140 open issues, 142 open PRs, GitHub search results complete and not rate-limited. Verdict: continue CoderSteroids as a Codex-first evidence/continuity/field-diagnosis/memory hygiene layer, but close TDD, code review, worktree/branch lifecycle, subagent execution, benchmark automation, and small-task overhead gaps.
 
+2026-05-26: Added `test-first-development` and `code-review-discipline` as pragmatic gap-closing skills after the updated Superpowers comparison. Added `benchmarks/prompts/tdd-code-review-gap-closing.md` to test failing-test evidence plus grounded review evidence. These are structurally implemented but not yet field-validated.
+
 ## Next Action
 
-Add a pragmatic CoderSteroids TDD/code-review gap-closing path, then continue with `bench:chat-render` in `local-first-personal-assistant`.
+Run the TDD/code-review gap-closing benchmark, then continue with `bench:chat-render` in `local-first-personal-assistant`.
 
 ## Risks
 
@@ -78,3 +80,4 @@ Add a pragmatic CoderSteroids TDD/code-review gap-closing path, then continue wi
 - Skill behavior needs live agent testing; static validation only checks structure.
 - Benchmark artifact checks validate required result shape, not the factual truth of manually recorded evidence.
 - CoderSteroids remains weaker than Superpowers for broad software-development workflow breadth: TDD, code review, worktrees, branch finishing, subagent execution, multi-harness packaging, and public adoption.
+- New TDD/code-review skills are structural until benchmarked on a real code change.

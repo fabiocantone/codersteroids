@@ -34,6 +34,8 @@ Before any non-trivial coding task:
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
 - Short ambiguous request, prompt rewrite, Claude/Codex handoff, subagent task brief, or approval-before-execution prompt: use `prompt-briefing`.
 - Self-improvement, benchmark gap closure, methodology change, or plugin behavior evaluation: use `self-improvement-loop`.
+- Testable behavior change, bugfix, regression fix, or refactor with observable behavior: use `test-first-development`.
+- Requesting review, receiving review feedback, evaluating review suggestions, or deciding readiness after implementation: use `code-review-discipline`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Real-code behavior analysis, performance issue, architecture tradeoff, or production bug: use `field-engineering-depth`.
 - Runtime diagnosis, performance issue, flaky behavior, or production bug: use `observability-logging`.
@@ -52,7 +54,9 @@ Before any non-trivial coding task:
 - Do not stop field analysis at the first plausible cause; map the local flow, check secondary bottlenecks, and define falsification checks.
 - Do not treat runtime behavior as proven without logs, metrics, traces, profiles, benchmark reports, or an explicit instrumentation plan.
 - Do not implement non-trivial work without a plan.
+- Do not implement a testable behavior change without a failing test first, unless the skip reason and substitute evidence are explicit.
 - Do not execute broad ambiguous work before expanding the request into an approved or internally recorded prompt brief.
+- Do not accept review feedback blindly; verify it against the codebase and recorded decisions.
 - Do not claim success without fresh verification.
 - Do not leave roadmap or wiki stale after structural or decision-level changes.
 - Do not rely on chat history when a project memory artifact exists.

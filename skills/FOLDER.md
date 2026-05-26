@@ -12,6 +12,8 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 - `recommendation-verification/SKILL.md`: verified and filtered recommendations.
 - `prompt-briefing/SKILL.md`: convert short user briefs into execution-ready prompts with assumptions, missing context, and approval gates.
 - `self-improvement-loop/SKILL.md`: evidence-backed methodology improvement loop with before/after checks.
+- `test-first-development/SKILL.md`: pragmatic red/green/refactor discipline for testable behavior changes.
+- `code-review-discipline/SKILL.md`: request and receive review with severity, evidence, and technical verification.
 - `skill-lifecycle-doctor/SKILL.md`: install, cache, manifest, and skill lifecycle diagnostics.
 - `memory-hygiene-audit/SKILL.md`: roadmap/wiki/source/ledger quality diagnostics.
 - `benchmark-runner/SKILL.md`: repeatable benchmark result scaffolding and recording workflow.

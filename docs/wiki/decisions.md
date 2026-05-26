@@ -235,3 +235,13 @@
 **Alternatives:** Stop CoderSteroids, fork/copy Superpowers wholesale, or keep CoderSteroids narrow without closing broad workflow gaps.
 
 **Consequence:** Selectively adapt Superpowers' TDD, code review, worktree/branch lifecycle, and subagent orchestration ideas. Do not copy its full breadth, visual companion, or always-on skill rigidity. Preserve CoderSteroids' evidence/memory/diagnostics niche and reduce small-task overhead.
+
+## 2026-05-26: Add Pragmatic TDD And Review Skills
+
+**Decision:** Add `test-first-development` and `code-review-discipline` as lightweight CoderSteroids adaptations of Superpowers' TDD and review strengths.
+
+**Context:** The updated Superpowers gap analysis found CoderSteroids weaker in broad software-development workflow, especially TDD and review. Copying Superpowers wholesale would dilute CoderSteroids' niche, but leaving these gaps open would keep CoderSteroids weak on implementation quality.
+
+**Alternatives:** Copy Superpowers' strict TDD/review skills, ignore the gap, or wait for a full subagent review runner.
+
+**Consequence:** CoderSteroids now routes testable behavior changes through a pragmatic failing-test-first workflow and review interactions through a severity/evidence-based review workflow. These skills need a live benchmark before claiming parity.
