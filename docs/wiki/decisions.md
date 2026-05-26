@@ -186,6 +186,16 @@
 
 **Consequence:** Future methodology changes should be tied to an artifact proving the gap, an expected behavior improvement, fresh validation, and a saved verdict of improved, inconclusive, or worse.
 
+## 2026-05-26: Validate Self Improvement Result Shape
+
+**Decision:** Make `scripts/check-benchmark-artifacts.sh` reject malformed self-improvement benchmark results.
+
+**Context:** The self-improvement benchmark says not to claim improvement from static validation alone and requires before/after evidence. Before this change, the benchmark artifact checker only verified required prompt/template files, so a result file that merely said `Improved` could pass artifact checks.
+
+**Alternatives:** Leave self-improvement evidence as manual review only, or build a larger benchmark runner before adding any guardrail.
+
+**Consequence:** Self-improvement results now need gap, change, expected behavior, before evidence, after evidence, and an explicit verdict. This still cannot prove the truth of the evidence, but it prevents evidence-free result artifacts from passing the standard benchmark artifact check.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

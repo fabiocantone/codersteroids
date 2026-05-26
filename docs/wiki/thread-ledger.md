@@ -281,3 +281,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after cache sync.
 
 **Next:** Run the self-improvement benchmark against a real recent gap.
+
+## 2026-05-26: Self Improvement Benchmark Run
+
+**Intent:** Run the self-improvement-loop benchmark using only project artifacts and plugin health checks as context.
+
+**Completed:** Loaded roadmap, session state, thread ledger, decisions, benchmark results, doctor output, and memory-audit output first. Selected the gap that self-improvement results could pass artifact checks without before/after evidence. Updated `scripts/check-benchmark-artifacts.sh` to validate self-improvement result shape. Recorded before/after behavior evidence in `benchmarks/results/2026-05-26-self-improvement-loop.md`.
+
+**Changed:** `scripts/check-benchmark-artifacts.sh`, `benchmarks/results/2026-05-26-self-improvement-loop.md`, `docs/roadmap.md`, `docs/wiki/session-state.md`, `docs/wiki/decisions.md`, and this ledger.
+
+**Decisions:** Self-improvement benchmark results must include gap, change, expected behavior, before evidence, after evidence, and explicit verdict to pass artifact checks.
+
+**Verification:** Before the change, a malformed self-improvement result passed `check-benchmark-artifacts.sh`; after the change, the same malformed result failed with a missing `## Gap` error. Full verification suite was run after memory updates.
+
+**Next:** Continue with the Electron `bench:chat-render` harness.

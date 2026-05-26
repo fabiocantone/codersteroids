@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, and self-improvement loop implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, and self-improvement loop implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers. The self-improvement benchmark passed one narrow loop by turning missing before/after evidence in self-improvement result artifacts into a runnable benchmark artifact check.
 
 ## Milestones
 
@@ -43,6 +43,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add observability/logging gate for runtime diagnosis.
 - [x] Add prompt briefing for short request to execution-prompt workflows.
 - [x] Add self-improvement loop benchmark and skill.
+- [x] Run the self-improvement benchmark against a real recent gap.
 
 ## Deferred Phases
 
@@ -65,7 +66,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - `/Users/fabio/Projects/local-first-personal-assistant` is no longer a valid Tauri rendering test target because the app is moving to Electron. Use it for Electron rendering validation only; use a separate Tauri fixture or historical result for Tauri-specific comparisons.
 - Short user briefs for broad work should be compiled into an execution prompt with assumptions, missing context, and approval before running in Codex, Claude, subagents, or benchmark sessions.
 - Self-improvement must be evidence-backed: choose one gap, implement one scoped change, verify, and record before/after behavior.
+- Self-improvement benchmark results must include gap, change, expected behavior, before evidence, after evidence, and an explicit verdict; the benchmark artifact checker enforces this shape.
 
 ## Next Action
 
-Run the self-improvement benchmark on a real recent gap, then continue with the Electron `bench:chat-render` harness.
+Continue with the Electron `bench:chat-render` harness.

@@ -64,12 +64,14 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `self-improvement-loop` and `benchmarks/prompts/self-improvement-loop.md` to test whether CoderSteroids can improve itself from evidence. The loop requires a concrete gap, source artifact, scoped change, expected behavior improvement, verification, before/after evidence, and a verdict.
 
+2026-05-26: Ran the self-improvement benchmark against a concrete benchmark-artifact gap. Before the change, a malformed self-improvement result containing only metadata and `Improved` passed `scripts/check-benchmark-artifacts.sh`. Updated `scripts/check-benchmark-artifacts.sh` to require self-improvement result sections for gap, change, expected behavior, before evidence, after evidence, and verdict. The same malformed artifact now fails with a missing `## Gap` error. Saved `benchmarks/results/2026-05-26-self-improvement-loop.md`.
+
 ## Next Action
 
-Run the self-improvement benchmark against a recent real gap. If it passes, continue with `bench:chat-render` in `local-first-personal-assistant`.
+Continue with `bench:chat-render` in `local-first-personal-assistant`.
 
 ## Risks
 
 - Context7 may not be configured in the host environment.
 - Skill behavior needs live agent testing; static validation only checks structure.
-- Superpowers comparison is still pending.
+- Benchmark artifact checks validate required result shape, not the factual truth of manually recorded evidence.
