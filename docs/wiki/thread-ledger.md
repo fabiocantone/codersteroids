@@ -43,3 +43,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
 
 **Next:** Run the three benchmark prompts and full recommendation-verification test.
+
+## 2026-05-26: Full Recommendation Verification Run
+
+**Intent:** Test whether CoderSteroids filters naming recommendations before presenting them when GitHub availability is required.
+
+**Completed:** Ran a fresh naming prompt requiring GitHub account/org availability and no exact repo-name conflicts. The assistant returned 10 verified names and excluded unverified options. Independent API verification confirmed the results.
+
+**Changed:** `benchmarks/results/2026-05-26-recommendation-verification-full.md`, `docs/roadmap.md`, `docs/wiki/session-state.md`, and `docs/wiki/thread-ledger.md`.
+
+**Decisions:** Treat this as a pass for `recommendation-verification` behavior on GitHub account/org plus exact repo-name checks.
+
+**Verification:** Independent GitHub API checks confirmed all 10 suggested names returned account/org 404 and no exact repo-name match.
+
+**Next:** Run the three main benchmark prompts and then compare against Superpowers.

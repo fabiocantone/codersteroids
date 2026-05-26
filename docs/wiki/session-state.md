@@ -18,9 +18,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran the chat-continuity benchmark in a fresh Codex chat using the prompt in `benchmarks/prompts/chat-continuity.md`. The run passed the project-memory recovery criteria and saved `benchmarks/results/2026-05-26-chat-continuity.md`. The repository has `skills/chat-continuity/SKILL.md`; the cached installed plugin initially did not expose that skill, so the local cache at `/Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` was refreshed from the repository and verified with `diff -qr`.
 
+2026-05-26: Ran the full recommendation-verification test with GitHub account/org availability and exact repository-name conflict checks. The assistant returned only verified names and stated API limitations. Independent verification confirmed all 10 names returned account/org 404 and no exact repo-name matches; see `benchmarks/results/2026-05-26-recommendation-verification-full.md`.
+
 ## Next Action
 
-Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
+Run the three benchmark prompts in `benchmarks/prompts/` and save scorecards under `benchmarks/results/`, then compare results against Superpowers.
 
 ## Risks
 
