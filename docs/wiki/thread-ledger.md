@@ -71,3 +71,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after adding the skill and benchmark result files.
 
 **Next:** Run validation and compare CoderSteroids results against Superpowers.
+
+## 2026-05-26: Similar Project Research Benchmark
+
+**Intent:** Validate whether CoderSteroids can research similar projects and avoid overclaiming uniqueness.
+
+**Completed:** Verified GitHub metadata for Superpowers, ADD, SpecMem, Jumbo, AGENTS.md, and CoderSteroids; recorded a benchmark result with positioning and limitations.
+
+**Changed:** `benchmarks/results/2026-05-26-web-similar-project-research.md`, `docs/wiki/sources.md`, `docs/wiki/session-state.md`, and `docs/wiki/thread-ledger.md`.
+
+**Decisions:** Treat CoderSteroids as a focused Codex-first composition, not a category-unique agent methodology.
+
+**Verification:** GitHub API checks confirmed metadata; `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after file updates.
+
+**Next:** Run validation, then complete the Superpowers comparison.

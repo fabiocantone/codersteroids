@@ -57,3 +57,11 @@
 **Alternatives:** Fold this into `context7-research` or leave it as ad hoc behavior.
 
 **Consequence:** External research now has a dedicated workflow that covers official docs, GitHub similar-project search, search engines, and Playwright/browser inspection with dated limitations.
+
+## 2026-05-26: Position CoderSteroids As A Focused Composition, Not A New Category
+
+**Decision:** Do not claim CoderSteroids is category-unique after similar-project research.
+
+**Context:** Current GitHub/web checks found active overlaps: Superpowers and ADD cover agent methodology, SpecMem/Jumbo/agentmemory cover project memory and context, AGENTS.md covers portable agent instructions, and skill libraries/adaptations cover reusable agent workflows.
+
+**Consequence:** Position CoderSteroids around its narrower thesis: a Codex plugin that combines lightweight skills, living roadmap, Markdown LLM Wiki memory, current-doc verification, and benchmark gates for long-running projects.

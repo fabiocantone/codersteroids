@@ -22,6 +22,10 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `web-and-github-research` to make browser/search/GitHub-similar-project research explicit. Recorded the three original benchmark scenarios as result files and updated source ledger with Playwright and Google Programmable Search docs.
 
+2026-05-26: Ran live similar-project research for CoderSteroids using web search and GitHub API checks. Exact-name GitHub search found only `fabiocantone/codersteroids`, but adjacent projects are active: Superpowers, ADD, SpecMem, Jumbo, agentmemory, AGENTS.md, and multiple skill-library/port projects. Conclusion: CoderSteroids is meaningfully different only as a small Codex-focused composition around roadmap/wiki/current-doc verification, not as a wholly novel category.
+
+2026-05-26: Independently verified similar-project metadata with GitHub API and recorded `benchmarks/results/2026-05-26-web-similar-project-research.md`. Notable confirmed values: `obra/superpowers` had 207090 stars and release `v5.1.0`; `agentsmd/agents.md` had 21695 stars; `fabiocantone/codersteroids` had 0 stars/forks and no release/license reported by API.
+
 ## Next Action
 
 Run the Superpowers comparison against the recorded benchmark results and decide whether to expand CoderSteroids beyond MVP.
