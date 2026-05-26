@@ -99,4 +99,29 @@ while IFS= read -r -d '' file; do
   }
 done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
 
+while IFS= read -r -d '' file; do
+  if ! grep -q 'benchmarks/prompts/worktree-branch-lifecycle.md' "$file" &&
+    [[ "$(basename "$file")" != *worktree-branch-lifecycle* ]]; then
+    continue
+  fi
+
+  require_heading "$file" "## Workspace Lifecycle"
+  require_heading "$file" "## Dirty State Evidence"
+  require_heading "$file" "## Isolation Decision"
+  require_heading "$file" "## Verification Evidence"
+  require_heading "$file" "## Memory Docs Evidence"
+  require_heading "$file" "## Finish Decision"
+  require_heading "$file" "## Verdict"
+
+  require_section_content "$file" "## Workspace Lifecycle"
+  require_section_content "$file" "## Dirty State Evidence"
+  require_section_content "$file" "## Verification Evidence"
+  require_section_content "$file" "## Finish Decision"
+
+  grep -Eq '^(Improved|Inconclusive|Worse)([[:space:]].*)?$' "$file" || {
+    echo "Worktree/branch lifecycle result must record a verdict of Improved, Inconclusive, or Worse: $file"
+    exit 1
+  }
+done < <(find "$ROOT/benchmarks/results" -maxdepth 1 -type f -name '*.md' ! -name template.md -print0)
+
 echo "Benchmark artifacts present."

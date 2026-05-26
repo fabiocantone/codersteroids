@@ -74,9 +74,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `branch-workspace-lifecycle` to close the Superpowers worktree/branch-finishing gap at the instruction level. The skill requires branch/dirty-state inspection before risky work, explicit isolation decisions, no destructive cleanup or remote mutation without user approval, and a finish report with verification plus memory/docs state.
 
+2026-05-26: Ran the branch/workspace lifecycle benchmark on the clean-worktree finish path. Before the checker change, a malformed worktree/branch lifecycle result containing only metadata and `Improved` passed; after the change, it fails with missing `## Workspace Lifecycle`. Saved `benchmarks/results/2026-05-26-worktree-branch-lifecycle.md`. Remaining limitation: still needs a dirty-worktree preservation benchmark.
+
 ## Next Action
 
-Run the branch/workspace lifecycle benchmark, then continue with `bench:chat-render` in `local-first-personal-assistant`.
+Continue with `bench:chat-render` in `local-first-personal-assistant`.
 
 ## Risks
 
@@ -85,4 +87,4 @@ Run the branch/workspace lifecycle benchmark, then continue with `bench:chat-ren
 - Benchmark artifact checks validate required result shape, not the factual truth of manually recorded evidence.
 - CoderSteroids remains weaker than Superpowers for broad software-development workflow breadth: TDD, code review, worktrees, branch finishing, subagent execution, multi-harness packaging, and public adoption.
 - New TDD/code-review skills are structural until benchmarked on a real code change.
-- New branch/workspace lifecycle skill is structural until benchmarked on a real dirty-worktree or branch-finish scenario.
+- Branch/workspace lifecycle is benchmarked for a clean branch-finish path, but not yet for dirty-worktree preservation.

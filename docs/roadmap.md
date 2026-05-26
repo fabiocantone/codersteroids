@@ -72,8 +72,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Self-improvement benchmark results must include gap, change, expected behavior, before evidence, after evidence, and an explicit verdict; the benchmark artifact checker enforces this shape.
 - CoderSteroids should selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas, but should not copy Superpowers' full breadth or always-on rigidity.
 - Test-first and code-review workflows are now structurally implemented, but still need a live benchmark run before claiming field parity with Superpowers.
-- Branch/workspace lifecycle is now structurally implemented, but still needs a live benchmark run before claiming parity with Superpowers' worktree/branch finishing discipline.
+- Branch/workspace lifecycle is implemented and benchmarked on a clean-worktree finish path; a dirty-worktree preservation scenario still needs a future benchmark before claiming full parity with Superpowers' worktree/branch finishing discipline.
 
 ## Next Action
 
-Run the branch/workspace lifecycle benchmark, then continue with the Electron `bench:chat-render` harness.
+Continue with the Electron `bench:chat-render` harness.
