@@ -32,6 +32,7 @@ required_files=(
   "$ROOT/benchmarks/prompts/multi-step-bugfix.md"
   "$ROOT/benchmarks/prompts/interrupted-session-recovery.md"
   "$ROOT/benchmarks/prompts/chat-continuity.md"
+  "$ROOT/benchmarks/prompts/web-similar-project-research.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -42,6 +43,7 @@ done
 required_skills=(
   using-methodology
   context7-research
+  web-and-github-research
   recommendation-verification
   roadmap-first-planning
   llm-wiki-memory

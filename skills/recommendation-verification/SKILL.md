@@ -22,6 +22,7 @@ Before suggesting options:
 ## Examples
 
 - Product or plugin name: check GitHub account/org, exact repo conflicts when relevant, package registry, and domain if requested.
+- Project idea: use `web-and-github-research` to find similar repos and current alternatives before recommending a direction.
 - Library choice: check maintenance, version compatibility, official docs, and project fit.
 - API recommendation: check current official docs or Context7.
 - Service choice: check current pricing/status if it affects the recommendation.
@@ -38,4 +39,3 @@ For each recommended option, include:
 ## Stop Conditions
 
 Do not present unverified options as recommendations when verification was requested or obviously necessary. If rate limited or blocked, say so and recommend only the verified subset.
-

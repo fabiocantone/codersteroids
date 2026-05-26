@@ -47,3 +47,13 @@
 **Alternatives:** Rely only on `session-state.md`, or ask the user to summarize manually.
 
 **Consequence:** Each meaningful chat must leave a concise durable handoff so future chats can resume from project memory, not conversation history.
+
+## 2026-05-26: Add Web And Similar Project Research
+
+**Decision:** Add `web-and-github-research`.
+
+**Context:** The user wants CoderSteroids to research with browser/search tools, verify dates and versions, and check GitHub for similar existing projects before developing a new idea.
+
+**Alternatives:** Fold this into `context7-research` or leave it as ad hoc behavior.
+
+**Consequence:** External research now has a dedicated workflow that covers official docs, GitHub similar-project search, search engines, and Playwright/browser inspection with dated limitations.

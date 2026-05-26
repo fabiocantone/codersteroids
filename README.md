@@ -8,6 +8,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 
 - `using-methodology`
 - `context7-research`
+- `web-and-github-research`
 - `recommendation-verification`
 - `roadmap-first-planning`
 - `llm-wiki-memory`

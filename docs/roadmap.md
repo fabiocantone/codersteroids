@@ -25,8 +25,9 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - [x] Add chat-continuity skill and thread ledger.
 - [x] Run chat-continuity benchmark in a fresh Codex chat.
 - [x] Refresh or reinstall the local Codex plugin cache so installed skills include `chat-continuity`.
-- [ ] Run the three benchmark scenarios from `docs/specs/plugin-methodology-validation.md`.
+- [x] Run the three benchmark scenarios from `docs/specs/plugin-methodology-validation.md`.
 - [x] Run full recommendation-verification test with GitHub account/org checks.
+- [x] Add web/browser/GitHub similar-project research workflow.
 - [ ] Compare results against Superpowers.
 
 ## Deferred Phases
@@ -48,4 +49,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 
 ## Next Action
 
-Run the three benchmark prompts in `benchmarks/prompts/` and save scorecards under `benchmarks/results/`, then compare results against Superpowers.
+Compare recorded CoderSteroids benchmark results against Superpowers and decide whether to expand beyond MVP.

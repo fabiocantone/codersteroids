@@ -57,3 +57,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** Independent GitHub API checks confirmed all 10 suggested names returned account/org 404 and no exact repo-name match.
 
 **Next:** Run the three main benchmark prompts and then compare against Superpowers.
+
+## 2026-05-26: Web Research Skill And Benchmark Result Set
+
+**Intent:** Complete the three pending benchmark result files and add explicit web/browser/GitHub similar-project research behavior.
+
+**Completed:** Added `web-and-github-research`, a benchmark prompt for similar-project research, and result files for external-library research, multi-step bugfix, and interrupted-session recovery.
+
+**Changed:** `skills/web-and-github-research/SKILL.md`, benchmark prompts/results, source ledger, decisions, session state, and validation script.
+
+**Decisions:** Use Context7 and official docs first; use GitHub search for similar projects; use Google/search engines only when configured; use Playwright/browser automation when rendering or interaction matters.
+
+**Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after adding the skill and benchmark result files.
+
+**Next:** Run validation and compare CoderSteroids results against Superpowers.

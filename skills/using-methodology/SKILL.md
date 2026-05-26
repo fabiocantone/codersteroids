@@ -30,6 +30,7 @@ Before any non-trivial coding task:
 ## Skill Routing
 
 - External library/API/configuration: use `context7-research`.
+- Current web research, Google/search-engine use, browser inspection, or similar-project discovery: use `web-and-github-research`.
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Existing project context or durable decision: use `llm-wiki-memory`.

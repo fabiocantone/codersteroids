@@ -20,12 +20,14 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran the full recommendation-verification test with GitHub account/org availability and exact repository-name conflict checks. The assistant returned only verified names and stated API limitations. Independent verification confirmed all 10 names returned account/org 404 and no exact repo-name matches; see `benchmarks/results/2026-05-26-recommendation-verification-full.md`.
 
+2026-05-26: Added `web-and-github-research` to make browser/search/GitHub-similar-project research explicit. Recorded the three original benchmark scenarios as result files and updated source ledger with Playwright and Google Programmable Search docs.
+
 ## Next Action
 
-Run the three benchmark prompts in `benchmarks/prompts/` and save scorecards under `benchmarks/results/`, then compare results against Superpowers.
+Run the Superpowers comparison against the recorded benchmark results and decide whether to expand CoderSteroids beyond MVP.
 
 ## Risks
 
 - Context7 may not be configured in the host environment.
 - Skill behavior needs live agent testing; static validation only checks structure.
-- Three main benchmark results and Superpowers comparison are not populated yet.
+- Superpowers comparison is still pending.

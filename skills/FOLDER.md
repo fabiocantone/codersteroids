@@ -8,6 +8,7 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 
 - `using-methodology/SKILL.md`: bootstrap and skill routing.
 - `context7-research/SKILL.md`: current documentation and source ledger discipline.
+- `web-and-github-research/SKILL.md`: web, browser, Google/search-engine, and similar-project research.
 - `recommendation-verification/SKILL.md`: verified and filtered recommendations.
 - `roadmap-first-planning/SKILL.md`: roadmap and plan gates.
 - `llm-wiki-memory/SKILL.md`: Markdown wiki read/write rules.
