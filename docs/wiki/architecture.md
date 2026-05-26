@@ -13,6 +13,7 @@ The plugin is a Codex plugin with:
 - `scripts/doctor.sh`: plugin install, cache, manifest, and lifecycle diagnostics.
 - `scripts/memory-audit.sh`: wiki, source ledger, decision, and handoff hygiene diagnostics.
 - `scripts/benchmark-runner.sh`: benchmark prompt listing and result scaffold creation.
+- `scripts/check-field-depth-report.sh`: field-depth report structure validation.
 
 ## Skill Responsibilities
 
@@ -23,6 +24,7 @@ The plugin is a Codex plugin with:
 - `skill-lifecycle-doctor`: plugin install/cache/manifest/config diagnostics.
 - `memory-hygiene-audit`: roadmap/wiki/source/ledger quality checks.
 - `benchmark-runner`: benchmark result scaffold and recording workflow.
+- `field-engineering-depth`: real-code analysis depth gate for local flow, secondary bottlenecks, falsification checks, implementation libraries, and affected verification.
 - `roadmap-first-planning`: roadmap and plan gates.
 - `llm-wiki-memory`: project memory read/write rules.
 - `chat-continuity`: cross-chat handoff and resume behavior.

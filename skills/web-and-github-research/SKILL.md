@@ -39,6 +39,19 @@ When recommending languages, frameworks, runtimes, UI stacks, storage layers, de
 
 Example: for a Tauri AI chat app, check Tauri webview versions and platform-specific WebView/WKWebView/WebKitGTK behavior, then search Tauri issues for rendering/performance problems before recommending Tauri, Electron, native, or hybrid alternatives.
 
+## Implementation Library Research
+
+When a recommendation implies a concrete library or implementation package, compare realistic options before choosing:
+
+- Official docs and current version/activity.
+- License and commercial limitations.
+- Known issues, open bugs, and platform constraints.
+- Fit with local architecture and code style.
+- Migration effort and testability.
+- At least one fallback option.
+
+Example: before recommending chat virtualization, compare TanStack Virtual, React Virtuoso, and a custom virtualizer. Record whether chat-specific functionality is open-source or commercial, and what dynamic-height or scroll-anchoring limitations apply.
+
 ## Date And Version Gate
 
 Every research summary must include:
@@ -48,6 +61,7 @@ Every research summary must include:
 - Version or recency indicator when available.
 - What was confirmed.
 - Known issues and mitigations checked when recommending a stack.
+- Implementation libraries compared when recommending a concrete package.
 - What remains unverified.
 
 ## Playwright Gate
@@ -73,6 +87,7 @@ Do not use Playwright just to read simple static docs.
 **Similar projects:** ...
 **Known issues:** ...
 **Mitigations:** ...
+**Implementation options:** ...
 **Limitations:** ...
 **Recommendation:** ...
 ```

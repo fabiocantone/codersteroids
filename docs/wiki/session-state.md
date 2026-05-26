@@ -46,9 +46,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Recorded first Superpowers field battle on `/Users/fabio/Projects/local-first-personal-assistant` Tauri chat rendering performance. Result: numeric tie, but Superpowers wins technical-analysis depth. CoderSteroids wins durable memory and handoff. Next gap to close: add a field engineering depth gate requiring broader local flow inspection, secondary bottleneck pass, implementation-library research, and affected-slice verification.
 
+2026-05-26: Implemented `field-engineering-depth` and `scripts/check-field-depth-report.sh`. The gate requires Local Flow Map, Primary Hypotheses, Secondary Bottlenecks, Implementation Library Research, Falsification Checks, Affected Verification Matrix, Decision And Next Step, and Durable Memory Updates. Updated routing, debugging, web research, Superpowers field battle prompt/spec, roadmap, and validation.
+
 ## Next Action
 
-Add a field engineering depth gate so CoderSteroids can beat Superpowers in the next field battle.
+Run the Tauri chat rendering field battle again with `field-engineering-depth`, then score whether CoderSteroids beats Superpowers on technical-analysis depth.
 
 ## Risks
 

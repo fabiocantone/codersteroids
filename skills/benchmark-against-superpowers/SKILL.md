@@ -38,6 +38,7 @@ Rate each run from 0-2:
 - Known issues and source limitations handled.
 - Install/cache/memory health checked.
 - Final implementation quality.
+- Field engineering depth: local flow map, secondary bottlenecks, falsification checks, implementation-library research, and affected verification matrix.
 - Overhead acceptable.
 
 ## Go/No-Go

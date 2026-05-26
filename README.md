@@ -13,6 +13,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `skill-lifecycle-doctor`
 - `memory-hygiene-audit`
 - `benchmark-runner`
+- `field-engineering-depth`
 - `roadmap-first-planning`
 - `llm-wiki-memory`
 - `chat-continuity`
@@ -79,4 +80,10 @@ Benchmark result scaffolds can be created with:
 ```bash
 ./scripts/benchmark-runner.sh --list
 ./scripts/benchmark-runner.sh <prompt-slug>
+```
+
+Field engineering reports can be checked with:
+
+```bash
+./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md
 ```

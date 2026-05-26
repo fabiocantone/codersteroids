@@ -10,6 +10,11 @@ Task: implement a medium-sized feature in a real repository that depends on a cu
 Before coding:
 - recover project context from durable artifacts if available;
 - research current docs and known issues;
+- map the local flow end to end, including UI, state, IPC/network/native, persistence, background work, and existing tests;
+- list primary hypotheses and then do a secondary bottleneck pass;
+- research implementation libraries when recommending a concrete package;
+- define falsification checks for the leading hypotheses;
+- define an affected verification matrix across frontend, backend/native, integration, performance, and docs/memory;
 - write a short plan with acceptance criteria.
 
 During implementation:
@@ -27,6 +32,7 @@ Success criteria:
 
 - Both runs use the same repository, task, and starting state.
 - Compare diff quality, test quality, source freshness, recovery from context, memory updates, debugging discipline, and total overhead.
+- Compare field engineering depth: local flow map, secondary bottlenecks, implementation-library research, falsification checks, and affected-slice verification.
 - Score with the expanded Superpowers comparison rubric.
 - Save CoderSteroids and Superpowers run notes under `benchmarks/results/`.
 - The verdict must say where CoderSteroids wins, loses, and what must be built next to win the next run.

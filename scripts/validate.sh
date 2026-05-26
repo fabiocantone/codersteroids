@@ -19,6 +19,8 @@ required_files=(
   "$ROOT/docs/roadmap.md"
   "$ROOT/docs/context7-setup.md"
   "$ROOT/docs/specs/plugin-methodology-validation.md"
+  "$ROOT/docs/specs/superpowers-field-benchmark.md"
+  "$ROOT/docs/examples/field-depth-report-template.md"
   "$ROOT/docs/wiki/index.md"
   "$ROOT/docs/wiki/session-state.md"
   "$ROOT/docs/wiki/thread-ledger.md"
@@ -51,6 +53,7 @@ required_skills=(
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner
+  field-engineering-depth
   roadmap-first-planning
   llm-wiki-memory
   chat-continuity
@@ -90,6 +93,11 @@ test -x "$ROOT/scripts/memory-audit.sh" || {
 
 test -x "$ROOT/scripts/benchmark-runner.sh" || {
   echo "Benchmark runner script is not executable: $ROOT/scripts/benchmark-runner.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/check-field-depth-report.sh" || {
+  echo "Field depth checker is not executable: $ROOT/scripts/check-field-depth-report.sh"
   exit 1
 }
 

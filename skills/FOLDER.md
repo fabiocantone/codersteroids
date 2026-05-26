@@ -13,6 +13,7 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 - `skill-lifecycle-doctor/SKILL.md`: install, cache, manifest, and skill lifecycle diagnostics.
 - `memory-hygiene-audit/SKILL.md`: roadmap/wiki/source/ledger quality diagnostics.
 - `benchmark-runner/SKILL.md`: repeatable benchmark result scaffolding and recording workflow.
+- `field-engineering-depth/SKILL.md`: local flow, secondary bottleneck, falsification, implementation-library, and verification-depth gate.
 - `roadmap-first-planning/SKILL.md`: roadmap and plan gates.
 - `llm-wiki-memory/SKILL.md`: Markdown wiki read/write rules.
 - `chat-continuity/SKILL.md`: handoff continuity across Codex chats.

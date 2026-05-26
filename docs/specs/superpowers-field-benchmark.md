@@ -32,6 +32,7 @@ Superpowers currently has stronger breadth in TDD, review workflows, worktrees, 
 - Current docs and known issues checked before implementation.
 - Quality of written plan and acceptance criteria.
 - Test or verification strength.
+- Field engineering depth: local flow map, secondary bottlenecks, falsification checks, implementation-library research, affected verification matrix.
 - Cross-chat continuity.
 - Decision/source reuse.
 - Memory and handoff quality.

@@ -169,3 +169,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed.
 
 **Next:** Add a field engineering depth gate.
+
+## 2026-05-26: Field Engineering Depth Gate
+
+**Intent:** Implement the gap-closing capability from the first Superpowers field battle.
+
+**Completed:** Added `field-engineering-depth`, `scripts/check-field-depth-report.sh`, and a report template. Updated method routing, systematic debugging, web research, Superpowers benchmark skill, field battle prompt/spec, validation, doctor benchmark checks, README, skills folder docs, architecture, roadmap, decisions, and session state.
+
+**Changed:** `skills/field-engineering-depth/SKILL.md`, `scripts/check-field-depth-report.sh`, `docs/examples/field-depth-report-template.md`, `docs/plans/2026-05-26-field-engineering-depth.md`, routing/research/debugging/benchmark skills, validation scripts, roadmap, wiki, and benchmark prompt/spec.
+
+**Decisions:** Field-critical analysis must include local flow map, primary hypotheses, secondary bottlenecks, implementation-library research, falsification checks, affected verification matrix, decision/next step, and durable memory updates.
+
+**Verification:** `./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md`, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
+
+**Next:** Run the Tauri chat rendering field battle again using the new gate.

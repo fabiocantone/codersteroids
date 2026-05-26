@@ -116,6 +116,16 @@
 
 **Consequence:** The next CoderSteroids capability should require broader local flow inspection, secondary bottleneck discovery, affected-slice verification, implementation-library research, and falsification checks while preserving durable memory updates.
 
+## 2026-05-26: Implement Field Engineering Depth Gate
+
+**Decision:** Add `field-engineering-depth` plus `scripts/check-field-depth-report.sh` as the required depth gate for real-code behavior analysis, performance issues, architecture tradeoffs, and production bugs.
+
+**Context:** The first Superpowers field battle showed that durable memory was not enough. To beat Superpowers, CoderSteroids must force broader local-flow inspection, secondary bottleneck discovery, implementation-library research, falsification checks, and affected-slice verification before recommending a fix.
+
+**Alternatives:** Only update `systematic-debugging`, rely on reviewer discipline, or wait for another field loss.
+
+**Consequence:** Future field reports must include specific required sections and can be structurally checked before being trusted. The Superpowers field battle prompt now measures this dimension directly.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.
