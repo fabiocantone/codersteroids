@@ -16,13 +16,14 @@ Use this skill to close the gap found in the first Superpowers field battle: Cod
 For non-trivial real-code analysis, performance work, architecture decisions, or production bugs, produce a field-depth report with these sections:
 
 1. `## Local Flow Map`
-2. `## Primary Hypotheses`
-3. `## Secondary Bottlenecks`
-4. `## Implementation Library Research`
-5. `## Falsification Checks`
-6. `## Affected Verification Matrix`
-7. `## Decision And Next Step`
-8. `## Durable Memory Updates`
+2. `## Observability And Logging Plan`
+3. `## Primary Hypotheses`
+4. `## Secondary Bottlenecks`
+5. `## Implementation Library Research`
+6. `## Falsification Checks`
+7. `## Affected Verification Matrix`
+8. `## Decision And Next Step`
+9. `## Durable Memory Updates`
 
 After drafting the report, validate it:
 
@@ -42,6 +43,18 @@ Trace the behavior beyond the obvious files:
 - Tests and diagnostics that already cover the flow.
 
 List concrete files/functions and what each contributes to the behavior.
+
+## Observability And Logging Plan
+
+Use `observability-logging` before ranking hypotheses. Identify existing logs, metrics, traces, profiles, benchmark reports, debug flags, and runtime IDs. If the signals needed to distinguish hypotheses do not exist, the next recommendation should include instrumentation before a risky fix.
+
+At minimum, state:
+
+- Existing signals checked.
+- Missing signals.
+- Minimal instrumentation needed.
+- Privacy/noise limits.
+- Whether missing observability blocks the conclusion.
 
 ## Primary Hypotheses
 
@@ -105,6 +118,7 @@ Verification must cover every affected slice, not only the edited language:
 Stop and say the analysis is incomplete when:
 
 - You cannot trace the local flow end to end.
+- The report lacks an observability/logging plan for runtime behavior.
 - The report has no secondary bottleneck pass.
 - Implementation options are recommended without current library research.
 - No falsification check exists for the leading hypothesis.
@@ -116,5 +130,6 @@ Before claiming the field analysis is ready:
 
 - Validate the report with `check-field-depth-report.sh`.
 - Run relevant fresh verification commands.
+- Prefer data from logs, metrics, traces, profiles, or benchmark reports over unmeasured guesses.
 - Update roadmap/wiki/thread ledger when the conclusion changes future work.
 - Record source links and limitations.

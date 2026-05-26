@@ -25,6 +25,7 @@ fi
 
 required_headings=(
   "## Local Flow Map"
+  "## Observability And Logging Plan"
   "## Primary Hypotheses"
   "## Secondary Bottlenecks"
   "## Implementation Library Research"
@@ -46,6 +47,12 @@ if grep -q '| Slice | Command or inspection | Proves | Status |' "$file"; then
   pass "verification matrix header present"
 else
   fail "verification matrix header missing"
+fi
+
+if grep -q '| Signal | Source | Proves | Gap | Action |' "$file"; then
+  pass "observability matrix header present"
+else
+  fail "observability matrix header missing"
 fi
 
 if grep -qi 'falsif' "$file"; then

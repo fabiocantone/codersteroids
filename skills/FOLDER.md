@@ -14,6 +14,7 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 - `memory-hygiene-audit/SKILL.md`: roadmap/wiki/source/ledger quality diagnostics.
 - `benchmark-runner/SKILL.md`: repeatable benchmark result scaffolding and recording workflow.
 - `field-engineering-depth/SKILL.md`: local flow, secondary bottleneck, falsification, implementation-library, and verification-depth gate.
+- `observability-logging/SKILL.md`: logs, metrics, traces, profiles, and instrumentation gate for runtime diagnosis.
 - `project-bootstrap/SKILL.md`: export lightweight CoderSteroids helpers into target repositories.
 - `roadmap-first-planning/SKILL.md`: roadmap and plan gates.
 - `llm-wiki-memory/SKILL.md`: Markdown wiki read/write rules.

@@ -9,6 +9,16 @@
 - Background work:
 - Existing tests/diagnostics:
 
+## Observability And Logging Plan
+
+| Signal | Source | Proves | Gap | Action |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+Privacy/noise limits:
+
+Minimum instrumentation before fix:
+
 ## Primary Hypotheses
 
 | Rank | Hypothesis | Evidence | Counter-evidence | First diagnostic |

@@ -34,6 +34,7 @@ Before any non-trivial coding task:
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Real-code behavior analysis, performance issue, architecture tradeoff, or production bug: use `field-engineering-depth`.
+- Runtime diagnosis, performance issue, flaky behavior, or production bug: use `observability-logging`.
 - Existing project context or durable decision: use `llm-wiki-memory`.
 - New chat, resumed work, or handoff across chats: use `chat-continuity`.
 - Structural code changes: use `coding-standards` and `folder-docs`.
@@ -47,6 +48,7 @@ Before any non-trivial coding task:
 - Do not suggest availability-dependent options without checking and filtering them.
 - Do not recommend a stack or runtime without checking known issues when the choice affects performance, rendering, deployment, security, or data durability.
 - Do not stop field analysis at the first plausible cause; map the local flow, check secondary bottlenecks, and define falsification checks.
+- Do not treat runtime behavior as proven without logs, metrics, traces, profiles, benchmark reports, or an explicit instrumentation plan.
 - Do not implement non-trivial work without a plan.
 - Do not claim success without fresh verification.
 - Do not leave roadmap or wiki stale after structural or decision-level changes.

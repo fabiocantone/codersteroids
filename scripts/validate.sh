@@ -54,6 +54,7 @@ required_skills=(
   memory-hygiene-audit
   benchmark-runner
   field-engineering-depth
+  observability-logging
   project-bootstrap
   roadmap-first-planning
   llm-wiki-memory

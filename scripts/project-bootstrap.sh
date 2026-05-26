@@ -7,7 +7,7 @@ MODE="write"
 usage() {
   cat <<'USAGE'
 Usage:
-  ./scripts/project-bootstrap.sh [--check] /path/to/target-repo
+  ./scripts/project-bootstrap.sh [--check|--force] /path/to/target-repo
 
 Exports lightweight CoderSteroids helpers into a target repository:
   scripts/codersteroids/check-field-depth-report.sh
@@ -21,10 +21,16 @@ if test "${1:-}" = "--help" || test "${1:-}" = "-h"; then
   exit 0
 fi
 
-if test "${1:-}" = "--check"; then
-  MODE="check"
-  shift
-fi
+case "${1:-}" in
+  --check)
+    MODE="check"
+    shift
+    ;;
+  --force)
+    MODE="force"
+    shift
+    ;;
+esac
 
 TARGET="${1:-}"
 
@@ -68,6 +74,8 @@ scripts/codersteroids/check-field-depth-report.sh path/to/report.md
 ```
 
 The checker validates report structure only. It does not prove the analysis is correct.
+It requires an observability/logging plan so runtime claims are grounded in logs,
+metrics, traces, profiles, benchmark reports, or explicit instrumentation gaps.
 README
 }
 
@@ -118,7 +126,7 @@ for mapping in "${mappings[@]}"; do
   dest="${mapping#*|}"
   mkdir -p "$(dirname "$dest")"
 
-  if test -f "$dest" && ! cmp -s "$src" "$dest"; then
+  if test -f "$dest" && ! cmp -s "$src" "$dest" && test "$MODE" != "force"; then
     echo "Refusing to overwrite changed file: $dest"
     echo "Remove it or reconcile it manually, then rerun bootstrap."
     exit 1
@@ -137,7 +145,7 @@ mkdir -p "$(dirname "$readme_target")"
 if test -f "$readme_target"; then
   tmp="$(mktemp)"
   write_readme > "$tmp"
-  if ! cmp -s "$tmp" "$readme_target"; then
+  if ! cmp -s "$tmp" "$readme_target" && test "$MODE" != "force"; then
     rm -f "$tmp"
     echo "Refusing to overwrite changed file: $readme_target"
     echo "Remove it or reconcile it manually, then rerun bootstrap."

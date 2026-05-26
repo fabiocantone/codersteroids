@@ -211,3 +211,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/project-bootstrap.sh /Users/fabio/Projects/local-first-personal-assistant`, `./scripts/project-bootstrap.sh --check /Users/fabio/Projects/local-first-personal-assistant`, and `/Users/fabio/Projects/local-first-personal-assistant/scripts/codersteroids/check-field-depth-report.sh /Users/fabio/Projects/local-first-personal-assistant/docs/codersteroids/field-depth-report-template.md` passed.
 
 **Next:** Rerun the Tauri chat rendering field check using the target-local validator.
+
+## 2026-05-26: Observability Logging Gate
+
+**Intent:** Make logging, metrics, traces, profiles, benchmark reports, and instrumentation planning a required pillar of runtime diagnosis.
+
+**Completed:** Added `observability-logging`, updated `field-engineering-depth`, `systematic-debugging`, `using-methodology`, the field-depth template, checker, project bootstrap, validation, README, skills docs, architecture, roadmap, decisions, and session state.
+
+**Changed:** `skills/observability-logging/SKILL.md`, `skills/field-engineering-depth/SKILL.md`, `skills/systematic-debugging/SKILL.md`, `skills/using-methodology/SKILL.md`, `docs/examples/field-depth-report-template.md`, `scripts/check-field-depth-report.sh`, `scripts/project-bootstrap.sh`, validation/docs/wiki files.
+
+**Decisions:** Runtime diagnosis must prefer measured signals over static guesses. If signals are missing, the analysis must explicitly propose minimal instrumentation and state whether missing observability blocks the conclusion.
+
+**Verification:** `./scripts/project-bootstrap.sh --check /Users/fabio/Projects/local-first-personal-assistant`, target-local `scripts/codersteroids/check-field-depth-report.sh`, plugin-local `./scripts/check-field-depth-report.sh`, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after target helper refresh.
+
+**Next:** Refresh target helpers and rerun the Tauri chat rendering field check with an observability plan.

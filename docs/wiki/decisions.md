@@ -146,6 +146,16 @@
 
 **Consequence:** Target repos can now receive CoderSteroids-owned helper files under `scripts/codersteroids/` and `docs/codersteroids/`, with a non-writing `--check` mode for drift detection.
 
+## 2026-05-26: Make Observability A Field Diagnosis Pillar
+
+**Decision:** Add `observability-logging` and make `## Observability And Logging Plan` mandatory in field-depth reports.
+
+**Context:** The user pointed out that without logging and data analysis, agents can still produce plausible hypotheses and effectively guess. The first field battles also showed that benchmark/profile/log evidence is the difference between strong diagnosis and a good static analysis.
+
+**Alternatives:** Leave logging as a debugging suggestion, rely on ad hoc benchmark plans, or require full observability platforms before analysis.
+
+**Consequence:** Field analysis must identify existing logs, metrics, traces, profiles, benchmark reports, missing signals, minimal instrumentation, and privacy/noise limits before choosing a fix when runtime behavior matters.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

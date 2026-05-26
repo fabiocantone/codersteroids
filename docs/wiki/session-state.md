@@ -54,9 +54,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran project bootstrap in `/Users/fabio/Projects/local-first-personal-assistant`. Exported helpers were written and `scripts/codersteroids/check-field-depth-report.sh docs/codersteroids/field-depth-report-template.md` passed inside the target repo.
 
+2026-05-26: Added `observability-logging` and made observability/logging a required section of field-depth reports. `check-field-depth-report.sh` now requires `## Observability And Logging Plan` and a signal/source/proves/gap/action table. Project bootstrap now supports `--force` so generated helpers can be refreshed in target repos.
+
 ## Next Action
 
-Rerun the Tauri chat rendering field check using the target-local CoderSteroids validator, then compare against Superpowers again if needed.
+Refresh CoderSteroids helpers in `/Users/fabio/Projects/local-first-personal-assistant`, then rerun the Tauri chat rendering field check with target-local validator and observability/logging plan.
 
 ## Risks
 

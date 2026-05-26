@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, and project bootstrap implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, and project bootstrap implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
 
 ## Milestones
 
@@ -40,6 +40,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add field engineering depth gate.
 - [x] Rerun CoderSteroids Tauri chat rendering analysis with field-depth gate.
 - [x] Add project bootstrap/export for CoderSteroids validation helpers.
+- [x] Add observability/logging gate for runtime diagnosis.
 
 ## Deferred Phases
 
@@ -62,4 +63,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 
 ## Next Action
 
-Rerun the Tauri chat rendering field check using the target-local CoderSteroids validator, then compare against Superpowers again if needed.
+Rerun the Tauri chat rendering field check with target-local validator and observability/logging plan, then compare against Superpowers again if needed.

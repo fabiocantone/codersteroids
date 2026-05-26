@@ -14,6 +14,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `memory-hygiene-audit`
 - `benchmark-runner`
 - `field-engineering-depth`
+- `observability-logging`
 - `project-bootstrap`
 - `roadmap-first-planning`
 - `llm-wiki-memory`

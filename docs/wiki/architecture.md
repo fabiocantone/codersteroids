@@ -26,6 +26,7 @@ The plugin is a Codex plugin with:
 - `memory-hygiene-audit`: roadmap/wiki/source/ledger quality checks.
 - `benchmark-runner`: benchmark result scaffold and recording workflow.
 - `field-engineering-depth`: real-code analysis depth gate for local flow, secondary bottlenecks, falsification checks, implementation libraries, and affected verification.
+- `observability-logging`: runtime evidence gate for logs, metrics, traces, profiles, benchmark reports, and instrumentation plans.
 - `project-bootstrap`: target-repository helper export for CoderSteroids checks.
 - `roadmap-first-planning`: roadmap and plan gates.
 - `llm-wiki-memory`: project memory read/write rules.
