@@ -11,12 +11,16 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 - `web-and-github-research/SKILL.md`: web, browser, Google/search-engine, and similar-project research.
 - `recommendation-verification/SKILL.md`: verified and filtered recommendations.
 - `small-task-fast-path/SKILL.md`: lightweight path for tiny local tasks without losing verification discipline.
+- `spec-discovery/SKILL.md`: working-spec discovery for ambiguous product, UX, architecture, and creative feature work.
 - `prompt-briefing/SKILL.md`: convert short user briefs into execution-ready prompts with assumptions, missing context, and approval gates.
 - `self-improvement-loop/SKILL.md`: evidence-backed methodology improvement loop with before/after checks.
+- `skill-authoring-pressure-test/SKILL.md`: skill authoring and routing pressure-test workflow.
 - `test-first-development/SKILL.md`: pragmatic red/green/refactor discipline for testable behavior changes.
 - `code-review-discipline/SKILL.md`: request and receive review with severity, evidence, and technical verification.
 - `branch-workspace-lifecycle/SKILL.md`: branch/worktree start and finish workflow with dirty-state, verification, and cleanup gates.
 - `subagent-execution-controller/SKILL.md`: controller workflow for delegated work, worker packets, result decisions, integration, and global verification.
+- `plan-execution-checkpoints/SKILL.md`: checkpoint discipline for executing written plans and handoffs.
+- `cross-agent-export/SKILL.md`: portable AGENTS.md/CLAUDE.md export workflow for other agent harnesses.
 - `skill-lifecycle-doctor/SKILL.md`: install, cache, manifest, and skill lifecycle diagnostics.
 - `memory-hygiene-audit/SKILL.md`: roadmap/wiki/source/ledger quality diagnostics.
 - `benchmark-runner/SKILL.md`: repeatable benchmark result scaffolding and recording workflow.

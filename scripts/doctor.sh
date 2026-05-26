@@ -201,12 +201,35 @@ check_benchmarks() {
   done
 }
 
+check_scripts() {
+  local required=(
+    "$ROOT/scripts/benchmark-runner.sh"
+    "$ROOT/scripts/check-benchmark-artifacts.sh"
+    "$ROOT/scripts/cross-agent-export.sh"
+    "$ROOT/scripts/doctor.sh"
+    "$ROOT/scripts/memory-audit.sh"
+    "$ROOT/scripts/project-bootstrap.sh"
+    "$ROOT/scripts/skill-smoke-test.sh"
+    "$ROOT/scripts/validate.sh"
+  )
+
+  local file
+  for file in "${required[@]}"; do
+    if test -x "$file"; then
+      pass "script executable: ${file#$ROOT/}"
+    else
+      fail "script missing or not executable: ${file#$ROOT/}"
+    fi
+  done
+}
+
 check_manifest
 check_skills
 check_cache
 check_marketplace
 check_codex_config
 check_benchmarks
+check_scripts
 
 printf '\nSummary: %s failure(s), %s warning(s)\n' "$failures" "$warnings"
 

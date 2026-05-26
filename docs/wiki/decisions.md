@@ -265,3 +265,13 @@
 **Alternatives:** Keep adding broad Superpowers-like skills without benchmark hooks, or stop after structural parity.
 
 **Consequence:** CoderSteroids now covers the practical workflow gaps locally while keeping its evidence/memory/current-doc niche. Remaining Superpowers advantages are distribution, adoption, and live multi-agent execution maturity.
+
+## 2026-05-26: Zero Local Superpowers Methodology Gap
+
+**Decision:** Add spec discovery, plan execution checkpoints, skill authoring pressure tests, cross-agent export, and skill routing smoke tests.
+
+**Context:** The user asked to ignore the Electron benchmark and first zero the gap with Superpowers. The remaining local methodology gaps were brainstorming/spec refinement, executing written plans, skill-writing guidance, behavior/routing tests, and multi-harness portability.
+
+**Alternatives:** Keep focusing on product-specific Electron performance, or add more benchmark artifacts instead of implementation.
+
+**Consequence:** CoderSteroids now has local skill/script coverage for the Superpowers methodology surface while keeping its differentiators. Remaining gaps are no longer local methodology files; they are external adoption, distribution, and real host-agent enforcement.

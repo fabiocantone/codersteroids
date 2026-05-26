@@ -57,12 +57,16 @@ required_skills=(
   web-and-github-research
   recommendation-verification
   small-task-fast-path
+  spec-discovery
   prompt-briefing
   self-improvement-loop
+  skill-authoring-pressure-test
   test-first-development
   code-review-discipline
   branch-workspace-lifecycle
   subagent-execution-controller
+  plan-execution-checkpoints
+  cross-agent-export
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner
@@ -118,6 +122,16 @@ test -x "$ROOT/scripts/check-field-depth-report.sh" || {
 
 test -x "$ROOT/scripts/project-bootstrap.sh" || {
   echo "Project bootstrap script is not executable: $ROOT/scripts/project-bootstrap.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/cross-agent-export.sh" || {
+  echo "Cross-agent export script is not executable: $ROOT/scripts/cross-agent-export.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/skill-smoke-test.sh" || {
+  echo "Skill smoke test script is not executable: $ROOT/scripts/skill-smoke-test.sh"
   exit 1
 }
 

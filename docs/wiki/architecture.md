@@ -15,6 +15,8 @@ The plugin is a Codex plugin with:
 - `scripts/benchmark-runner.sh`: benchmark prompt listing and result scaffold creation.
 - `scripts/check-field-depth-report.sh`: field-depth report structure validation.
 - `scripts/project-bootstrap.sh`: target-repository helper export and drift check.
+- `scripts/cross-agent-export.sh`: portable AGENTS.md/CLAUDE.md instruction export.
+- `scripts/skill-smoke-test.sh`: routing and skill-discoverability smoke test.
 
 ## Skill Responsibilities
 
@@ -23,12 +25,16 @@ The plugin is a Codex plugin with:
 - `web-and-github-research`: web/current-source, known-issue, and similar-project research.
 - `recommendation-verification`: availability, status, risk, and known-issue filtering before recommendations.
 - `small-task-fast-path`: low-overhead path for tiny local work while preserving verification and memory rules.
+- `spec-discovery`: working-spec loop for ambiguous product, UX, architecture, and creative feature work.
 - `prompt-briefing`: short-brief to execution-prompt compiler for Codex, Claude, subagents, benchmarks, and approval gates.
 - `self-improvement-loop`: benchmark/user-correction to scoped methodology change with before/after evidence.
+- `skill-authoring-pressure-test`: skill creation/editing checklist with routing, misuse, and validation pressure tests.
 - `test-first-development`: pragmatic failing-test-first workflow for testable behavior changes.
 - `code-review-discipline`: severity-based code review request/reception workflow with technical verification.
 - `branch-workspace-lifecycle`: dirty-state, branch/worktree isolation, finishing, push/PR/merge, and cleanup decision workflow.
 - `subagent-execution-controller`: delegated-work controller for packets, checkpoints, result decisions, integration, and global verification.
+- `plan-execution-checkpoints`: checkpoint loop for executing written plans and handoffs.
+- `cross-agent-export`: portable instruction export for AGENTS.md and CLAUDE.md.
 - `skill-lifecycle-doctor`: plugin install/cache/manifest/config diagnostics.
 - `memory-hygiene-audit`: roadmap/wiki/source/ledger quality checks.
 - `benchmark-runner`: benchmark result scaffold and recording workflow.

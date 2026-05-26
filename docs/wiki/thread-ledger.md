@@ -308,18 +308,16 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 ## 2026-05-26: Pragmatic TDD Code Review Gap Closing
 **Intent:** Close the highest-priority Superpowers gap without copying Superpowers wholesale.
 **Completed:** Added `test-first-development`, `code-review-discipline`, a TDD/code-review benchmark prompt, validation wiring, and roadmap/wiki updates.
-**Changed:** `skills/test-first-development/SKILL.md`, `skills/code-review-discipline/SKILL.md`, `benchmarks/prompts/tdd-code-review-gap-closing.md`, `docs/plans/2026-05-26-tdd-code-review-gap-closing.md`, validation scripts, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
+**Changed:** TDD/review skills, benchmark prompt, plan, validation, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
 **Decisions:** Use pragmatic failing-test-first discipline for testable behavior changes and severity/evidence-based review discipline for readiness checks. Do not claim parity with Superpowers until a live benchmark passes.
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after cache sync.
-**Next:** Run the TDD/code-review gap-closing benchmark, then continue with Electron `bench:chat-render`.
 
 ## 2026-05-26: TDD Code Review Benchmark Run
 **Intent:** Validate the new TDD/code-review skills with a small real behavior change.
-**Completed:** Used test-first discipline on `scripts/check-benchmark-artifacts.sh`. A malformed TDD/code-review result passed before the change, then failed after the checker required failing-test evidence, passing-test evidence, broader verification, review table, and verdict. Recorded the run in `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`.
+**Completed:** Used test-first discipline on `scripts/check-benchmark-artifacts.sh`; malformed TDD/code-review results now fail unless they include red/green evidence, broader verification, review table, and verdict.
 **Changed:** `scripts/check-benchmark-artifacts.sh`, `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`, roadmap, session state, and this ledger.
 **Decisions:** TDD/code-review benchmark results must include red/green evidence, broader verification, review result table, and explicit verdict.
-**Verification:** Focused negative test confirmed a malformed TDD/code-review result now fails with missing `## Failing Test Evidence`. `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed.
-**Next:** Continue with Electron `bench:chat-render`.
+**Verification:** Focused negative test and standard suite passed.
 
 ## 2026-05-26: Branch Workspace Lifecycle Gap Closing
 **Intent:** Close the next Superpowers gap around isolated workspaces, dirty worktree handling, branch finishing, and cleanup safety.
@@ -327,7 +325,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Changed:** New lifecycle skill, benchmark prompt, plan, validation scripts, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
 **Decisions:** Use one pragmatic lifecycle skill rather than copying Superpowers' separate worktree and branch-finishing skills. Require branch/dirty-state inspection, explicit isolation choice, unrelated-change preservation, no push/merge/delete/cleanup without approval, and a finish report with verification plus memory/docs state.
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed before this note was finalized.
-**Next:** Run the branch/workspace lifecycle benchmark, then continue with Electron `bench:chat-render`.
 
 ## 2026-05-26: Branch Workspace Lifecycle Benchmark Run
 **Intent:** Validate the new branch/workspace lifecycle workflow against a concrete checker behavior change and recorded finish path.
@@ -335,7 +332,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Changed:** Benchmark checker, lifecycle result artifact, roadmap, session state, and this ledger.
 **Decisions:** Treat the clean-worktree finish path as improved, but keep dirty-worktree preservation as a remaining benchmark gap.
 **Verification:** Focused negative test confirmed a malformed lifecycle result now fails with missing `## Workspace Lifecycle`; standard suite passed after the benchmark artifact was corrected.
-**Next:** Continue with Electron `bench:chat-render`.
 
 ## 2026-05-26: Remaining Superpowers Gap Coverage
 **Intent:** Cover the remaining local workflow gaps: small-task overhead, subagent execution control, benchmark automation, and dirty-worktree proof.
@@ -343,4 +339,11 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Changed:** New skills/prompts/results, benchmark runner/checker, validation/doctor wiring, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
 **Decisions:** Treat local practical gaps as covered; keep public adoption, multi-harness maturity, and real external multi-agent execution as honest residual Superpowers advantages.
 **Verification:** Full suite passed after cache sync and benchmark checker fix.
-**Next:** Continue with Electron `bench:chat-render`.
+
+## 2026-05-26: Zero Local Superpowers Methodology Gap
+**Intent:** Ignore the Electron benchmark and close remaining local methodology differences with Superpowers.
+**Completed:** Added `spec-discovery`, `plan-execution-checkpoints`, `skill-authoring-pressure-test`, `cross-agent-export`, `scripts/cross-agent-export.sh`, and `scripts/skill-smoke-test.sh`.
+**Changed:** New skills/scripts/plan, routing, validation, doctor, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
+**Decisions:** Treat local methodology gap as covered; remaining Superpowers advantages are external adoption/distribution and host-runtime execution, not missing CoderSteroids skill artifacts.
+**Verification:** Cross-agent export temp check, skill smoke test, doctor, memory audit, validation, benchmark artifact check, diff check, and cache diff passed.
+**Next:** Keep CoderSteroids stable; product work can resume later.

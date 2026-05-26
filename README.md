@@ -11,12 +11,16 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `web-and-github-research`
 - `recommendation-verification`
 - `small-task-fast-path`
+- `spec-discovery`
 - `prompt-briefing`
 - `self-improvement-loop`
+- `skill-authoring-pressure-test`
 - `test-first-development`
 - `code-review-discipline`
 - `branch-workspace-lifecycle`
 - `subagent-execution-controller`
+- `plan-execution-checkpoints`
+- `cross-agent-export`
 - `skill-lifecycle-doctor`
 - `memory-hygiene-audit`
 - `benchmark-runner`
@@ -78,6 +82,12 @@ Installation and cache health can be checked with:
 ./scripts/doctor.sh
 ```
 
+Skill routing smoke tests can be checked with:
+
+```bash
+./scripts/skill-smoke-test.sh
+```
+
 Project memory hygiene can be checked with:
 
 ```bash
@@ -103,4 +113,11 @@ CoderSteroids helpers can be exported into a target repository with:
 ```bash
 ./scripts/project-bootstrap.sh /path/to/target-repo
 ./scripts/project-bootstrap.sh --check /path/to/target-repo
+```
+
+Portable agent instructions can be exported with:
+
+```bash
+./scripts/cross-agent-export.sh /path/to/target-repo
+./scripts/cross-agent-export.sh --check /path/to/target-repo
 ```

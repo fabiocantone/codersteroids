@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, skill ecosystem improvement research, and updated Superpowers repo/plugin gap analysis complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, self-improvement loop, pragmatic test-first development, code review discipline, branch/workspace lifecycle, small-task fast path, and subagent execution controller implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers. Latest strategic position: continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer while keeping Superpowers-style execution rigor where it matters.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, skill ecosystem improvement research, and updated Superpowers repo/plugin gap analysis complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, field engineering depth gate, observability/logging gate, project bootstrap, prompt briefing, self-improvement loop, pragmatic test-first development, code review discipline, branch/workspace lifecycle, small-task fast path, subagent execution controller, spec discovery, plan execution checkpoints, skill authoring pressure tests, and cross-agent export implemented. Latest strategic position: CoderSteroids covers the practical local methodology gaps with Superpowers while preserving stronger evidence, memory, current-doc, and continuity behavior.
 
 ## Milestones
 
@@ -51,6 +51,11 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add subagent execution controller.
 - [x] Add dirty-worktree lifecycle benchmark evidence.
 - [x] Add benchmark runner `--check` path.
+- [x] Add spec discovery workflow.
+- [x] Add plan execution checkpoint workflow.
+- [x] Add skill authoring pressure-test workflow.
+- [x] Add cross-agent AGENTS.md/CLAUDE.md export path.
+- [x] Add skill routing smoke test.
 
 ## Deferred Phases
 
@@ -79,7 +84,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Branch/workspace lifecycle is implemented and benchmarked on clean finish and dirty-parent isolation paths.
 - Subagent execution controller is implemented and structurally benchmarked, but real multi-agent execution still depends on host tooling.
 - Public adoption, issue volume, and multi-harness maturity remain outside the scope of a local plugin implementation.
+- Local methodology gap coverage is complete at the artifact/skill/script level. Remaining gaps are external: public adoption, marketplace distribution, and host runtime capabilities.
 
 ## Next Action
 
-Continue with the Electron `bench:chat-render` harness.
+Keep CoderSteroids stable; next engineering work can return to product-specific tasks such as the Electron `bench:chat-render` harness.
