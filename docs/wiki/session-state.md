@@ -48,9 +48,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Implemented `field-engineering-depth` and `scripts/check-field-depth-report.sh`. The gate requires Local Flow Map, Primary Hypotheses, Secondary Bottlenecks, Implementation Library Research, Falsification Checks, Affected Verification Matrix, Decision And Next Step, and Durable Memory Updates. Updated routing, debugging, web research, Superpowers field battle prompt/spec, roadmap, and validation.
 
+2026-05-26: Reviewed updated CoderSteroids Tauri chat rendering analysis after field-depth gate. The rerun corrected stale virtualization assumptions, produced local flow map, secondary bottlenecks, implementation library research, falsification checks, and a verification matrix. It now beats the prior Superpowers output on technical-analysis depth, but still loses on verification breadth and revealed target-repo portability gap: `scripts/check-field-depth-report.sh` exists in the plugin repo, not in `local-first-personal-assistant`.
+
 ## Next Action
 
-Run the Tauri chat rendering field battle again with `field-engineering-depth`, then score whether CoderSteroids beats Superpowers on technical-analysis depth.
+Add project bootstrap/export for CoderSteroids validation helpers so target repos can run field-depth checks.
 
 ## Risks
 

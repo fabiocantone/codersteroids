@@ -126,6 +126,16 @@
 
 **Consequence:** Future field reports must include specific required sections and can be structurally checked before being trusted. The Superpowers field battle prompt now measures this dimension directly.
 
+## 2026-05-26: Field Depth Gate Beats Prior Superpowers Output But Needs Portability
+
+**Decision:** Treat the updated CoderSteroids rerun as a technical-depth win against the prior Superpowers output, with two remaining gaps: verification breadth and target-repo portability for validation helpers.
+
+**Context:** The rerun corrected stale assumptions, recognized current TanStack virtualization, identified Markdown/Mermaid final commit as primary suspect, added secondary bottlenecks and falsification checks, and compared implementation libraries. However, the target repo could not run `scripts/check-field-depth-report.sh` because that helper only exists inside the CoderSteroids plugin repo.
+
+**Alternatives:** Accept manual validation, require users to know plugin-internal paths, or copy scripts ad hoc.
+
+**Consequence:** Next capability should bootstrap/export CoderSteroids helper scripts and templates into target repos when a methodology check needs local execution.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, and field engineering depth gate implemented. First Superpowers field battle completed: CoderSteroids tied numerically but did not clearly beat Superpowers because Superpowers produced deeper technical analysis and broader verification.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, recommendation-verification, chat-continuity, known-issues stack recommendation, direct Superpowers comparison, and skill ecosystem improvement research complete. Skill lifecycle doctor, memory hygiene audit, benchmark runner, and field engineering depth gate implemented. First Superpowers field battle exposed a depth gap; CoderSteroids rerun with field-depth gate beat the prior Superpowers output on technical-analysis depth but revealed a target-repo portability gap for validation helpers.
 
 ## Milestones
 
@@ -38,6 +38,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Implement `benchmark-runner`.
 - [x] Run first Superpowers field battle on Tauri chat rendering.
 - [x] Add field engineering depth gate.
+- [x] Rerun CoderSteroids Tauri chat rendering analysis with field-depth gate.
+- [ ] Add project bootstrap/export for CoderSteroids validation helpers.
 
 ## Deferred Phases
 
@@ -60,4 +62,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 
 ## Next Action
 
-Run the Tauri chat rendering field battle again with `field-engineering-depth`, then score whether CoderSteroids beats Superpowers on technical-analysis depth.
+Add project bootstrap/export for CoderSteroids validation helpers so target repos can run checks like `check-field-depth-report.sh` without manually copying plugin internals.

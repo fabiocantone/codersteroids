@@ -183,3 +183,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md`, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
 
 **Next:** Run the Tauri chat rendering field battle again using the new gate.
+
+## 2026-05-26: Field Depth Rerun Result
+
+**Intent:** Score the updated CoderSteroids Tauri chat rendering analysis after adding the field engineering depth gate.
+
+**Completed:** Reviewed updated target-repo artifacts and the user's pasted summary. Recorded `benchmarks/results/2026-05-26-superpowers-field-battle-chat-rendering-rerun.md`.
+
+**Changed:** Benchmark result, roadmap, session state, decisions, and this ledger.
+
+**Decisions:** Updated CoderSteroids beats the prior Superpowers output on technical-analysis depth, but needs stronger affected-slice verification and a way to export validation helpers into target repos.
+
+**Verification:** `./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md`, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed.
+
+**Next:** Add project bootstrap/export for CoderSteroids validation helpers.
