@@ -11,6 +11,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `recommendation-verification`
 - `roadmap-first-planning`
 - `llm-wiki-memory`
+- `chat-continuity`
 - `coding-standards`
 - `folder-docs`
 - `systematic-debugging`
@@ -31,6 +32,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `docs/plans/`
 - `docs/wiki/index.md`
 - `docs/wiki/session-state.md`
+- `docs/wiki/thread-ledger.md`
 - `docs/wiki/architecture.md`
 - `docs/wiki/decisions.md`
 - `docs/wiki/sources.md`

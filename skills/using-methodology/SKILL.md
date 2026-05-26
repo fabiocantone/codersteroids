@@ -33,6 +33,7 @@ Before any non-trivial coding task:
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
 - Feature/refactor/multi-step task: use `roadmap-first-planning`.
 - Existing project context or durable decision: use `llm-wiki-memory`.
+- New chat, resumed work, or handoff across chats: use `chat-continuity`.
 - Structural code changes: use `coding-standards` and `folder-docs`.
 - Bug/test failure: use `systematic-debugging`.
 - Before completion claim: use `verification-before-completion`.
@@ -45,3 +46,4 @@ Before any non-trivial coding task:
 - Do not implement non-trivial work without a plan.
 - Do not claim success without fresh verification.
 - Do not leave roadmap or wiki stale after structural or decision-level changes.
+- Do not rely on chat history when a project memory artifact exists.

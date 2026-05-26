@@ -15,6 +15,7 @@ Read relevant pages:
 
 - `docs/wiki/index.md`
 - `docs/wiki/session-state.md`
+- `docs/wiki/thread-ledger.md`
 - `docs/wiki/architecture.md`
 - `docs/wiki/decisions.md`
 - `docs/wiki/sources.md`
@@ -31,6 +32,7 @@ Write durable knowledge only:
 - Recurring bug patterns.
 - Open questions and contradictions.
 - Current session state and next action.
+- Cross-chat handoff entries.
 
 Do not store secrets, credentials, private personal data, or raw chat logs.
 
@@ -50,4 +52,3 @@ Use this shape:
 ## Contradiction Handling
 
 If new information conflicts with existing memory, do not silently overwrite. Add an entry to `open-questions.md` and continue only when the conflict does not block the task.
-

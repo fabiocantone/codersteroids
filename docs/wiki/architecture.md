@@ -17,6 +17,7 @@ The plugin is a Codex plugin with:
 - `context7-research`: documentation lookup discipline.
 - `roadmap-first-planning`: roadmap and plan gates.
 - `llm-wiki-memory`: project memory read/write rules.
+- `chat-continuity`: cross-chat handoff and resume behavior.
 - `coding-standards`: local programming standards.
 - `folder-docs`: folder-level documentation.
 - `systematic-debugging`: root-cause debugging.

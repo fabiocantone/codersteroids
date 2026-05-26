@@ -14,9 +14,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: `./scripts/validate.sh` initially failed because the external plugin validator imports PyYAML and bare `python3` had no `yaml` module. Added a bootstrap fallback through `uv run --with PyYAML`; `./scripts/validate.sh` and `./scripts/check-benchmark-artifacts.sh` now pass. The recommendation-verification naming dry run filtered unavailable/conflicting names before presenting recommendations, but it was partial because GitHub account/org availability was out of scope; see `benchmarks/results/2026-05-26-recommendation-verification.md`.
 
+2026-05-26: Added `chat-continuity` and `docs/wiki/thread-ledger.md` so separate Codex chats can resume from durable project memory instead of implicit chat history.
+
 ## Next Action
 
-Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
+Run `benchmarks/prompts/chat-continuity.md`, then run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
 
 ## Risks
 

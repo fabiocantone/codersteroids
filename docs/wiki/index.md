@@ -5,6 +5,7 @@ This wiki is the durable memory for the project. Agents should read it before pl
 ## Core Pages
 
 - [Session State](session-state.md): current goal, plan, verification, and next action.
+- [Thread Ledger](thread-ledger.md): cross-chat handoff history.
 - [Architecture](architecture.md): project structure and component responsibilities.
 - [Decisions](decisions.md): durable decisions and rejected alternatives.
 - [Sources](sources.md): Context7 and official documentation used.
@@ -14,4 +15,3 @@ This wiki is the durable memory for the project. Agents should read it before pl
 ## Operating Rule
 
 If a task changes what future agents need to know, update the relevant wiki page before claiming completion.
-

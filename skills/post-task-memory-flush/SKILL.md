@@ -15,6 +15,7 @@ Update affected artifacts:
 
 - `docs/roadmap.md`: current phase, milestones, blockers, next action.
 - `docs/wiki/session-state.md`: current state and last verification.
+- `docs/wiki/thread-ledger.md`: chat handoff when work should continue in another conversation.
 - `docs/wiki/decisions.md`: durable choices and tradeoffs.
 - `docs/wiki/sources.md`: Context7 or official-doc evidence.
 - `docs/wiki/architecture.md`: structure or responsibility changes.

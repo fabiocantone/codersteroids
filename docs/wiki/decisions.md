@@ -37,3 +37,13 @@
 **Alternatives:** Treat it as a one-off conversational correction.
 
 **Consequence:** Future recommendations must define availability criteria, check sources, filter unavailable options, and label partial checks.
+
+## 2026-05-26: Add Thread Ledger For Cross-Chat Continuity
+
+**Decision:** Add `chat-continuity` and `docs/wiki/thread-ledger.md`.
+
+**Context:** The user keeps long-running work in a single Codex chat because new chats often lose what happened elsewhere.
+
+**Alternatives:** Rely only on `session-state.md`, or ask the user to summarize manually.
+
+**Consequence:** Each meaningful chat must leave a concise durable handoff so future chats can resume from project memory, not conversation history.

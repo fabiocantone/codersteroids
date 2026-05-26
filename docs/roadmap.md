@@ -22,6 +22,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test and
 - [x] Add recommendation verification gate after naming workflow failure.
 - [x] Run recommendation-verification naming dry run.
 - [x] Run validation in a real Codex plugin install.
+- [x] Add chat-continuity skill and thread ledger.
+- [ ] Run chat-continuity benchmark in a fresh Codex chat.
 - [ ] Run the three benchmark scenarios from `docs/specs/plugin-methodology-validation.md`.
 - [ ] Run full recommendation-verification test with GitHub account/org checks.
 - [ ] Compare results against Superpowers.
@@ -45,4 +47,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test and
 
 ## Next Action
 
-Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
+Run `benchmarks/prompts/chat-continuity.md`, then run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.

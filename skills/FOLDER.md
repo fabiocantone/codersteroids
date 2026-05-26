@@ -11,6 +11,7 @@ This folder contains the MVP skill library for the CoderSteroids plugin.
 - `recommendation-verification/SKILL.md`: verified and filtered recommendations.
 - `roadmap-first-planning/SKILL.md`: roadmap and plan gates.
 - `llm-wiki-memory/SKILL.md`: Markdown wiki read/write rules.
+- `chat-continuity/SKILL.md`: handoff continuity across Codex chats.
 - `coding-standards/SKILL.md`: module boundaries and code shape.
 - `folder-docs/SKILL.md`: folder-level documentation requirements.
 - `systematic-debugging/SKILL.md`: root-cause debugging workflow.

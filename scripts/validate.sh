@@ -21,6 +21,7 @@ required_files=(
   "$ROOT/docs/specs/plugin-methodology-validation.md"
   "$ROOT/docs/wiki/index.md"
   "$ROOT/docs/wiki/session-state.md"
+  "$ROOT/docs/wiki/thread-ledger.md"
   "$ROOT/docs/wiki/architecture.md"
   "$ROOT/docs/wiki/decisions.md"
   "$ROOT/docs/wiki/sources.md"
@@ -30,6 +31,7 @@ required_files=(
   "$ROOT/benchmarks/prompts/external-library-feature.md"
   "$ROOT/benchmarks/prompts/multi-step-bugfix.md"
   "$ROOT/benchmarks/prompts/interrupted-session-recovery.md"
+  "$ROOT/benchmarks/prompts/chat-continuity.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -43,6 +45,7 @@ required_skills=(
   recommendation-verification
   roadmap-first-planning
   llm-wiki-memory
+  chat-continuity
   coding-standards
   folder-docs
   systematic-debugging
