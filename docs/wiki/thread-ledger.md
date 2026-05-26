@@ -295,3 +295,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** Before the change, a malformed self-improvement result passed `check-benchmark-artifacts.sh`; after the change, the same malformed result failed with a missing `## Gap` error. Full verification suite was run after memory updates.
 
 **Next:** Continue with the Electron `bench:chat-render` harness.
+
+## 2026-05-26: Updated Superpowers Repo Plugin Gap Analysis
+
+**Intent:** Re-run the CoderSteroids vs Superpowers analysis without relying on chat history, using local memory, installed plugin files, benchmark results, plugin/memory health, and live GitHub/web evidence.
+
+**Completed:** Loaded roadmap, session state, thread ledger, decisions, sources, benchmark results, installed CoderSteroids files, active curated Superpowers cache, older full local Superpowers checkout, and live `obra/superpowers` API/web data. Saved `benchmarks/results/2026-05-26-superpowers-repo-plugin-gap-analysis.md`.
+
+**Changed:** Added the benchmark result and updated roadmap, session state, decisions, sources, and this ledger.
+
+**Decisions:** Continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer. Selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas; do not copy full breadth or always-on rigidity.
+
+**Verification:** `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after updates. Independent web spot-check confirmed the live `obra/superpowers` repo metadata remains consistent in direction, with star count already slightly drifted because GitHub counters are point-in-time.
+
+**Next:** Add pragmatic CoderSteroids TDD/code-review gap-closing, then continue with the Electron `bench:chat-render` harness.

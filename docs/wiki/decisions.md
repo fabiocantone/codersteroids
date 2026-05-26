@@ -225,3 +225,13 @@
 **Alternatives:** Leave benchmarks fully manual, or overbuild a live Codex launcher before artifact discipline is solid.
 
 **Consequence:** Benchmark runs now have a repeatable artifact entry point. The script does not pretend to execute a fresh Codex chat; it prepares the file, preflight checklist, scorecard, and embedded prompt for evidence-based completion.
+
+## 2026-05-26: Continue CoderSteroids As Evidence And Continuity Layer
+
+**Decision:** Continue CoderSteroids, but position it as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer rather than a full Superpowers clone.
+
+**Context:** Updated local and live research found Superpowers much more mature for broad software development workflow: TDD, code review, worktrees, branch finishing, subagent execution, multi-harness packaging, tests, releases, issue activity, and adoption signals. CoderSteroids has implemented and partly validated differentiators Superpowers does not expose locally: roadmap/wiki/thread-ledger continuity, current-doc and known-issue research, recommendation verification, source ledger, field-depth and observability gates, plugin lifecycle diagnostics, memory hygiene audit, prompt briefing, and evidence-backed self-improvement checks.
+
+**Alternatives:** Stop CoderSteroids, fork/copy Superpowers wholesale, or keep CoderSteroids narrow without closing broad workflow gaps.
+
+**Consequence:** Selectively adapt Superpowers' TDD, code review, worktree/branch lifecycle, and subagent orchestration ideas. Do not copy its full breadth, visual companion, or always-on skill rigidity. Preserve CoderSteroids' evidence/memory/diagnostics niche and reduce small-task overhead.
