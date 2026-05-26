@@ -33,6 +33,7 @@ required_files=(
   "$ROOT/benchmarks/prompts/interrupted-session-recovery.md"
   "$ROOT/benchmarks/prompts/chat-continuity.md"
   "$ROOT/benchmarks/prompts/web-similar-project-research.md"
+  "$ROOT/benchmarks/prompts/skill-ecosystem-improvement-research.md"
   "$ROOT/benchmarks/results/template.md"
 )
 

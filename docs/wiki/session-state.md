@@ -26,9 +26,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Independently verified similar-project metadata with GitHub API and recorded `benchmarks/results/2026-05-26-web-similar-project-research.md`. Notable confirmed values: `obra/superpowers` had 207090 stars and release `v5.1.0`; `agentsmd/agents.md` had 21695 stars; `fabiocantone/codersteroids` had 0 stars/forks and no release/license reported by API.
 
+2026-05-26: Added `benchmarks/prompts/skill-ecosystem-improvement-research.md` to test whether CoderSteroids can research popular coding-agent skill systems, public user pain points, and improvement opportunities before proposing roadmap changes.
+
 ## Next Action
 
-Run the Superpowers comparison against the recorded benchmark results and decide whether to expand CoderSteroids beyond MVP.
+Run `benchmarks/prompts/skill-ecosystem-improvement-research.md`, then compare recorded CoderSteroids benchmark results against Superpowers and decide whether to expand beyond MVP.
 
 ## Risks
 

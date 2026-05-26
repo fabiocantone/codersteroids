@@ -85,3 +85,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** GitHub API checks confirmed metadata; `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after file updates.
 
 **Next:** Run validation, then complete the Superpowers comparison.
+
+## 2026-05-26: Skill Ecosystem Improvement Benchmark Prompt
+
+**Intent:** Add a benchmark that asks CoderSteroids to research popular coding-agent skill systems and public user requests before proposing improvements.
+
+**Completed:** Added `benchmarks/prompts/skill-ecosystem-improvement-research.md` and wired it into validation.
+
+**Changed:** `benchmarks/prompts/skill-ecosystem-improvement-research.md`, `scripts/validate.sh`, `docs/roadmap.md`, `docs/wiki/session-state.md`, and `docs/wiki/thread-ledger.md`.
+
+**Decisions:** The test must require current web/GitHub evidence, issue/discussion signals where available, source limitations, and a prioritized improvement roadmap.
+
+**Verification:** `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after file updates.
+
+**Next:** Run validation, then execute the new benchmark prompt in a fresh Codex chat.

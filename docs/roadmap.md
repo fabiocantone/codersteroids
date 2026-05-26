@@ -28,6 +28,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 - [x] Run the three benchmark scenarios from `docs/specs/plugin-methodology-validation.md`.
 - [x] Run full recommendation-verification test with GitHub account/org checks.
 - [x] Add web/browser/GitHub similar-project research workflow.
+- [x] Add skill ecosystem improvement research benchmark prompt.
 - [ ] Compare results against Superpowers.
 
 ## Deferred Phases
@@ -49,4 +50,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, pa
 
 ## Next Action
 
-Compare recorded CoderSteroids benchmark results against Superpowers and decide whether to expand beyond MVP.
+Run `benchmarks/prompts/skill-ecosystem-improvement-research.md`, then compare recorded CoderSteroids benchmark results against Superpowers and decide whether to expand beyond MVP.
