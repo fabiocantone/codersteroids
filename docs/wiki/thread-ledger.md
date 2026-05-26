@@ -30,3 +30,16 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Next:** Add explicit chat-continuity support so future Codex chats always read and write a cross-chat handoff ledger.
 
+## 2026-05-26: Chat Continuity Benchmark Run
+
+**Intent:** Continue from a fresh chat using only CoderSteroids project memory and the thread ledger, then record the benchmark result.
+
+**Completed:** Read `docs/roadmap.md`, `docs/wiki/session-state.md`, `docs/wiki/thread-ledger.md`, the active validation spec, and the MVP plan; ran the chat-continuity benchmark; saved the result scorecard; refreshed the local cached plugin `skills/` tree from the repository.
+
+**Changed:** `benchmarks/results/2026-05-26-chat-continuity.md`, `docs/roadmap.md`, `docs/wiki/session-state.md`, `docs/wiki/thread-ledger.md`, and `/Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills`.
+
+**Decisions:** Treat this benchmark as passed for project-memory recovery. The local installed cache was refreshed so future chats can discover the repo's `chat-continuity` skill.
+
+**Verification:** `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
+
+**Next:** Run the three benchmark prompts and full recommendation-verification test.

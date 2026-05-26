@@ -6,7 +6,7 @@ Build and validate the CoderSteroids plugin: bootstrap, Context7 research, roadm
 
 ## Current Phase
 
-Phase 8-10 artifact implementation complete; Codex plugin install smoke test and partial recommendation-verification dry run complete; live benchmark still pending.
+Phase 8-10 artifact implementation complete; Codex plugin install smoke test, partial recommendation-verification dry run, chat-continuity benchmark, and local plugin cache skill refresh complete. Three live benchmark scenarios and comparison still pending.
 
 ## Milestones
 
@@ -23,7 +23,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test and
 - [x] Run recommendation-verification naming dry run.
 - [x] Run validation in a real Codex plugin install.
 - [x] Add chat-continuity skill and thread ledger.
-- [ ] Run chat-continuity benchmark in a fresh Codex chat.
+- [x] Run chat-continuity benchmark in a fresh Codex chat.
+- [x] Refresh or reinstall the local Codex plugin cache so installed skills include `chat-continuity`.
 - [ ] Run the three benchmark scenarios from `docs/specs/plugin-methodology-validation.md`.
 - [ ] Run full recommendation-verification test with GitHub account/org checks.
 - [ ] Compare results against Superpowers.
@@ -47,4 +48,4 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test and
 
 ## Next Action
 
-Run `benchmarks/prompts/chat-continuity.md`, then run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
+Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.

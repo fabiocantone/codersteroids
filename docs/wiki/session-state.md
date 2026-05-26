@@ -16,12 +16,14 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `chat-continuity` and `docs/wiki/thread-ledger.md` so separate Codex chats can resume from durable project memory instead of implicit chat history.
 
+2026-05-26: Ran the chat-continuity benchmark in a fresh Codex chat using the prompt in `benchmarks/prompts/chat-continuity.md`. The run passed the project-memory recovery criteria and saved `benchmarks/results/2026-05-26-chat-continuity.md`. The repository has `skills/chat-continuity/SKILL.md`; the cached installed plugin initially did not expose that skill, so the local cache at `/Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` was refreshed from the repository and verified with `diff -qr`.
+
 ## Next Action
 
-Run `benchmarks/prompts/chat-continuity.md`, then run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
+Run the three benchmark prompts in `benchmarks/prompts/`, run the full recommendation-verification test with GitHub account/org checks, and save scorecards under `benchmarks/results/`.
 
 ## Risks
 
 - Context7 may not be configured in the host environment.
 - Skill behavior needs live agent testing; static validation only checks structure.
-- Benchmark results are not populated yet.
+- Three main benchmark results and Superpowers comparison are not populated yet.
