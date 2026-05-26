@@ -156,6 +156,16 @@
 
 **Consequence:** Field analysis must identify existing logs, metrics, traces, profiles, benchmark reports, missing signals, minimal instrumentation, and privacy/noise limits before choosing a fix when runtime behavior matters.
 
+## 2026-05-26: Retire Local Assistant As Fresh Tauri Test Target
+
+**Decision:** Stop using `/Users/fabio/Projects/local-first-personal-assistant` as the fresh Tauri rendering benchmark target.
+
+**Context:** The user clarified that the app previously used to test the Tauri chat rendering problem has removed Tauri and moved to Electron. Running new Tauri checks there would test the wrong runtime and make the Superpowers/CoderSteroids comparison invalid.
+
+**Alternatives:** Keep replaying the old Tauri prompt against the migrated repo, treat Electron behavior as a proxy for Tauri, or skip field benchmarks entirely.
+
+**Consequence:** Prior Tauri analysis remains historical evidence. Future work in that repo should benchmark Electron rendering, Chromium process behavior, IPC/security, and chat-render performance. Fresh Tauri-specific comparisons require a separate Tauri fixture or another repository that still uses Tauri.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

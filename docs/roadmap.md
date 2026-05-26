@@ -60,7 +60,8 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Add global-memory and subagent support as skills, but require live testing before claiming behavioral superiority.
 - After ecosystem research, prioritize skill lifecycle diagnostics, memory hygiene auditing, runnable benchmark execution, and cross-agent exports before adding broad workflow breadth.
 - Stack, language, runtime, and library recommendations must check known issues and mitigations when the choice affects rendering, performance, deployment, security, or data durability.
+- `/Users/fabio/Projects/local-first-personal-assistant` is no longer a valid Tauri rendering test target because the app is moving to Electron. Use it for Electron rendering validation only; use a separate Tauri fixture or historical result for Tauri-specific comparisons.
 
 ## Next Action
 
-Rerun the Tauri chat rendering field check with target-local validator and observability/logging plan, then compare against Superpowers again if needed.
+Define the next field benchmark against the current Electron-based `local-first-personal-assistant` app, with observability/logging and render benchmarks. If a Tauri comparison is still needed, create or pick a separate Tauri fixture before running it.

@@ -225,3 +225,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/project-bootstrap.sh --check /Users/fabio/Projects/local-first-personal-assistant`, target-local `scripts/codersteroids/check-field-depth-report.sh`, plugin-local `./scripts/check-field-depth-report.sh`, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after target helper refresh.
 
 **Next:** Refresh target helpers and rerun the Tauri chat rendering field check with an observability plan.
+
+## 2026-05-26: Retire Local Assistant As Tauri Test Target
+
+**Intent:** Correct the benchmark direction after the target app moved from Tauri to Electron.
+
+**Completed:** Updated roadmap, session state, decisions, and this ledger to mark `/Users/fabio/Projects/local-first-personal-assistant` as an Electron validation target, not a fresh Tauri benchmark target.
+
+**Changed:** `docs/roadmap.md`, `docs/wiki/session-state.md`, `docs/wiki/decisions.md`, and `docs/wiki/thread-ledger.md`.
+
+**Decisions:** Do not run new Tauri-specific claims against the migrated Electron app. Use prior Tauri artifacts only as historical evidence; use a separate Tauri fixture if fresh Tauri comparison is required.
+
+**Verification:** `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
+
+**Next:** Define the next field benchmark for the Electron app with observability/logging and render benchmark evidence.

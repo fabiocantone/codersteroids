@@ -56,9 +56,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added `observability-logging` and made observability/logging a required section of field-depth reports. `check-field-depth-report.sh` now requires `## Observability And Logging Plan` and a signal/source/proves/gap/action table. Project bootstrap now supports `--force` so generated helpers can be refreshed in target repos.
 
+2026-05-26: User clarified that `/Users/fabio/Projects/local-first-personal-assistant` is moving from Tauri to Electron, so it is no longer valid for fresh Tauri rendering tests. Keep prior Tauri findings as historical evidence only. Future tests in that repo should validate Electron rendering behavior; any new Tauri-specific comparison needs a separate Tauri fixture or target repo.
+
 ## Next Action
 
-Refresh CoderSteroids helpers in `/Users/fabio/Projects/local-first-personal-assistant`, then rerun the Tauri chat rendering field check with target-local validator and observability/logging plan.
+Define and run the next field benchmark against the current Electron-based `local-first-personal-assistant` app using target-local CoderSteroids validators, observability/logging, and render benchmarks. Create or select a separate Tauri fixture only if a fresh Tauri comparison is still required.
 
 ## Risks
 
