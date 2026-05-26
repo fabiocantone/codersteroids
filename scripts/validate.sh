@@ -41,6 +41,7 @@ required_files=(
   "$ROOT/benchmarks/prompts/prompt-briefing.md"
   "$ROOT/benchmarks/prompts/self-improvement-loop.md"
   "$ROOT/benchmarks/prompts/tdd-code-review-gap-closing.md"
+  "$ROOT/benchmarks/prompts/worktree-branch-lifecycle.md"
   "$ROOT/benchmarks/results/template.md"
 )
 
@@ -57,6 +58,7 @@ required_skills=(
   self-improvement-loop
   test-first-development
   code-review-discipline
+  branch-workspace-lifecycle
   skill-lifecycle-doctor
   memory-hygiene-audit
   benchmark-runner

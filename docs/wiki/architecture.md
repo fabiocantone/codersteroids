@@ -26,6 +26,7 @@ The plugin is a Codex plugin with:
 - `self-improvement-loop`: benchmark/user-correction to scoped methodology change with before/after evidence.
 - `test-first-development`: pragmatic failing-test-first workflow for testable behavior changes.
 - `code-review-discipline`: severity-based code review request/reception workflow with technical verification.
+- `branch-workspace-lifecycle`: dirty-state, branch/worktree isolation, finishing, push/PR/merge, and cleanup decision workflow.
 - `skill-lifecycle-doctor`: plugin install/cache/manifest/config diagnostics.
 - `memory-hygiene-audit`: roadmap/wiki/source/ledger quality checks.
 - `benchmark-runner`: benchmark result scaffold and recording workflow.

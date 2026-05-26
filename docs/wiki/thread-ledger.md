@@ -337,3 +337,11 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** Focused negative test confirmed a malformed TDD/code-review result now fails with missing `## Failing Test Evidence`. `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed.
 
 **Next:** Continue with Electron `bench:chat-render`.
+
+## 2026-05-26: Branch Workspace Lifecycle Gap Closing
+**Intent:** Close the next Superpowers gap around isolated workspaces, dirty worktree handling, branch finishing, and cleanup safety.
+**Completed:** Added `branch-workspace-lifecycle`, routed it from `using-methodology`, added `benchmarks/prompts/worktree-branch-lifecycle.md`, required both in validation, and synced the installed cache.
+**Changed:** New lifecycle skill, benchmark prompt, plan, validation scripts, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
+**Decisions:** Use one pragmatic lifecycle skill rather than copying Superpowers' separate worktree and branch-finishing skills. Require branch/dirty-state inspection, explicit isolation choice, unrelated-change preservation, no push/merge/delete/cleanup without approval, and a finish report with verification plus memory/docs state.
+**Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed before this note was finalized.
+**Next:** Run the branch/workspace lifecycle benchmark, then continue with Electron `bench:chat-render`.

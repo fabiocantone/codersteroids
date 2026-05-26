@@ -72,9 +72,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Ran the TDD/code-review gap-closing benchmark against a small checker behavior change. Before implementation, a malformed TDD/code-review result with only `Improved` passed `scripts/check-benchmark-artifacts.sh`; after the change, the same malformed result fails with missing `## Failing Test Evidence`. Saved `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`.
 
+2026-05-26: Added `branch-workspace-lifecycle` to close the Superpowers worktree/branch-finishing gap at the instruction level. The skill requires branch/dirty-state inspection before risky work, explicit isolation decisions, no destructive cleanup or remote mutation without user approval, and a finish report with verification plus memory/docs state.
+
 ## Next Action
 
-Continue with `bench:chat-render` in `local-first-personal-assistant`.
+Run the branch/workspace lifecycle benchmark, then continue with `bench:chat-render` in `local-first-personal-assistant`.
 
 ## Risks
 
@@ -83,3 +85,4 @@ Continue with `bench:chat-render` in `local-first-personal-assistant`.
 - Benchmark artifact checks validate required result shape, not the factual truth of manually recorded evidence.
 - CoderSteroids remains weaker than Superpowers for broad software-development workflow breadth: TDD, code review, worktrees, branch finishing, subagent execution, multi-harness packaging, and public adoption.
 - New TDD/code-review skills are structural until benchmarked on a real code change.
+- New branch/workspace lifecycle skill is structural until benchmarked on a real dirty-worktree or branch-finish scenario.

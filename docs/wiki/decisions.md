@@ -245,3 +245,13 @@
 **Alternatives:** Copy Superpowers' strict TDD/review skills, ignore the gap, or wait for a full subagent review runner.
 
 **Consequence:** CoderSteroids now routes testable behavior changes through a pragmatic failing-test-first workflow and review interactions through a severity/evidence-based review workflow. These skills need a live benchmark before claiming parity.
+
+## 2026-05-26: Add Branch Workspace Lifecycle Skill
+
+**Decision:** Add `branch-workspace-lifecycle` as one pragmatic workflow covering dirty-state inspection, branch/worktree isolation, finish decisions, and cleanup safety.
+
+**Context:** The updated Superpowers gap analysis found CoderSteroids weaker in worktree creation and development-branch finishing. That gap matters because CoderSteroids is intended for long-running work across sessions, where unrelated changes and stale handoffs are common.
+
+**Alternatives:** Copy Superpowers' separate worktree and branch-finishing skills, keep this as generic planning guidance, or build full branch/PR automation first.
+
+**Consequence:** CoderSteroids now requires explicit branch/dirty-state inspection before risky work, an isolation decision, preservation of unrelated user changes, verification before finish, memory/docs flush, and user approval before push, merge, delete, or cleanup operations. The workflow is structural until validated in a live benchmark.

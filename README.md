@@ -14,6 +14,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `self-improvement-loop`
 - `test-first-development`
 - `code-review-discipline`
+- `branch-workspace-lifecycle`
 - `skill-lifecycle-doctor`
 - `memory-hygiene-audit`
 - `benchmark-runner`
