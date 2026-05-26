@@ -197,3 +197,17 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Verification:** `./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md`, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed.
 
 **Next:** Add project bootstrap/export for CoderSteroids validation helpers.
+
+## 2026-05-26: Project Bootstrap For Target Repos
+
+**Intent:** Make CoderSteroids validation helpers available inside target repositories.
+
+**Completed:** Added `project-bootstrap`, `scripts/project-bootstrap.sh`, validation wiring, README/docs updates, tested bootstrap on a temporary target directory, and bootstrapped `/Users/fabio/Projects/local-first-personal-assistant`.
+
+**Changed:** `skills/project-bootstrap/SKILL.md`, `scripts/project-bootstrap.sh`, `scripts/validate.sh`, README, skills folder docs, architecture, roadmap, decisions, session state, and this ledger.
+
+**Decisions:** Export lightweight helpers under `scripts/codersteroids/` and `docs/codersteroids/`; do not copy plugin memory, benchmark results, local config, or secrets into target repos.
+
+**Verification:** `./scripts/project-bootstrap.sh /Users/fabio/Projects/local-first-personal-assistant`, `./scripts/project-bootstrap.sh --check /Users/fabio/Projects/local-first-personal-assistant`, and `/Users/fabio/Projects/local-first-personal-assistant/scripts/codersteroids/check-field-depth-report.sh /Users/fabio/Projects/local-first-personal-assistant/docs/codersteroids/field-depth-report-template.md` passed.
+
+**Next:** Rerun the Tauri chat rendering field check using the target-local validator.

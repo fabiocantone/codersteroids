@@ -136,6 +136,16 @@
 
 **Consequence:** Next capability should bootstrap/export CoderSteroids helper scripts and templates into target repos when a methodology check needs local execution.
 
+## 2026-05-26: Add Project Bootstrap For Target-Repo Helpers
+
+**Decision:** Add `project-bootstrap` plus `scripts/project-bootstrap.sh` to export lightweight CoderSteroids helper scripts and templates into target repositories.
+
+**Context:** The Tauri chat rendering rerun needed `check-field-depth-report.sh`, but the script existed only in the CoderSteroids plugin repository. Field checks must run where the work happens without asking the user or agent to know plugin-internal paths.
+
+**Alternatives:** Keep using plugin-internal paths, copy scripts manually, or require every repo to vendor the full plugin.
+
+**Consequence:** Target repos can now receive CoderSteroids-owned helper files under `scripts/codersteroids/` and `docs/codersteroids/`, with a non-writing `--check` mode for drift detection.
+
 ## 2026-05-26: Add Skill Lifecycle Doctor
 
 **Decision:** Add `skill-lifecycle-doctor` plus `scripts/doctor.sh` as a first-class plugin health check.

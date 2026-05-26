@@ -50,9 +50,13 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Reviewed updated CoderSteroids Tauri chat rendering analysis after field-depth gate. The rerun corrected stale virtualization assumptions, produced local flow map, secondary bottlenecks, implementation library research, falsification checks, and a verification matrix. It now beats the prior Superpowers output on technical-analysis depth, but still loses on verification breadth and revealed target-repo portability gap: `scripts/check-field-depth-report.sh` exists in the plugin repo, not in `local-first-personal-assistant`.
 
+2026-05-26: Implemented `project-bootstrap` and `scripts/project-bootstrap.sh`. It exports `scripts/codersteroids/check-field-depth-report.sh`, `docs/codersteroids/field-depth-report-template.md`, and `docs/codersteroids/README.md` into a target repo, refuses to overwrite drifted files, and supports `--check`.
+
+2026-05-26: Ran project bootstrap in `/Users/fabio/Projects/local-first-personal-assistant`. Exported helpers were written and `scripts/codersteroids/check-field-depth-report.sh docs/codersteroids/field-depth-report-template.md` passed inside the target repo.
+
 ## Next Action
 
-Add project bootstrap/export for CoderSteroids validation helpers so target repos can run field-depth checks.
+Rerun the Tauri chat rendering field check using the target-local CoderSteroids validator, then compare against Superpowers again if needed.
 
 ## Risks
 

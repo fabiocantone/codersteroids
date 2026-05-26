@@ -14,6 +14,7 @@ It is intentionally smaller than Superpowers in its MVP. The goal is to prove on
 - `memory-hygiene-audit`
 - `benchmark-runner`
 - `field-engineering-depth`
+- `project-bootstrap`
 - `roadmap-first-planning`
 - `llm-wiki-memory`
 - `chat-continuity`
@@ -86,4 +87,11 @@ Field engineering reports can be checked with:
 
 ```bash
 ./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md
+```
+
+CoderSteroids helpers can be exported into a target repository with:
+
+```bash
+./scripts/project-bootstrap.sh /path/to/target-repo
+./scripts/project-bootstrap.sh --check /path/to/target-repo
 ```

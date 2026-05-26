@@ -54,6 +54,7 @@ required_skills=(
   memory-hygiene-audit
   benchmark-runner
   field-engineering-depth
+  project-bootstrap
   roadmap-first-planning
   llm-wiki-memory
   chat-continuity
@@ -98,6 +99,11 @@ test -x "$ROOT/scripts/benchmark-runner.sh" || {
 
 test -x "$ROOT/scripts/check-field-depth-report.sh" || {
   echo "Field depth checker is not executable: $ROOT/scripts/check-field-depth-report.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/project-bootstrap.sh" || {
+  echo "Project bootstrap script is not executable: $ROOT/scripts/project-bootstrap.sh"
   exit 1
 }
 
