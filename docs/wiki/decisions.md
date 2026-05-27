@@ -315,3 +315,13 @@
 **Alternatives:** Disable Superpowers in the user's Codex config, or accept Superpowers as the first workflow.
 
 **Consequence:** CoderSteroids now documents the host-level conflict and requires immediate routing back to CoderSteroids for its primary domains. `doctor.sh` warns when Superpowers is enabled alongside CoderSteroids.
+
+## 2026-05-27: Strict Auto-Start Requires No Competing Bootstrap
+
+**Decision:** Add `host-enforcement-check.sh --strict-autostart` to fail when Superpowers is enabled.
+
+**Context:** The user repeated the manual test and the host still invoked Superpowers first. Since Superpowers declares itself for every conversation, CoderSteroids cannot guarantee first position while Superpowers remains enabled.
+
+**Alternatives:** Disable Superpowers automatically, or keep treating the conflict as only a warning.
+
+**Consequence:** Normal checks warn about the conflict; strict auto-start checks fail. This makes the required test configuration explicit without silently changing the user's global Codex config.

@@ -26,6 +26,14 @@ Run before committing:
 git diff --check
 ```
 
+For strict fresh-chat auto-start validation, run:
+
+```bash
+./scripts/host-enforcement-check.sh --strict-autostart
+```
+
+This intentionally fails if Superpowers or another always-on methodology bootstrap is enabled.
+
 If the local Codex cache is used, also run:
 
 ```bash

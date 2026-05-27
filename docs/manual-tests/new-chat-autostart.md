@@ -9,6 +9,18 @@ Verify whether the host loads CoderSteroids without the user explicitly saying "
 - CoderSteroids plugin enabled.
 - Fresh Codex chat.
 - Do not mention CoderSteroids in the prompt.
+- For strict CoderSteroids-first testing, disable competing always-on methodology plugins such as Superpowers.
+- If Superpowers remains enabled, the host may invoke `superpowers:using-superpowers` first; the pass condition is then immediate routing to CoderSteroids as the primary workflow.
+
+## Preflight
+
+Run:
+
+```bash
+./scripts/host-enforcement-check.sh --strict-autostart
+```
+
+If this fails because Superpowers is enabled, strict CoderSteroids-first auto-start is not a valid test configuration.
 
 ## Prompt
 
@@ -23,7 +35,7 @@ Devo migliorare questo plugin: riscrivi questo prompt in modo che l'agente non p
 - The agent treats CoderSteroids as the primary workflow for prompt rewriting.
 - The agent mentions loading or preserving project memory/roadmap/wiki when applicable.
 - The agent does not require the user to say "Use CoderSteroids".
-- If Superpowers is installed and appears as a host bootstrap, the agent should immediately route to CoderSteroids and should not present Superpowers as the primary workflow.
+- If Superpowers is installed and appears as a host bootstrap, the agent should immediately route to CoderSteroids and should not present Superpowers as the primary workflow for the task.
 - If it produces a draft prompt, the draft includes verification and memory-update requirements.
 
 ## Pass Criteria

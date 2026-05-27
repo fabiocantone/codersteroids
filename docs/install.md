@@ -18,6 +18,14 @@ git clone https://github.com/fabiocantone/codersteroids.git
 ./scripts/host-enforcement-check.sh
 ```
 
+For strict auto-start testing where CoderSteroids must appear before any competing methodology bootstrap:
+
+```bash
+./scripts/host-enforcement-check.sh --strict-autostart
+```
+
+If this fails because Superpowers is enabled, either disable Superpowers for the test or accept that the host may invoke Superpowers first and then route back to CoderSteroids.
+
 ## Target Repository Bootstrap
 
 Export CoderSteroids helper checks into a project:

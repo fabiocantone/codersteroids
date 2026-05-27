@@ -71,6 +71,11 @@ grep -q 'CoderSteroids is the primary workflow' "$ROOT/.codex-plugin/plugin.json
   exit 1
 }
 
+grep -q -- '--strict-autostart' "$ROOT/scripts/host-enforcement-check.sh" || {
+  echo "host enforcement check missing strict auto-start mode"
+  exit 1
+}
+
 grep -q 'prompt rewriting remains a CoderSteroids-primary workflow' "$ROOT/skills/prompt-briefing/SKILL.md" || {
   echo "prompt-briefing missing methodology conflict rule"
   exit 1

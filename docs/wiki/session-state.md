@@ -88,6 +88,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: User ran the fresh-chat prompt and the first thought still invoked `superpowers:using-superpowers` before CoderSteroids. Root cause: Superpowers has a host-level bootstrap rule and is enabled alongside CoderSteroids. Added explicit CoderSteroids-primary conflict rules for CoderSteroids/prompt-rewriting/memory/current-doc tasks, plus doctor/smoke/export/manual-test coverage.
 
+2026-05-27: The fresh-chat behavior still showed Superpowers first. Added `./scripts/host-enforcement-check.sh --strict-autostart`, which fails when Superpowers is enabled because strict CoderSteroids-first auto-start cannot be guaranteed in that host configuration.
+
 ## Next Action
 
 Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume later.
