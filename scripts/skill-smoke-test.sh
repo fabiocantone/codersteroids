@@ -56,4 +56,19 @@ grep -q 'Apply CoderSteroids automatically' "$ROOT/.codex-plugin/plugin.json" ||
   exit 1
 }
 
+grep -q 'Before any coding response, apply CoderSteroids routing' "$ROOT/.codex-plugin/plugin.json" || {
+  echo "manifest missing strong before-coding auto-start prompt"
+  exit 1
+}
+
+grep -q 'Before any coding response, apply CoderSteroids routing' "$ROOT/skills/using-methodology/SKILL.md" || {
+  echo "using-methodology missing strong before-coding auto-start rule"
+  exit 1
+}
+
+test -f "$ROOT/docs/manual-tests/new-chat-autostart.md" || {
+  echo "missing new-chat auto-start manual test"
+  exit 1
+}
+
 echo "Skill smoke test passed."

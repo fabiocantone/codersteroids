@@ -23,6 +23,7 @@ required_files=(
   "$ROOT/docs/distribution.md"
   "$ROOT/docs/host-enforcement.md"
   "$ROOT/docs/release-checklist.md"
+  "$ROOT/docs/manual-tests/new-chat-autostart.md"
   "$ROOT/docs/roadmap.md"
   "$ROOT/docs/context7-setup.md"
   "$ROOT/docs/specs/plugin-methodology-validation.md"

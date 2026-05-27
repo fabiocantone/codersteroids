@@ -308,7 +308,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 ## 2026-05-26: TDD Code Review Benchmark Run
 **Intent:** Validate the new TDD/code-review skills with a small real behavior change.
 **Completed:** Used test-first discipline on `scripts/check-benchmark-artifacts.sh`; malformed TDD/code-review results now fail unless they include red/green evidence, broader verification, review table, and verdict.
-**Changed:** `scripts/check-benchmark-artifacts.sh`, `benchmarks/results/2026-05-26-tdd-code-review-gap-closing.md`, roadmap, session state, and this ledger.
 **Decisions:** TDD/code-review benchmark results must include red/green evidence, broader verification, review result table, and explicit verdict.
 **Verification:** Focused negative test and standard suite passed.
 
@@ -316,34 +315,36 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Intent:** Close the next Superpowers gap around isolated workspaces, dirty worktree handling, branch finishing, and cleanup safety.
 **Completed:** Added `branch-workspace-lifecycle`, routed it from `using-methodology`, added `benchmarks/prompts/worktree-branch-lifecycle.md`, required both in validation, and synced the installed cache.
 **Changed:** New lifecycle skill, benchmark prompt, plan, validation, README/docs, architecture, roadmap, decisions, session state, and this ledger.
-**Decisions:** Use one pragmatic lifecycle skill requiring branch/dirty-state inspection, explicit isolation choice, unrelated-change preservation, no push/merge/delete/cleanup without approval, and a finish report.
+**Decisions:** Use one pragmatic lifecycle skill requiring branch/dirty-state inspection, explicit isolation choice, unrelated-change preservation, explicit approval for risky git actions, and a finish report.
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed before this note was finalized.
 
 ## 2026-05-26: Branch Workspace Lifecycle Benchmark Run
 **Intent:** Validate the new branch/workspace lifecycle workflow against a concrete checker behavior change and recorded finish path.
 **Completed:** Created `benchmarks/results/2026-05-26-worktree-branch-lifecycle.md` and updated `scripts/check-benchmark-artifacts.sh` so malformed lifecycle results no longer pass with only `Improved`.
-**Changed:** Benchmark checker, lifecycle result artifact, roadmap, session state, and this ledger.
 **Decisions:** Treat the clean-worktree finish path as improved, but keep dirty-worktree preservation as a remaining benchmark gap.
 **Verification:** Focused negative test confirmed a malformed lifecycle result now fails with missing `## Workspace Lifecycle`; standard suite passed after the benchmark artifact was corrected.
 
 ## 2026-05-26: Remaining Superpowers Gap Coverage
 **Intent:** Cover the remaining local workflow gaps: small-task overhead, subagent execution control, benchmark automation, and dirty-worktree proof.
 **Completed:** Added `small-task-fast-path`, `subagent-execution-controller`, `benchmark-runner.sh --check`, small-task/subagent result shape checks, and dirty-worktree lifecycle result evidence.
-**Changed:** New skills/prompts/results, benchmark runner/checker, validation/doctor wiring, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
 **Decisions:** Treat local practical gaps as covered; keep public adoption, multi-harness maturity, and real external multi-agent execution as honest residual Superpowers advantages.
 **Verification:** Full suite passed after cache sync and benchmark checker fix.
 
 ## 2026-05-26: Zero Local Superpowers Methodology Gap
 **Intent:** Ignore the Electron benchmark and close remaining local methodology differences with Superpowers.
 **Completed:** Added `spec-discovery`, `plan-execution-checkpoints`, `skill-authoring-pressure-test`, `cross-agent-export`, `scripts/cross-agent-export.sh`, and `scripts/skill-smoke-test.sh`.
-**Changed:** New skills/scripts/plan, routing, validation, doctor, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
 **Decisions:** Treat local methodology gap as covered; remaining Superpowers advantages are external adoption/distribution and host-runtime execution, not missing CoderSteroids skill artifacts.
 **Verification:** Cross-agent export temp check, skill smoke test, doctor, memory audit, validation, benchmark artifact check, diff check, and cache diff passed.
 
 ## 2026-05-27: Release Distribution And Host Enforcement
 **Intent:** Proceed on the remaining gap: adoption/distribution/host runtime capabilities.
 **Completed:** Added release-ready repo files, install/distribution/host-enforcement/release docs, generated root agent instruction files, and added host-enforcement plus release-readiness scripts.
-**Changed:** License, changelog, contributing guide, AGENTS/CLAUDE/GEMINI/Cursor instructions, distribution docs, release docs, manifest metadata, validation, doctor, smoke test, roadmap, decisions, session state, and this ledger.
 **Decisions:** Treat adoption and marketplace submission as external outcomes; make the repository ready and verifiable instead of overclaiming runtime enforcement.
 **Verification:** Release readiness, host enforcement, cross-agent export, doctor, memory audit, validate, benchmark checks, diff checks, and cache checks passed.
-**Next:** Tag/release when ready.
+
+## 2026-05-27: Auto Start And Language Follow-Up
+**Intent:** Complete the user's earlier auto-start suggestions precisely.
+**Completed:** Added strong before-coding auto-start text, doctor/smoke/export checks, same-language checks, and a manual fresh-chat auto-start test prompt.
+**Decisions:** Do not claim fresh-chat runtime success from repo scripts alone; document and provide the manual test.
+**Verification:** Doctor now checks strong auto-start and same-language manifest prompts; smoke/export/release/host/memory/validate/check suites passed after cache/export refresh.
+**Next:** Run the manual new-chat test in Codex.

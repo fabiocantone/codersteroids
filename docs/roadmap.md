@@ -60,6 +60,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add host-enforcement check.
 - [x] Generate portable root instruction files.
 - [x] Add prompt-rewriting auto-activation and same-language response rules.
+- [x] Add doctor/smoke/manual coverage for new-chat auto-start behavior.
 
 ## Deferred Phases
 
@@ -90,6 +91,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Public adoption, issue volume, and multi-harness maturity remain outside the scope of a local plugin implementation.
 - Local methodology and release-readiness coverage is complete at the artifact/skill/script level. Remaining gaps are external outcomes: public adoption, marketplace submission, and host runtime compliance.
 - CoderSteroids now explicitly auto-activates for prompt rewriting/generation and answers in the user's language by default.
+- Fresh-chat auto-start has repository checks plus a manual test prompt; actual host compliance must still be verified in a new chat runtime.
 
 ## Next Action
 

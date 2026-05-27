@@ -84,6 +84,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: Added explicit auto-activation and language behavior after user feedback. CoderSteroids now says to auto-apply routing for prompt rewriting/generation and other methodology tasks without requiring "Use CoderSteroids"; it also requires answering in the user's language by default.
 
+2026-05-27: Tightened the auto-start work after user asked whether all earlier suggestions were done. Added the exact stronger default prompt rule, doctor checks for auto-start/language, smoke checks, export checks, and `docs/manual-tests/new-chat-autostart.md` for the one part that must be verified in a fresh Codex chat.
+
 ## Next Action
 
 Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume later.

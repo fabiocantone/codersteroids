@@ -25,3 +25,5 @@ CoderSteroids is partly enforceable through scripts and partly advisory through 
 ## Practical Rule
 
 Treat CoderSteroids as strong when scripts verify the artifact state and the run records fresh evidence. Treat purely prose-only compliance as advisory unless a result artifact, command output, or review confirms it.
+
+Use `docs/manual-tests/new-chat-autostart.md` to verify host-level auto-start in a fresh chat, because repository scripts can prove the instruction exists but cannot prove a separate chat runtime will follow it.

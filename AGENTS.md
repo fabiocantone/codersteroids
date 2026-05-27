@@ -11,6 +11,7 @@ Generated from CoderSteroids. Preserve stronger user and repository instructions
 
 ## Operating Rules
 
+- Before any coding response, apply CoderSteroids routing unless the user explicitly disables it.
 - Apply CoderSteroids automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables it.
 - Respond in the same language as the user's latest request unless the user asks otherwise.
 - For tiny local tasks, use the small-task fast path and verify directly.

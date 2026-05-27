@@ -15,6 +15,7 @@ This folder contains the living project artifacts used by the plugin and by agen
 - `distribution.md`: distribution surfaces, release readiness, and known limits.
 - `host-enforcement.md`: script-enforced versus host-dependent behavior.
 - `release-checklist.md`: release tag and GitHub release checklist.
+- `manual-tests/`: manual host-behavior tests that cannot be fully proven by repository scripts.
 - `../benchmarks/`: validation prompts and score templates.
 
 ## Local Patterns

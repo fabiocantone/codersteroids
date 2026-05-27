@@ -32,6 +32,7 @@
       "Write"
     ],
     "defaultPrompt": [
+      "Before any coding response, apply CoderSteroids routing unless the user explicitly disables it.",
       "Apply CoderSteroids automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables it.",
       "Continue from the roadmap and wiki memory.",
       "Research current docs before implementing.",

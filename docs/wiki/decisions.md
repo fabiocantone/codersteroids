@@ -295,3 +295,13 @@
 **Alternatives:** Keep requiring "Use CoderSteroids", or only add the language rule to exported instructions.
 
 **Consequence:** `using-methodology`, `prompt-briefing`, the plugin manifest default prompt, cross-agent exports, and smoke tests now require automatic CoderSteroids use for prompt rewriting/generation and same-language responses unless the user asks otherwise.
+
+## 2026-05-27: Add Explicit Fresh Chat Auto-Start Coverage
+
+**Decision:** Add the exact strong "Before any coding response" auto-start rule to manifest, methodology, exports, doctor, smoke tests, and a manual fresh-chat test.
+
+**Context:** The user asked whether the earlier suggestions were actually implemented, including doctor/smoke auto-start checks and a fresh-chat test. Scripts can verify that instructions are installed and exported, but only a fresh host chat can prove runtime behavior.
+
+**Alternatives:** Rely on the existing broader auto-activation wording, or claim the fresh-chat test passed without running one.
+
+**Consequence:** Repository checks now fail if the strong auto-start and language rules are missing. Fresh-chat compliance remains a manual/host-level test documented in `docs/manual-tests/new-chat-autostart.md`.

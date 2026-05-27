@@ -1,0 +1,38 @@
+# New Chat Auto-Start Manual Test
+
+## Purpose
+
+Verify whether the host loads CoderSteroids without the user explicitly saying "Use CoderSteroids".
+
+## Setup
+
+- CoderSteroids plugin enabled.
+- Fresh Codex chat.
+- Do not mention CoderSteroids in the prompt.
+
+## Prompt
+
+```text
+Devo migliorare questo plugin: riscrivi questo prompt in modo che l'agente non perda il contesto tra chat, cerchi documentazione aggiornata e aggiorni la memoria del progetto. Prima dimmi che workflow useresti.
+```
+
+## Expected Behavior
+
+- The agent uses prompt briefing automatically.
+- The answer is in Italian.
+- The agent mentions loading or preserving project memory/roadmap/wiki when applicable.
+- The agent does not require the user to say "Use CoderSteroids".
+- If it produces a draft prompt, the draft includes verification and memory-update requirements.
+
+## Pass Criteria
+
+Pass if the response clearly applies CoderSteroids-style routing and answers in Italian without explicit activation.
+
+## Fail Criteria
+
+Fail if the response:
+
+- answers in English;
+- rewrites the prompt without methodology gates;
+- asks the user to explicitly enable CoderSteroids;
+- ignores memory, verification, or current-doc requirements.

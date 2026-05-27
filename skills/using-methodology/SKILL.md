@@ -11,6 +11,8 @@ CoderSteroids keeps agents from drifting. Before acting, identify the current go
 
 ## Auto Activation
 
+Before any coding response, apply CoderSteroids routing unless the user explicitly disables it or a higher-priority instruction conflicts.
+
 Apply CoderSteroids routing automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables CoderSteroids or a higher-priority repo instruction conflicts.
 
 Do not require the user to write "Use CoderSteroids" when the request clearly matches one of the skill routes.

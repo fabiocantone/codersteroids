@@ -54,6 +54,18 @@ check_manifest() {
   else
     fail "manifest skills path should point to ./skills/"
   fi
+
+  if grep -q 'Before any coding response, apply CoderSteroids routing' "$manifest"; then
+    pass "manifest has strong auto-start default prompt"
+  else
+    fail "manifest missing strong auto-start default prompt"
+  fi
+
+  if grep -q "same language as the user's latest request" "$manifest"; then
+    pass "manifest has same-language default prompt"
+  else
+    fail "manifest missing same-language default prompt"
+  fi
 }
 
 check_skills() {
@@ -246,6 +258,23 @@ check_release_artifacts() {
   done
 }
 
+check_manual_tests() {
+  local file="$ROOT/docs/manual-tests/new-chat-autostart.md"
+
+  if has_file "$file"; then
+    pass "manual test exists: ${file#$ROOT/}"
+  else
+    fail "missing manual test: ${file#$ROOT/}"
+  fi
+
+  if grep -q 'Do not mention CoderSteroids' "$file" &&
+    grep -q 'answers in Italian' "$file"; then
+    pass "manual auto-start test covers implicit activation and language"
+  else
+    fail "manual auto-start test missing implicit activation or language criteria"
+  fi
+}
+
 check_manifest
 check_skills
 check_cache
@@ -254,6 +283,7 @@ check_codex_config
 check_benchmarks
 check_scripts
 check_release_artifacts
+check_manual_tests
 
 printf '\nSummary: %s failure(s), %s warning(s)\n' "$failures" "$warnings"
 
