@@ -344,4 +344,4 @@
 
 **Alternatives:** Market CoderSteroids as a Superpowers replacement, keep the README as a technical inventory, or delay promotion until marketplace adoption.
 
-**Consequence:** The README now leads with problem/promise/workflow and the promotion strategy avoids overclaiming. Public messaging should emphasize roadmap/wiki continuity, current-doc checks, source ledgers, observability-based diagnosis, and verification gates.
+**Consequence:** The README now leads with problem/promise/workflow and avoids a direct competitor section. Public messaging should emphasize roadmap/wiki continuity, current-doc checks, source ledgers, observability-based diagnosis, and verification gates; competitor comparison belongs in strategy and benchmark docs.

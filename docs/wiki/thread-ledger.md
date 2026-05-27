@@ -6,11 +6,11 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Intent:** Improve CoderSteroids' public presentation and prepare a promotion path without overclaiming against Superpowers.
 
-**Completed:** Rewrote the README as a public-facing product page, added `docs/promotion-strategy.md`, recorded Superpowers README evidence, and kept the thread ledger compact.
+**Completed:** Rewrote the README as a public-facing product page, removed the direct "How It Differs From Superpowers" section from the public README, added `docs/promotion-strategy.md`, recorded Superpowers README evidence, and kept the thread ledger compact.
 
 **Changed:** `README.md`, `docs/promotion-strategy.md`, `docs/plans/2026-05-27-readme-promotion.md`, `docs/FOLDER.md`, roadmap, sources, decisions, session state, and this ledger.
 
-**Decisions:** Position CoderSteroids as a Codex-first continuity/evidence layer. Do not claim it replaces Superpowers or guarantees host runtime behavior.
+**Decisions:** Position CoderSteroids as a Codex-first continuity/evidence layer. Keep direct competitor comparison in strategy/internal docs, not in the public README.
 
 **Verification:** `./scripts/skill-smoke-test.sh`, `./scripts/release-readiness.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `./scripts/memory-audit.sh`, and `git diff --check` passed.
 
@@ -20,11 +20,11 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Intent:** Improve CoderSteroids' public README and define a promotion strategy after user feedback that Superpowers presents itself better.
 
-**Completed:** Compared the live Superpowers README structure, rewrote CoderSteroids README as a public-facing product page, and added `docs/promotion-strategy.md`.
+**Completed:** Compared the live Superpowers README structure, rewrote CoderSteroids README as a public-facing product page, removed direct public comparison language, and added `docs/promotion-strategy.md`.
 
 **Changed:** `README.md`, `docs/promotion-strategy.md`, `docs/FOLDER.md`, roadmap, sources, decisions, session state, and this ledger.
 
-**Decisions:** Position CoderSteroids as a Codex-first continuity/evidence layer. Do not claim it replaces Superpowers or guarantees host runtime behavior.
+**Decisions:** Position CoderSteroids on its own merits in the README. Keep Superpowers comparison in `docs/promotion-strategy.md` and benchmark docs.
 
 **Verification:** `./scripts/skill-smoke-test.sh`, `./scripts/release-readiness.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `./scripts/memory-audit.sh`, and `git diff --check` passed.
 

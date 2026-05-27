@@ -69,22 +69,6 @@ CoderSteroids is built for work where continuity and evidence matter more than r
 
 For tiny local edits, CoderSteroids includes a small-task fast path so the agent does not perform unnecessary ceremony.
 
-## How It Differs From Superpowers
-
-Superpowers is broader and more mature as a general software-development methodology. CoderSteroids should not pretend otherwise.
-
-CoderSteroids focuses on a narrower gap:
-
-- Codex-first plugin packaging and local install diagnostics;
-- living roadmap plus Markdown LLM Wiki continuity;
-- source ledger and current-doc research before implementation;
-- known-issue checks before stack/library recommendations;
-- field engineering reports with observability and falsification gates;
-- benchmark artifacts and memory hygiene checks;
-- cross-agent exports for AGENTS.md, Claude, Gemini, and Cursor.
-
-The goal is not to clone Superpowers. The goal is to make long-running Codex work easier to resume, audit, and trust.
-
 ## Skills Inside
 
 **Start and routing**
