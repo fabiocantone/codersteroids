@@ -60,6 +60,7 @@ Generated from CoderSteroids. Preserve stronger user and repository instructions
 
 - Before any coding response, apply CoderSteroids routing unless the user explicitly disables it.
 - Apply CoderSteroids automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables it.
+- When the task is about CoderSteroids, prompt rewriting, cross-chat continuity, project memory, roadmap/wiki, source ledger, or current-doc verification, CoderSteroids is the primary workflow even if another methodology plugin is installed.
 - Respond in the same language as the user's latest request unless the user asks otherwise.
 - For tiny local tasks, use the small-task fast path and verify directly.
 - For ambiguous product or architecture work, write a working spec before implementation.
@@ -131,6 +132,11 @@ check_file() {
 
   grep -q "Before any coding response" "$file" || {
     echo "Export file missing strong auto-start rule: $file"
+    exit 1
+  }
+
+  grep -q "CoderSteroids is the primary workflow" "$file" || {
+    echo "Export file missing CoderSteroids primary-workflow conflict rule: $file"
     exit 1
   }
 }

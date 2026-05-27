@@ -305,3 +305,13 @@
 **Alternatives:** Rely on the existing broader auto-activation wording, or claim the fresh-chat test passed without running one.
 
 **Consequence:** Repository checks now fail if the strong auto-start and language rules are missing. Fresh-chat compliance remains a manual/host-level test documented in `docs/manual-tests/new-chat-autostart.md`.
+
+## 2026-05-27: CoderSteroids Primary When Superpowers Also Boots
+
+**Decision:** Add methodology conflict rules so CoderSteroids is primary for CoderSteroids, prompt rewriting, continuity, memory, source-ledger, and current-doc tasks even if Superpowers is also installed.
+
+**Context:** A fresh-chat test showed the host invoking `superpowers:using-superpowers` first because Superpowers has a global mandatory bootstrap. This can confuse the workflow even when the user is testing CoderSteroids prompt rewriting.
+
+**Alternatives:** Disable Superpowers in the user's Codex config, or accept Superpowers as the first workflow.
+
+**Consequence:** CoderSteroids now documents the host-level conflict and requires immediate routing back to CoderSteroids for its primary domains. `doctor.sh` warns when Superpowers is enabled alongside CoderSteroids.

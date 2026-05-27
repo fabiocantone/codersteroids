@@ -66,6 +66,12 @@ check_manifest() {
   else
     fail "manifest missing same-language default prompt"
   fi
+
+  if grep -q "CoderSteroids is the primary workflow" "$manifest"; then
+    pass "manifest has methodology conflict priority prompt"
+  else
+    fail "manifest missing methodology conflict priority prompt"
+  fi
 }
 
 check_skills() {
@@ -181,6 +187,10 @@ check_codex_config() {
     fail "old evidence-first-methodology@personal plugin is still enabled"
   else
     pass "old evidence-first-methodology plugin is not enabled"
+  fi
+
+  if awk '/\[plugins\."superpowers@openai-curated"\]/{flag=1;next}/^\[/{flag=0}flag && /^enabled[[:space:]]*=/{print}' "$CODEX_CONFIG" | grep -q 'true'; then
+    warn "Superpowers is enabled too; host bootstrap may invoke it before CoderSteroids"
   fi
 }
 

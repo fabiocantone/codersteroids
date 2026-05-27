@@ -17,6 +17,8 @@ Use this skill automatically when the user asks to write, improve, rewrite, gene
 
 When generating a prompt for another agent, include "Use CoderSteroids" only if the target environment has CoderSteroids available. Otherwise include the portable CoderSteroids operating rules directly.
 
+If Superpowers or another methodology plugin is also installed, prompt rewriting remains a CoderSteroids-primary workflow unless the user explicitly asks for that other methodology. Do not lead with Superpowers for prompt rewriting just because its bootstrap skill exists.
+
 ## Language
 
 Write the explanation, assumptions, and approval request in the user's language. Keep the draft prompt in the user's language unless the target agent, repository, or user explicitly requires another language.

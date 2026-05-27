@@ -34,6 +34,7 @@
     "defaultPrompt": [
       "Before any coding response, apply CoderSteroids routing unless the user explicitly disables it.",
       "Apply CoderSteroids automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables it.",
+      "When the task is about CoderSteroids, prompt rewriting, cross-chat continuity, project memory, roadmap/wiki, source ledger, or current-doc verification, CoderSteroids is the primary workflow even if another methodology plugin is installed.",
       "Continue from the roadmap and wiki memory.",
       "Research current docs before implementing.",
       "When a user asks to rewrite or generate a prompt, use the CoderSteroids prompt-briefing workflow.",

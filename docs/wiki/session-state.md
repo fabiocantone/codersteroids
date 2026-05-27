@@ -86,6 +86,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: Tightened the auto-start work after user asked whether all earlier suggestions were done. Added the exact stronger default prompt rule, doctor checks for auto-start/language, smoke checks, export checks, and `docs/manual-tests/new-chat-autostart.md` for the one part that must be verified in a fresh Codex chat.
 
+2026-05-27: User ran the fresh-chat prompt and the first thought still invoked `superpowers:using-superpowers` before CoderSteroids. Root cause: Superpowers has a host-level bootstrap rule and is enabled alongside CoderSteroids. Added explicit CoderSteroids-primary conflict rules for CoderSteroids/prompt-rewriting/memory/current-doc tasks, plus doctor/smoke/export/manual-test coverage.
+
 ## Next Action
 
 Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume later.

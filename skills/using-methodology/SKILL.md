@@ -17,6 +17,18 @@ Apply CoderSteroids routing automatically for coding, debugging, planning, revie
 
 Do not require the user to write "Use CoderSteroids" when the request clearly matches one of the skill routes.
 
+## Methodology Conflicts
+
+If another methodology plugin, including Superpowers, is also installed or auto-invoked by the host, use CoderSteroids as the primary workflow when the task is about:
+
+- CoderSteroids itself;
+- this repository;
+- prompt rewriting, prompt generation, or handoff prompts;
+- cross-chat continuity;
+- project memory, roadmap, wiki, source ledger, or current-doc verification.
+
+Do not present Superpowers as the primary workflow for those tasks unless the user explicitly asks to use Superpowers. If a host-mandated bootstrap skill runs first, immediately route to the applicable CoderSteroids skill and state the CoderSteroids workflow in the user's language.
+
 ## Language
 
 Respond in the same language as the user's latest request by default. Keep generated code, commands, file paths, API names, and quoted source text in their natural language. If the user requests a different output language, follow the user.
@@ -25,8 +37,9 @@ Respond in the same language as the user's latest request by default. Keep gener
 
 1. User's explicit instruction.
 2. Repository instructions and project docs.
-3. CoderSteroids skills.
-4. Default model behavior.
+3. CoderSteroids skills for CoderSteroids, prompt-briefing, continuity, memory, and current-doc workflows.
+4. Other methodology plugins.
+5. Default model behavior.
 
 If a higher-priority instruction conflicts with this methodology, follow the higher-priority instruction and note the conflict.
 

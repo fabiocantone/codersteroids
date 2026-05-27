@@ -20,8 +20,10 @@ Devo migliorare questo plugin: riscrivi questo prompt in modo che l'agente non p
 
 - The agent uses prompt briefing automatically.
 - The answer is in Italian.
+- The agent treats CoderSteroids as the primary workflow for prompt rewriting.
 - The agent mentions loading or preserving project memory/roadmap/wiki when applicable.
 - The agent does not require the user to say "Use CoderSteroids".
+- If Superpowers is installed and appears as a host bootstrap, the agent should immediately route to CoderSteroids and should not present Superpowers as the primary workflow.
 - If it produces a draft prompt, the draft includes verification and memory-update requirements.
 
 ## Pass Criteria
@@ -33,6 +35,7 @@ Pass if the response clearly applies CoderSteroids-style routing and answers in 
 Fail if the response:
 
 - answers in English;
+- presents Superpowers as the primary workflow unless the user explicitly asked for Superpowers;
 - rewrites the prompt without methodology gates;
 - asks the user to explicitly enable CoderSteroids;
 - ignores memory, verification, or current-doc requirements.

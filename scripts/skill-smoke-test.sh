@@ -66,6 +66,16 @@ grep -q 'Before any coding response, apply CoderSteroids routing' "$ROOT/skills/
   exit 1
 }
 
+grep -q 'CoderSteroids is the primary workflow' "$ROOT/.codex-plugin/plugin.json" || {
+  echo "manifest missing CoderSteroids primary-workflow conflict rule"
+  exit 1
+}
+
+grep -q 'prompt rewriting remains a CoderSteroids-primary workflow' "$ROOT/skills/prompt-briefing/SKILL.md" || {
+  echo "prompt-briefing missing methodology conflict rule"
+  exit 1
+}
+
 test -f "$ROOT/docs/manual-tests/new-chat-autostart.md" || {
   echo "missing new-chat auto-start manual test"
   exit 1
