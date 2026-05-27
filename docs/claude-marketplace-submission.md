@@ -45,7 +45,7 @@ Submission forms:
 ## Required Before Submission
 
 - [x] Add `.claude-plugin/plugin.json`.
-- [ ] Run `claude plugin validate .` on the repo.
+- [x] Run `claude plugin validate .` on the repo.
 - [ ] Run `claude --plugin-dir .` and confirm skills load.
 - [ ] Try representative namespaced skills such as `/codersteroids:using-methodology`.
 - [ ] Confirm README install/usage instructions are clear for Claude users.
@@ -65,3 +65,34 @@ Keep explicit version `0.1.0` in `.claude-plugin/plugin.json` for the first subm
 - Local Claude Code version checked: `2.1.63`.
 - Some docs mention newer behavior, such as zip plugin loading from `2.1.128+` and `displayName` from `2.1.143+`. Avoid newer optional fields until validated against the current CLI.
 - The official marketplace is curated separately by Anthropic; submitting the form targets community review, not official inclusion.
+- `claude plugin validate .` reports a warning that root `CLAUDE.md` is not loaded as plugin context. That is expected because plugin context should live in skills; `CLAUDE.md` is only a generated cross-agent export for repositories that want it.
+
+## Local Test Commands
+
+From the plugin repository:
+
+```bash
+cd /Users/fabio/Projects/superdev/evidence-first-methodology
+claude --plugin-dir .
+```
+
+Or from any directory:
+
+```bash
+claude --plugin-dir /Users/fabio/Projects/superdev/evidence-first-methodology
+```
+
+Inside Claude Code:
+
+```text
+/help
+/codersteroids:using-methodology
+```
+
+`/help` should list CoderSteroids skills under the `codersteroids` namespace. If Claude says `Unknown skill: codersteroids:using-methodology`, check the working directory shown in the Claude welcome screen. If it says `/Users/fabio`, then `--plugin-dir .` pointed to the home directory, not the plugin repository.
+
+After editing plugin files in an already open Claude session:
+
+```text
+/reload-plugins
+```

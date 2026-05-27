@@ -44,6 +44,20 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Next:** Run a local Claude plugin load test with `claude --plugin-dir .`, then complete the submission form.
 
+## 2026-05-27: Claude Local Load Troubleshooting
+
+**Intent:** Record the cause of `Unknown skill: codersteroids:using-methodology` during local Claude testing.
+
+**Completed:** Diagnosed that `claude --plugin-dir .` had been launched from `/Users/fabio`, so `.` pointed at the home directory instead of the CoderSteroids repo. Updated the Claude submission doc with absolute-path test commands, `/help`, `/reload-plugins`, and the expected namespace.
+
+**Changed:** `docs/claude-marketplace-submission.md` and this ledger.
+
+**Decisions:** Local Claude tests should use either the plugin repo as working directory or an absolute `--plugin-dir` path to avoid false unknown-skill failures.
+
+**Verification:** `claude plugin validate /Users/fabio/Projects/superdev/evidence-first-methodology` passed; full validation should run after this doc update.
+
+**Next:** Relaunch Claude with the absolute plugin path and test `/codersteroids:using-methodology`.
+
 ## 2026-05-27: README And Promotion Strategy
 
 **Intent:** Improve CoderSteroids' public README and define a promotion strategy after user feedback that Superpowers presents itself better.

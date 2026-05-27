@@ -98,6 +98,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: Researched Claude Code plugin submission docs. Added `.claude-plugin/plugin.json`, `docs/claude-marketplace-submission.md`, and integrated `claude plugin validate .` into validation/release/doctor checks. Local Claude Code version is `2.1.63`; the current Claude manifest validates.
 
+2026-05-27: User's first `claude --plugin-dir .` test returned `Unknown skill: codersteroids:using-methodology` because Claude launched from `/Users/fabio`, so `.` referred to the home directory. Updated Claude submission docs to require running from the plugin repo or using the absolute plugin path.
+
 ## Next Action
 
 Run a Claude local load test with `claude --plugin-dir .` and representative `/codersteroids:*` skills, then prepare the Claude community marketplace submission form.
