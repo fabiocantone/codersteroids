@@ -190,7 +190,7 @@ check_codex_config() {
   fi
 
   if awk '/\[plugins\."superpowers@openai-curated"\]/{flag=1;next}/^\[/{flag=0}flag && /^enabled[[:space:]]*=/{print}' "$CODEX_CONFIG" | grep -q 'true'; then
-    warn "Superpowers is enabled too; host bootstrap may invoke it before CoderSteroids"
+    warn "Superpowers is enabled too; host runtime may invoke it before CoderSteroids"
   fi
 }
 

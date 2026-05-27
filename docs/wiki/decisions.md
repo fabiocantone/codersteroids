@@ -325,3 +325,23 @@
 **Alternatives:** Disable Superpowers automatically, or keep treating the conflict as only a warning.
 
 **Consequence:** Normal checks warn about the conflict; strict auto-start checks fail. This makes the required test configuration explicit without silently changing the user's global Codex config.
+
+## 2026-05-27: Do Not Rewrite Runtime Plugin Order
+
+**Decision:** Do not treat `~/.codex/config.toml` block order as an enforceable CoderSteroids priority mechanism.
+
+**Context:** The user clarified that plugin order is automatic and should not be manually moved. A config rewrite helper was therefore the wrong control surface.
+
+**Alternatives:** Keep a best-effort rewrite helper, automatically disable Superpowers, or rely only on explicit conflict routing and strict checks.
+
+**Consequence:** The config rewrite helper was removed and the local config was restored. Runtime ordering is documented as host-controlled. Strict CoderSteroids-first behavior still requires disabling competing always-on methodology plugins; otherwise CoderSteroids must immediately re-route applicable work back to itself.
+
+## 2026-05-27: Public Positioning For Promotion
+
+**Decision:** Position CoderSteroids as a Codex-first evidence and continuity layer for long-running coding-agent projects.
+
+**Context:** The user noted that Superpowers' README is much stronger and asked for a README improvement plus promotion strategy.
+
+**Alternatives:** Market CoderSteroids as a Superpowers replacement, keep the README as a technical inventory, or delay promotion until marketplace adoption.
+
+**Consequence:** The README now leads with problem/promise/workflow and the promotion strategy avoids overclaiming. Public messaging should emphasize roadmap/wiki continuity, current-doc checks, source ledgers, observability-based diagnosis, and verification gates.

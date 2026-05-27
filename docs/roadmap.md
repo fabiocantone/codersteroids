@@ -63,6 +63,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add doctor/smoke/manual coverage for new-chat auto-start behavior.
 - [x] Add CoderSteroids-primary conflict rule for environments where Superpowers also boots.
 - [x] Add strict auto-start check that fails when competing always-on bootstraps are enabled.
+- [x] Improve public README and add promotion strategy.
 
 ## Deferred Phases
 
@@ -95,8 +96,10 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - CoderSteroids now explicitly auto-activates for prompt rewriting/generation and answers in the user's language by default.
 - Fresh-chat auto-start has repository checks plus a manual test prompt; actual host compliance must still be verified in a new chat runtime.
 - If Superpowers is enabled too, host-level ordering may still invoke Superpowers first; CoderSteroids now requires immediate CoderSteroids-primary routing for prompt rewriting, continuity, memory, source-ledger, and current-doc tasks.
+- Do not rewrite Codex plugin block order as a runtime-order fix; skill ordering is host-controlled. Treat Superpowers-first behavior as a runtime conflict and use strict checks or disable Superpowers for strict CoderSteroids-first testing.
 - Strict CoderSteroids-first auto-start requires disabling competing always-on methodology bootstraps; `host-enforcement-check.sh --strict-autostart` now verifies that condition.
+- Public positioning should be honest: CoderSteroids is a Codex-first evidence/continuity layer, not a Superpowers clone or category-unique methodology.
 
 ## Next Action
 
-Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume.
+Run a fresh install/new-chat test, then prepare demo assets and release notes for public promotion.

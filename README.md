@@ -1,51 +1,143 @@
 # CoderSteroids
 
-CoderSteroids is a Codex plugin for coding agents that need continuity across sessions, current documentation, explicit plans, durable project memory, and release-ready verification.
+CoderSteroids is a Codex-first methodology plugin for agents that need to keep the thread on long-running software projects.
 
-The goal is to prove one thesis: for long-running projects, an agent performs better when it reads a living roadmap, records decisions, verifies external API usage with Context7 or official docs, and updates a Markdown LLM Wiki after each task.
+It makes the agent slow down at the moments that usually cause expensive mistakes: using stale API knowledge, starting without a plan, forgetting prior decisions, guessing at performance problems, accepting subagent output blindly, or claiming work is done without fresh verification.
 
-CoderSteroids should auto-activate for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks. It should answer in the user's language unless the user asks otherwise.
+## What It Does
 
-## MVP Skills
+CoderSteroids gives your coding agent a set of automatic working habits:
+
+- read the project roadmap and wiki before resuming work;
+- research current docs before using external APIs, SDKs, frameworks, or versioned libraries;
+- check known issues before recommending a stack, runtime, or library;
+- turn short rough requests into execution-ready prompts when the task is broad or risky;
+- keep a Markdown LLM Wiki with decisions, sources, architecture, open questions, and handoff state;
+- require logs, metrics, traces, profiles, benchmarks, or an instrumentation plan for runtime diagnosis;
+- verify work with fresh commands before calling it complete;
+- leave the next session with an explicit handoff.
+
+The core thesis is simple: agents are better on serious projects when they do not rely on chat history alone.
+
+## Quickstart
+
+Clone the plugin:
+
+```bash
+git clone https://github.com/fabiocantone/codersteroids.git
+cd codersteroids
+```
+
+Install it through your Codex personal plugin flow, then check the install:
+
+```bash
+./scripts/doctor.sh
+./scripts/skill-smoke-test.sh
+./scripts/host-enforcement-check.sh
+```
+
+For strict fresh-chat tests where CoderSteroids must appear before competing methodology bootstraps:
+
+```bash
+./scripts/host-enforcement-check.sh --strict-autostart
+```
+
+If Superpowers or another always-on methodology plugin is enabled, Codex may invoke that bootstrap first. That is host-controlled behavior. CoderSteroids documents the conflict and routes back to itself for CoderSteroids, prompt rewriting, continuity, memory, source-ledger, and current-doc tasks.
+
+## Basic Workflow
+
+1. **Rehydrate context** with `docs/roadmap.md`, `docs/wiki/session-state.md`, and `docs/wiki/thread-ledger.md`.
+2. **Route the task** to the smallest useful skill path: fast path, spec discovery, research, debugging, review, branch lifecycle, subagent control, or prompt briefing.
+3. **Research before code** when external APIs, frameworks, current docs, known issues, or similar projects matter.
+4. **Plan non-trivial work** with a written plan, active goal, milestones, blockers, and verification commands.
+5. **Implement with discipline** using test-first development where practical, local code standards, folder docs, and branch/workspace checks.
+6. **Diagnose from evidence** by preferring logs, metrics, traces, profiles, and benchmarks over plausible guesses.
+7. **Verify before completion** with fresh commands and explicit residual risks.
+8. **Flush memory** by updating roadmap, decisions, sources, architecture, session state, and thread ledger.
+
+## When It Helps Most
+
+CoderSteroids is built for work where continuity and evidence matter more than raw speed:
+
+- multi-session feature development;
+- debugging and performance investigations;
+- projects with fast-moving external APIs;
+- stack or library selection;
+- agent handoffs and subagent work;
+- codebases where prior decisions get forgotten;
+- public plugin or tool development where release readiness matters.
+
+For tiny local edits, CoderSteroids includes a small-task fast path so the agent does not perform unnecessary ceremony.
+
+## How It Differs From Superpowers
+
+Superpowers is broader and more mature as a general software-development methodology. CoderSteroids should not pretend otherwise.
+
+CoderSteroids focuses on a narrower gap:
+
+- Codex-first plugin packaging and local install diagnostics;
+- living roadmap plus Markdown LLM Wiki continuity;
+- source ledger and current-doc research before implementation;
+- known-issue checks before stack/library recommendations;
+- field engineering reports with observability and falsification gates;
+- benchmark artifacts and memory hygiene checks;
+- cross-agent exports for AGENTS.md, Claude, Gemini, and Cursor.
+
+The goal is not to clone Superpowers. The goal is to make long-running Codex work easier to resume, audit, and trust.
+
+## Skills Inside
+
+**Start and routing**
 
 - `using-methodology`
-- `context7-research`
-- `web-and-github-research`
-- `recommendation-verification`
 - `small-task-fast-path`
 - `spec-discovery`
 - `prompt-briefing`
-- `self-improvement-loop`
-- `skill-authoring-pressure-test`
-- `test-first-development`
-- `code-review-discipline`
-- `branch-workspace-lifecycle`
-- `subagent-execution-controller`
-- `plan-execution-checkpoints`
-- `cross-agent-export`
-- `skill-lifecycle-doctor`
-- `memory-hygiene-audit`
-- `benchmark-runner`
-- `field-engineering-depth`
-- `observability-logging`
-- `project-bootstrap`
 - `roadmap-first-planning`
+- `plan-execution-checkpoints`
+
+**Research and recommendations**
+
+- `context7-research`
+- `web-and-github-research`
+- `recommendation-verification`
+
+**Memory and project structure**
+
 - `llm-wiki-memory`
 - `chat-continuity`
+- `memory-hygiene-audit`
 - `coding-standards`
 - `folder-docs`
+- `global-memory`
+
+**Implementation discipline**
+
+- `test-first-development`
 - `systematic-debugging`
+- `field-engineering-depth`
+- `observability-logging`
+- `code-review-discipline`
 - `verification-before-completion`
 - `post-task-memory-flush`
 
-## Extended Skills
+**Collaboration, benchmarks, and release**
 
-- `global-memory`
+- `branch-workspace-lifecycle`
+- `subagent-execution-controller`
 - `subagent-context-packing`
 - `subagent-result-verification`
+- `benchmark-runner`
 - `benchmark-against-superpowers`
+- `self-improvement-loop`
+- `skill-authoring-pressure-test`
+- `skill-lifecycle-doctor`
+- `project-bootstrap`
+- `cross-agent-export`
 
-## Standard Project Artifacts
+## Project Memory Layout
+
+CoderSteroids expects or creates durable Markdown artifacts:
 
 - `docs/roadmap.md`
 - `docs/specs/`
@@ -60,50 +152,34 @@ CoderSteroids should auto-activate for coding, debugging, planning, review, rese
 - `docs/wiki/open-questions.md`
 - `README.md` or `FOLDER.md` in significant folders
 
-## Context7
+The wiki is not a transcript dump. It is compiled project memory for future agents.
 
-The plugin does not require Context7 to be installed, but it treats Context7 as the preferred documentation channel when available. If Context7 MCP tools or the `ctx7` CLI are unavailable, agents must fall back to official online documentation and record the fallback in `docs/wiki/sources.md`.
+## Context7 And Current Docs
 
-## Validate
+CoderSteroids prefers Context7 for versioned technical docs when available. If Context7 MCP tools or the `ctx7` CLI are unavailable, the agent must fall back to official online documentation and record the fallback in `docs/wiki/sources.md`.
 
-Run:
+The rule is practical: do not write code against volatile APIs from memory.
+
+## Validation Commands
+
+Core validation:
 
 ```bash
 ./scripts/validate.sh
-```
-
-Benchmark artifacts can be checked with:
-
-```bash
 ./scripts/check-benchmark-artifacts.sh
-```
-
-Installation and cache health can be checked with:
-
-```bash
 ./scripts/doctor.sh
 ```
 
-Host enforcement and release readiness can be checked with:
+Host, release, and routing checks:
 
 ```bash
 ./scripts/host-enforcement-check.sh
 ./scripts/release-readiness.sh
-```
-
-Skill routing smoke tests can be checked with:
-
-```bash
 ./scripts/skill-smoke-test.sh
-```
-
-Project memory hygiene can be checked with:
-
-```bash
 ./scripts/memory-audit.sh
 ```
 
-Benchmark result scaffolds can be created with:
+Benchmark result scaffolds:
 
 ```bash
 ./scripts/benchmark-runner.sh --list
@@ -111,29 +187,42 @@ Benchmark result scaffolds can be created with:
 ./scripts/benchmark-runner.sh <prompt-slug>
 ```
 
-Field engineering reports can be checked with:
+Field engineering reports:
 
 ```bash
 ./scripts/check-field-depth-report.sh docs/examples/field-depth-report-template.md
 ```
 
-CoderSteroids helpers can be exported into a target repository with:
+Export CoderSteroids helper checks into a target repository:
 
 ```bash
 ./scripts/project-bootstrap.sh /path/to/target-repo
 ./scripts/project-bootstrap.sh --check /path/to/target-repo
 ```
 
-Portable agent instructions can be exported with:
+Export portable agent instructions:
 
 ```bash
 ./scripts/cross-agent-export.sh /path/to/target-repo
 ./scripts/cross-agent-export.sh --check /path/to/target-repo
 ```
 
-See also:
+## Limitations
+
+- CoderSteroids cannot force a host model to follow instructions if the host ignores skills or instruction files.
+- Context7 availability depends on the user's Codex/MCP or CLI setup.
+- Real subagent execution depends on host tooling; CoderSteroids provides controller discipline and verification rules.
+- Public adoption and marketplace placement are not solved by local repo artifacts.
+- Benchmark artifact checks validate required evidence shape, not the factual truth of manually recorded evidence.
+
+## Documentation
 
 - [Install](docs/install.md)
 - [Distribution](docs/distribution.md)
 - [Host Enforcement](docs/host-enforcement.md)
+- [Promotion Strategy](docs/promotion-strategy.md)
 - [Release Checklist](docs/release-checklist.md)
+
+## License
+
+MIT. See [LICENSE](LICENSE).

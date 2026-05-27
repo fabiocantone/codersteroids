@@ -29,7 +29,7 @@ Treat CoderSteroids as strong when scripts verify the artifact state and the run
 
 Use `docs/manual-tests/new-chat-autostart.md` to verify host-level auto-start in a fresh chat, because repository scripts can prove the instruction exists but cannot prove a separate chat runtime will follow it.
 
-If Superpowers is also enabled, a host may invoke its bootstrap skill first. That is a host-level ordering issue, not a CoderSteroids artifact gap. The expected behavior is that CoderSteroids becomes the primary workflow immediately for CoderSteroids, prompt rewriting, continuity, memory, source-ledger, and current-doc tasks.
+If Superpowers is also enabled, a host may invoke its bootstrap skill first. That is a runtime-ordering issue, not a CoderSteroids artifact gap. Do not try to solve it by rewriting plugin block order in `~/.codex/config.toml`; Codex may derive skill order from runtime/plugin metadata rather than file position. The expected fallback behavior is that CoderSteroids becomes the primary workflow immediately for CoderSteroids, prompt rewriting, continuity, memory, source-ledger, and current-doc tasks.
 
 For a strict CoderSteroids-first test, run:
 

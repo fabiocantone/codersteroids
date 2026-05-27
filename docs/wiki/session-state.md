@@ -90,9 +90,13 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: The fresh-chat behavior still showed Superpowers first. Added `./scripts/host-enforcement-check.sh --strict-autostart`, which fails when Superpowers is enabled because strict CoderSteroids-first auto-start cannot be guaranteed in that host configuration.
 
+2026-05-27: Corrected the runtime-order strategy after the user clarified that plugin order is automatic and should not be manually rewritten. Restored `/Users/fabio/.codex/config.toml` from `/Users/fabio/.codex/config.toml.bak.20260527083546` and removed the config-order rewrite helper from the plugin. The valid position is now: strict first bootstrap requires disabling competing always-on methodology plugins; otherwise CoderSteroids must route back to itself after any host-selected bootstrap.
+
+2026-05-27: Reworked the public README after comparing Superpowers' README structure. Added `docs/promotion-strategy.md` with positioning, launch assets, channel plan, release checklist, launch post draft, and success metrics. CoderSteroids should be promoted as a Codex-first continuity/evidence layer, not as a Superpowers clone.
+
 ## Next Action
 
-Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume later.
+Run a fresh install/new-chat test, then prepare demo assets and release notes for public promotion. If Superpowers still appears first in fresh chats, treat it as host-controlled order; disable `superpowers@openai-curated` only for strict CoderSteroids-first testing.
 
 ## Risks
 
