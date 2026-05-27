@@ -1,0 +1,21 @@
+{
+  "name": "codersteroids",
+  "description": "Codex-first continuity and evidence workflow for coding agents: roadmap, current-doc research, Markdown project memory, debugging evidence, and verification gates.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Fabio"
+  },
+  "homepage": "https://github.com/fabiocantone/codersteroids",
+  "repository": "https://github.com/fabiocantone/codersteroids",
+  "license": "MIT",
+  "keywords": [
+    "coding-agent",
+    "agent-skills",
+    "llm-memory",
+    "context7",
+    "planning",
+    "verification",
+    "developer-tools"
+  ],
+  "skills": "./skills"
+}

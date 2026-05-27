@@ -31,6 +31,7 @@ has_file() {
 
 check_manifest() {
   local manifest="$ROOT/.codex-plugin/plugin.json"
+  local claude_manifest="$ROOT/.claude-plugin/plugin.json"
 
   if ! has_file "$manifest"; then
     fail "missing plugin manifest: $manifest"
@@ -71,6 +72,26 @@ check_manifest() {
     pass "manifest has methodology conflict priority prompt"
   else
     fail "manifest missing methodology conflict priority prompt"
+  fi
+
+  if ! has_file "$claude_manifest"; then
+    fail "missing Claude plugin manifest: $claude_manifest"
+  elif grep -q "\"name\"[[:space:]]*:[[:space:]]*\"$PLUGIN_NAME\"" "$claude_manifest" &&
+    grep -q "\"version\"[[:space:]]*:[[:space:]]*\"$PLUGIN_VERSION\"" "$claude_manifest" &&
+    grep -q '"skills"[[:space:]]*:[[:space:]]*"\./skills"' "$claude_manifest"; then
+    pass "Claude manifest exists and matches $PLUGIN_NAME $PLUGIN_VERSION"
+  else
+    fail "Claude manifest missing expected name, version, or skills path"
+  fi
+
+  if command -v claude >/dev/null 2>&1; then
+    if claude plugin validate "$ROOT" >/dev/null 2>&1; then
+      pass "Claude plugin validation passes"
+    else
+      fail "Claude plugin validation fails"
+    fi
+  else
+    warn "Claude CLI not found; skipping Claude plugin validation"
   fi
 }
 

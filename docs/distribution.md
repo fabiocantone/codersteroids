@@ -5,12 +5,15 @@ CoderSteroids is Codex-first, but the repository includes portable exports for o
 ## Supported Local Distribution Surfaces
 
 - Codex plugin manifest: `.codex-plugin/plugin.json`
+- Claude plugin manifest: `.claude-plugin/plugin.json`
 - Codex skills: `skills/*/SKILL.md`
 - Portable agent instructions: `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`
 - Cursor rule export: `.cursor/rules/codersteroids.mdc`
 - Target project helper export: `scripts/project-bootstrap.sh`
 
 Generated cross-agent instruction files include the CoderSteroids plugin version from `.codex-plugin/plugin.json` so target repositories can see which instruction snapshot they received.
+
+Claude marketplace submission is tracked in `docs/claude-marketplace-submission.md`.
 
 ## Release Readiness
 

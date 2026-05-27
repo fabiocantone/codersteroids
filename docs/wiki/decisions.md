@@ -317,23 +317,15 @@
 **Consequence:** CoderSteroids now documents the host-level conflict and requires immediate routing back to CoderSteroids for its primary domains. `doctor.sh` warns when Superpowers is enabled alongside CoderSteroids.
 
 ## 2026-05-27: Strict Auto-Start Requires No Competing Bootstrap
-
 **Decision:** Add `host-enforcement-check.sh --strict-autostart` to fail when Superpowers is enabled.
-
 **Context:** The user repeated the manual test and the host still invoked Superpowers first. Since Superpowers declares itself for every conversation, CoderSteroids cannot guarantee first position while Superpowers remains enabled.
-
 **Alternatives:** Disable Superpowers automatically, or keep treating the conflict as only a warning.
-
 **Consequence:** Normal checks warn about the conflict; strict auto-start checks fail. This makes the required test configuration explicit without silently changing the user's global Codex config.
 
 ## 2026-05-27: Do Not Rewrite Runtime Plugin Order
-
 **Decision:** Do not treat `~/.codex/config.toml` block order as an enforceable CoderSteroids priority mechanism.
-
 **Context:** The user clarified that plugin order is automatic and should not be manually moved. A config rewrite helper was therefore the wrong control surface.
-
 **Alternatives:** Keep a best-effort rewrite helper, automatically disable Superpowers, or rely only on explicit conflict routing and strict checks.
-
 **Consequence:** The config rewrite helper was removed and the local config was restored. Runtime ordering is documented as host-controlled. Strict CoderSteroids-first behavior still requires disabling competing always-on methodology plugins; otherwise CoderSteroids must immediately re-route applicable work back to itself.
 
 ## 2026-05-27: Public Positioning For Promotion
@@ -347,3 +339,8 @@
 **Context:** The user noticed that the Claude export had no visible version. The same issue applied to AGENTS, Gemini, and Cursor exports because they share one template.
 **Alternatives:** Add a Claude-only version line, leave exports unversioned, or add versioning to the shared export template.
 **Consequence:** `scripts/cross-agent-export.sh` now reads `.codex-plugin/plugin.json` and stamps generated instructions with `Generated from CoderSteroids vX.Y.Z`. The export checker fails if the version stamp is missing.
+
+## 2026-05-27: Prepare Claude Community Marketplace Submission
+**Decision:** Add a Claude-native plugin manifest and submission checklist, but target the community marketplace first.
+**Context:** Claude docs require `.claude-plugin/plugin.json` and `claude plugin validate` before submission. Anthropic documents `claude-community` as the review path for third-party plugins; `claude-plugins-official` is curated separately with no application process.
+**Alternatives/Consequence:** Do not submit the Codex manifest as-is. The repo now has a validating Claude manifest, release checks fail if Claude validation fails, and the next step is a local `claude --plugin-dir .` behavior test before filling the submission form.

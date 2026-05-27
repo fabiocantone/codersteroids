@@ -9,6 +9,8 @@ required_files=(
   "$ROOT/CHANGELOG.md"
   "$ROOT/CONTRIBUTING.md"
   "$ROOT/.codex-plugin/plugin.json"
+  "$ROOT/.claude-plugin/plugin.json"
+  "$ROOT/docs/claude-marketplace-submission.md"
   "$ROOT/docs/install.md"
   "$ROOT/docs/distribution.md"
   "$ROOT/docs/host-enforcement.md"
@@ -23,6 +25,18 @@ grep -q '"license"[[:space:]]*:[[:space:]]*"MIT"' "$ROOT/.codex-plugin/plugin.js
   echo "Manifest license must match LICENSE file"
   exit 1
 }
+
+grep -q '"license"[[:space:]]*:[[:space:]]*"MIT"' "$ROOT/.claude-plugin/plugin.json" || {
+  echo "Claude manifest license must match LICENSE file"
+  exit 1
+}
+
+if command -v claude >/dev/null 2>&1; then
+  claude plugin validate "$ROOT" >/dev/null
+else
+  echo "Claude CLI missing; cannot validate Claude marketplace package"
+  exit 1
+fi
 
 grep -q '^## 0.1.0 - 2026-05-27$' "$ROOT/CHANGELOG.md" || {
   echo "CHANGELOG missing 0.1.0 release entry"

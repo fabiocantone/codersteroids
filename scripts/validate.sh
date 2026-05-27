@@ -19,6 +19,8 @@ required_files=(
   "$ROOT/CHANGELOG.md"
   "$ROOT/CONTRIBUTING.md"
   "$ROOT/.codex-plugin/plugin.json"
+  "$ROOT/.claude-plugin/plugin.json"
+  "$ROOT/docs/claude-marketplace-submission.md"
   "$ROOT/docs/install.md"
   "$ROOT/docs/distribution.md"
   "$ROOT/docs/host-enforcement.md"
@@ -58,6 +60,12 @@ required_files=(
 for file in "${required_files[@]}"; do
   test -f "$file" || { echo "Missing required file: $file"; exit 1; }
 done
+
+if command -v claude >/dev/null 2>&1; then
+  claude plugin validate "$ROOT" >/dev/null
+else
+  echo "WARN claude CLI not found; skipping Claude plugin validation"
+fi
 
 required_skills=(
   using-methodology

@@ -30,6 +30,20 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Next:** Continue promotion prep after versioned exports are committed.
 
+## 2026-05-27: Claude Marketplace Preparation
+
+**Intent:** Understand and prepare the work needed to submit CoderSteroids to Claude Code's plugin marketplace.
+
+**Completed:** Read the official Claude plugin docs, added `.claude-plugin/plugin.json`, added `docs/claude-marketplace-submission.md`, and wired `claude plugin validate .` into validation, release readiness, and doctor checks.
+
+**Changed:** Claude manifest, validation scripts, distribution docs, README/docs index, source ledger, decisions, session state, and this ledger.
+
+**Decisions:** Submit to the Claude community marketplace first. The official marketplace is curated separately by Anthropic and has no direct application path.
+
+**Verification:** `claude plugin validate .` passed locally with Claude Code `2.1.63`.
+
+**Next:** Run a local Claude plugin load test with `claude --plugin-dir .`, then complete the submission form.
+
 ## 2026-05-27: README And Promotion Strategy
 
 **Intent:** Improve CoderSteroids' public README and define a promotion strategy after user feedback that Superpowers presents itself better.

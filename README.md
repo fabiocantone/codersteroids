@@ -204,6 +204,7 @@ Export portable agent instructions:
 - [Install](docs/install.md)
 - [Distribution](docs/distribution.md)
 - [Host Enforcement](docs/host-enforcement.md)
+- [Claude Marketplace Submission](docs/claude-marketplace-submission.md)
 - [Promotion Strategy](docs/promotion-strategy.md)
 - [Release Checklist](docs/release-checklist.md)
 
