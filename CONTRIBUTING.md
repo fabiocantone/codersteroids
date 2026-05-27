@@ -34,8 +34,8 @@ For strict fresh-chat auto-start validation, run:
 
 This intentionally fails if Superpowers or another always-on methodology bootstrap is enabled.
 
-If the local Codex cache is used, also run:
+If the local Codex cache is used, also compare repository skills with the installed cache path for your environment, for example:
 
 ```bash
-diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills
+diff -qr skills "$HOME/.codex/plugins/cache/personal/codersteroids/0.1.0/skills"
 ```

@@ -2,15 +2,19 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PLUGIN_VALIDATOR="/Users/fabio/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py"
+PLUGIN_VALIDATOR="${PLUGIN_VALIDATOR:-$HOME/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py}"
 
-if python3 -c 'import yaml' >/dev/null 2>&1; then
-  python3 "$PLUGIN_VALIDATOR" "$ROOT"
-elif command -v uv >/dev/null 2>&1; then
-  uv run --with PyYAML python "$PLUGIN_VALIDATOR" "$ROOT"
+if test -f "$PLUGIN_VALIDATOR"; then
+  if python3 -c 'import yaml' >/dev/null 2>&1; then
+    python3 "$PLUGIN_VALIDATOR" "$ROOT"
+  elif command -v uv >/dev/null 2>&1; then
+    uv run --with PyYAML python "$PLUGIN_VALIDATOR" "$ROOT"
+  else
+    echo "PyYAML is required to run the Codex plugin validator. Install PyYAML or uv, then retry."
+    exit 1
+  fi
 else
-  echo "PyYAML is required to run the plugin validator. Install PyYAML or uv, then retry."
-  exit 1
+  echo "WARN Codex plugin validator not found at $PLUGIN_VALIDATOR; skipping Codex validator"
 fi
 
 required_files=(
@@ -26,19 +30,8 @@ required_files=(
   "$ROOT/docs/host-enforcement.md"
   "$ROOT/docs/release-checklist.md"
   "$ROOT/docs/manual-tests/new-chat-autostart.md"
-  "$ROOT/docs/roadmap.md"
   "$ROOT/docs/context7-setup.md"
-  "$ROOT/docs/specs/plugin-methodology-validation.md"
-  "$ROOT/docs/specs/superpowers-field-benchmark.md"
   "$ROOT/docs/examples/field-depth-report-template.md"
-  "$ROOT/docs/wiki/index.md"
-  "$ROOT/docs/wiki/session-state.md"
-  "$ROOT/docs/wiki/thread-ledger.md"
-  "$ROOT/docs/wiki/architecture.md"
-  "$ROOT/docs/wiki/decisions.md"
-  "$ROOT/docs/wiki/sources.md"
-  "$ROOT/docs/wiki/code-standards.md"
-  "$ROOT/docs/wiki/open-questions.md"
   "$ROOT/benchmarks/README.md"
   "$ROOT/benchmarks/prompts/external-library-feature.md"
   "$ROOT/benchmarks/prompts/multi-step-bugfix.md"

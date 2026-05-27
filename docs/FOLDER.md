@@ -2,14 +2,10 @@
 
 ## Purpose
 
-This folder contains the living project artifacts used by the plugin and by agents working on the plugin.
+This folder contains public documentation for installing, validating, and submitting the plugin. Private working memory and raw benchmark results are intentionally excluded from the public repository.
 
 ## Main Files
 
-- `roadmap.md`: active goal, phase, milestones, blockers, and next action.
-- `specs/plugin-methodology-validation.md`: benchmark and go/no-go criteria.
-- `plans/2026-05-25-mvp-implementation.md`: MVP implementation plan.
-- `wiki/`: Markdown LLM Wiki memory.
 - `context7-setup.md`: Context7 setup policy and source reference.
 - `claude-marketplace-submission.md`: Claude plugin marketplace submission requirements and checklist.
 - `install.md`: installation and target-repository bootstrap instructions.
@@ -18,12 +14,12 @@ This folder contains the living project artifacts used by the plugin and by agen
 - `promotion-strategy.md`: positioning, launch assets, channels, and success metrics for public promotion.
 - `release-checklist.md`: release tag and GitHub release checklist.
 - `manual-tests/`: manual host-behavior tests that cannot be fully proven by repository scripts.
-- `../benchmarks/`: validation prompts and score templates.
+- `../benchmarks/`: public benchmark prompts and score template.
 
 ## Local Patterns
 
-Docs are concise, durable, and updated when future agents need the information to continue work without chat history.
+Public docs are concise and do not include raw project memory, local paths, personal working notes, or private benchmark result logs.
 
 ## Does Not Belong Here
 
-Generated build output, raw transcripts, secrets, or temporary scratch notes.
+Generated build output, raw transcripts, secrets, temporary scratch notes, private wiki memory, local roadmap/plans, or unsanitized benchmark results.

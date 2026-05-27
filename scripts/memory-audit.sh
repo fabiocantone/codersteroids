@@ -33,6 +33,36 @@ required_files=(
   "$WIKI/open-questions.md"
 )
 
+if ! test -d "$WIKI" || ! test -f "$ROOT/docs/roadmap.md"; then
+  pass "private project memory is not tracked in this public repository"
+  private_patterns=(
+    "/"'Users/'
+    "local-first-personal-"'assistant'
+    "Compet"itoor
+    "cmp""_[A-Za-z0-9_]+"
+    "API-"Key
+    "X-API-"Key
+  )
+  private_regex="$(IFS='|'; printf '%s' "${private_patterns[*]}")"
+  find "$ROOT" \
+    \( -path "$ROOT/.git" -o -path "$ROOT/scripts/memory-audit.sh" \) -prune -o \
+    -type f \( -name '*.md' -o -name '*.json' -o -name '*.sh' -o -name '*.mdc' \) -print0 |
+    xargs -0 grep -Eni "$private_regex" \
+      >/tmp/codersteroids-public-audit.$$ 2>/dev/null
+  if test -s /tmp/codersteroids-public-audit.$$; then
+    fail "public repository contains private path or secret-like marker(s):"
+    sed 's/^/FAIL   /' /tmp/codersteroids-public-audit.$$
+  else
+    pass "public docs/scripts have no known private path or secret-like markers"
+  fi
+  rm -f /tmp/codersteroids-public-audit.$$
+  printf '\nSummary: %s failure(s), %s warning(s)\n' "$failures" "$warnings"
+  if test "$failures" -gt 0; then
+    exit 1
+  fi
+  exit 0
+fi
+
 for file in "${required_files[@]}"; do
   if test -f "$file"; then
     pass "memory file exists: ${file#$ROOT/}"

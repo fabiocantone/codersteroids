@@ -121,7 +121,7 @@ For tiny local edits, CoderSteroids includes a small-task fast path so the agent
 
 ## Project Memory Layout
 
-CoderSteroids expects or creates durable Markdown artifacts:
+CoderSteroids expects or creates durable Markdown artifacts inside target projects:
 
 - `docs/roadmap.md`
 - `docs/specs/`
@@ -136,7 +136,7 @@ CoderSteroids expects or creates durable Markdown artifacts:
 - `docs/wiki/open-questions.md`
 - `README.md` or `FOLDER.md` in significant folders
 
-The wiki is not a transcript dump. It is compiled project memory for future agents.
+Those artifacts are project memory. They are intentionally not committed in this public plugin repository unless they are sanitized examples. The wiki is not a transcript dump; it is compiled project memory for future agents.
 
 ## Context7 And Current Docs
 
@@ -205,7 +205,6 @@ Export portable agent instructions:
 - [Distribution](docs/distribution.md)
 - [Host Enforcement](docs/host-enforcement.md)
 - [Claude Marketplace Submission](docs/claude-marketplace-submission.md)
-- [Promotion Strategy](docs/promotion-strategy.md)
 - [Release Checklist](docs/release-checklist.md)
 
 ## License

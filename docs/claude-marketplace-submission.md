@@ -72,14 +72,14 @@ Keep explicit version `0.1.0` in `.claude-plugin/plugin.json` for the first subm
 From the plugin repository:
 
 ```bash
-cd /Users/fabio/Projects/superdev/evidence-first-methodology
+cd /path/to/codersteroids
 claude --plugin-dir .
 ```
 
 Or from any directory:
 
 ```bash
-claude --plugin-dir /Users/fabio/Projects/superdev/evidence-first-methodology
+claude --plugin-dir /path/to/codersteroids
 ```
 
 Inside Claude Code:
@@ -89,7 +89,7 @@ Inside Claude Code:
 /codersteroids:using-methodology
 ```
 
-`/help` should list CoderSteroids skills under the `codersteroids` namespace. If Claude says `Unknown skill: codersteroids:using-methodology`, check the working directory shown in the Claude welcome screen. If it says `/Users/fabio`, then `--plugin-dir .` pointed to the home directory, not the plugin repository.
+`/help` should list CoderSteroids skills under the `codersteroids` namespace. If Claude says `Unknown skill: codersteroids:using-methodology`, check the working directory shown in the Claude welcome screen. If it is not the plugin repository, then `--plugin-dir .` pointed to the wrong directory.
 
 After editing plugin files in an already open Claude session:
 

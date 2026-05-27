@@ -1,0 +1,7 @@
+# CoderSteroids private working memory should stay out of the public repository.
+docs/wiki/
+docs/plans/
+docs/specs/
+docs/roadmap.md
+benchmarks/results/*.md
+!benchmarks/results/template.md
