@@ -13,6 +13,8 @@ Usage:
 Writes portable CoderSteroids instructions to:
   AGENTS.md
   CLAUDE.md
+  GEMINI.md
+  .cursor/rules/codersteroids.mdc
 USAGE
 }
 
@@ -117,11 +119,17 @@ check_file() {
 if test "$mode" = "check"; then
   check_file "$target/AGENTS.md"
   check_file "$target/CLAUDE.md"
+  check_file "$target/GEMINI.md"
+  check_file "$target/.cursor/rules/codersteroids.mdc"
   echo "Cross-agent export check passed: $target"
   exit 0
 fi
 
+mkdir -p "$target/.cursor/rules"
+
 write_file "$target/AGENTS.md"
 write_file "$target/CLAUDE.md"
+write_file "$target/GEMINI.md"
+write_file "$target/.cursor/rules/codersteroids.mdc"
 
 "$ROOT/scripts/cross-agent-export.sh" --check "$target"

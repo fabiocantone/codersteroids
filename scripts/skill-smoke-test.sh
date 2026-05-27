@@ -36,4 +36,9 @@ grep -q 'cross-agent-export.sh' "$ROOT/skills/cross-agent-export/SKILL.md" || {
   exit 1
 }
 
+grep -q 'release-readiness.sh' "$ROOT/README.md" || {
+  echo "README missing release readiness command"
+  exit 1
+}
+
 echo "Skill smoke test passed."

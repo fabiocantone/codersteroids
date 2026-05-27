@@ -1,8 +1,8 @@
 # CoderSteroids
 
-CoderSteroids is a Codex plugin for coding agents that need continuity across sessions, current documentation, explicit plans, and durable project memory.
+CoderSteroids is a Codex plugin for coding agents that need continuity across sessions, current documentation, explicit plans, durable project memory, and release-ready verification.
 
-It is intentionally smaller than Superpowers in its MVP. The goal is to prove one thesis: for long-running projects, an agent performs better when it reads a living roadmap, records decisions, verifies external API usage with Context7 or official docs, and updates a Markdown LLM Wiki after each task.
+The goal is to prove one thesis: for long-running projects, an agent performs better when it reads a living roadmap, records decisions, verifies external API usage with Context7 or official docs, and updates a Markdown LLM Wiki after each task.
 
 ## MVP Skills
 
@@ -82,6 +82,13 @@ Installation and cache health can be checked with:
 ./scripts/doctor.sh
 ```
 
+Host enforcement and release readiness can be checked with:
+
+```bash
+./scripts/host-enforcement-check.sh
+./scripts/release-readiness.sh
+```
+
 Skill routing smoke tests can be checked with:
 
 ```bash
@@ -121,3 +128,10 @@ Portable agent instructions can be exported with:
 ./scripts/cross-agent-export.sh /path/to/target-repo
 ./scripts/cross-agent-export.sh --check /path/to/target-repo
 ```
+
+See also:
+
+- [Install](docs/install.md)
+- [Distribution](docs/distribution.md)
+- [Host Enforcement](docs/host-enforcement.md)
+- [Release Checklist](docs/release-checklist.md)

@@ -275,3 +275,13 @@
 **Alternatives:** Keep focusing on product-specific Electron performance, or add more benchmark artifacts instead of implementation.
 
 **Consequence:** CoderSteroids now has local skill/script coverage for the Superpowers methodology surface while keeping its differentiators. Remaining gaps are no longer local methodology files; they are external adoption, distribution, and real host-agent enforcement.
+
+## 2026-05-27: Add Release Readiness And Host Enforcement Checks
+
+**Decision:** Add public-ready repository artifacts, portable root instruction files, release readiness checks, and host-enforcement checks.
+
+**Context:** After local methodology parity, the remaining Superpowers advantages were public adoption, distribution maturity, and host runtime enforcement. Adoption cannot be forced by code, but the repository can remove adoption friction and make host-dependent limits explicit.
+
+**Alternatives:** Leave the gap as a note, publish without release docs, or try to claim runtime enforcement the plugin cannot guarantee.
+
+**Consequence:** CoderSteroids now has install/distribution docs, MIT license file matching the manifest, changelog, contribution guide, release checklist, generated AGENTS/CLAUDE/GEMINI/Cursor instruction files, and scripts that verify release readiness and host-enforcement surfaces.

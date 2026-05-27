@@ -207,8 +207,10 @@ check_scripts() {
     "$ROOT/scripts/check-benchmark-artifacts.sh"
     "$ROOT/scripts/cross-agent-export.sh"
     "$ROOT/scripts/doctor.sh"
+    "$ROOT/scripts/host-enforcement-check.sh"
     "$ROOT/scripts/memory-audit.sh"
     "$ROOT/scripts/project-bootstrap.sh"
+    "$ROOT/scripts/release-readiness.sh"
     "$ROOT/scripts/skill-smoke-test.sh"
     "$ROOT/scripts/validate.sh"
   )
@@ -223,6 +225,27 @@ check_scripts() {
   done
 }
 
+check_release_artifacts() {
+  local required=(
+    "$ROOT/LICENSE"
+    "$ROOT/CHANGELOG.md"
+    "$ROOT/CONTRIBUTING.md"
+    "$ROOT/docs/install.md"
+    "$ROOT/docs/distribution.md"
+    "$ROOT/docs/host-enforcement.md"
+    "$ROOT/docs/release-checklist.md"
+  )
+
+  local file
+  for file in "${required[@]}"; do
+    if has_file "$file"; then
+      pass "release artifact exists: ${file#$ROOT/}"
+    else
+      fail "missing release artifact: ${file#$ROOT/}"
+    fi
+  done
+}
+
 check_manifest
 check_skills
 check_cache
@@ -230,6 +253,7 @@ check_marketplace
 check_codex_config
 check_benchmarks
 check_scripts
+check_release_artifacts
 
 printf '\nSummary: %s failure(s), %s warning(s)\n' "$failures" "$warnings"
 

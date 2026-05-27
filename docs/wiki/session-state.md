@@ -80,9 +80,11 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-26: Added the remaining Superpowers-equivalent local methodology pieces without running the Electron benchmark: `spec-discovery`, `plan-execution-checkpoints`, `skill-authoring-pressure-test`, `cross-agent-export`, `scripts/cross-agent-export.sh`, and `scripts/skill-smoke-test.sh`. This closes the local artifact/skill/script gap for brainstorming/spec refinement, executing plans, skill writing pressure tests, and portable agent instruction export.
 
+2026-05-27: Converted the remaining external gap into release/distribution readiness. Added `LICENSE`, `CHANGELOG.md`, `CONTRIBUTING.md`, install/distribution/host-enforcement/release docs, generated `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursor/rules/codersteroids.mdc`, and added `scripts/host-enforcement-check.sh` plus `scripts/release-readiness.sh`.
+
 ## Next Action
 
-Keep CoderSteroids stable; product-specific work can return to `bench:chat-render` in `local-first-personal-assistant` later.
+Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume later.
 
 ## Risks
 
@@ -92,4 +94,4 @@ Keep CoderSteroids stable; product-specific work can return to `bench:chat-rende
 - CoderSteroids remains weaker than Superpowers for broad software-development workflow breadth: TDD, code review, worktrees, branch finishing, subagent execution, multi-harness packaging, and public adoption.
 - New TDD/code-review skills are structural until benchmarked on a real code change.
 - Real multi-agent execution is still limited by the host environment; the controller skill covers workflow discipline but does not launch workers by itself.
-- Public adoption and marketplace distribution remain Superpowers advantages until CoderSteroids is packaged and tested beyond this personal plugin.
+- Public adoption and external marketplace submission remain outside local repo control, but package/readiness artifacts now exist.

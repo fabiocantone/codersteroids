@@ -238,7 +238,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Verification:** `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed.
 
-**Next:** Define the next field benchmark for the Electron app with observability/logging and render benchmark evidence.
 
 ## 2026-05-26: Prompt Briefing Skill
 
@@ -252,7 +251,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and `diff -qr skills /Users/fabio/.codex/plugins/cache/personal/codersteroids/0.1.0/skills` passed after cache sync.
 
-**Next:** Run the prompt-briefing benchmark, then use the approved-prompt workflow for the Electron field benchmark.
 
 ## 2026-05-26: Prompt Briefing Electron Field Run
 
@@ -266,7 +264,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Verification:** `scripts/codersteroids/check-field-depth-report.sh docs/plans/2026-05-26-electron-chat-rendering-field-report.md` passed in the target repo. In CoderSteroids, `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed.
 
-**Next:** Implement or request the Electron-aware chat render benchmark harness.
 
 ## 2026-05-26: Self Improvement Loop
 
@@ -280,7 +277,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed after cache sync.
 
-**Next:** Run the self-improvement benchmark against a real recent gap.
 
 ## 2026-05-26: Self Improvement Benchmark Run
 
@@ -294,7 +290,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Verification:** Before the change, a malformed self-improvement result passed `check-benchmark-artifacts.sh`; after the change, the same malformed result failed with a missing `## Gap` error. Full verification suite was run after memory updates.
 
-**Next:** Continue with the Electron `bench:chat-render` harness.
 
 ## 2026-05-26: Updated Superpowers Repo Plugin Gap Analysis
 
@@ -303,8 +298,6 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Changed:** Added the benchmark result and updated roadmap, session state, decisions, sources, and this ledger.
 **Decisions:** Continue CoderSteroids as a Codex-first evidence, continuity, field-diagnosis, and memory hygiene layer. Selectively adapt Superpowers' TDD, code review, worktree/branch, and subagent execution ideas.
 **Verification:** `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, and `git diff --check` passed after updates.
-**Next:** Add pragmatic CoderSteroids TDD/code-review gap-closing, then continue with the Electron `bench:chat-render` harness.
-
 ## 2026-05-26: Pragmatic TDD Code Review Gap Closing
 **Intent:** Close the highest-priority Superpowers gap without copying Superpowers wholesale.
 **Completed:** Added `test-first-development`, `code-review-discipline`, a TDD/code-review benchmark prompt, validation wiring, and roadmap/wiki updates.
@@ -322,8 +315,8 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 ## 2026-05-26: Branch Workspace Lifecycle Gap Closing
 **Intent:** Close the next Superpowers gap around isolated workspaces, dirty worktree handling, branch finishing, and cleanup safety.
 **Completed:** Added `branch-workspace-lifecycle`, routed it from `using-methodology`, added `benchmarks/prompts/worktree-branch-lifecycle.md`, required both in validation, and synced the installed cache.
-**Changed:** New lifecycle skill, benchmark prompt, plan, validation scripts, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
-**Decisions:** Use one pragmatic lifecycle skill rather than copying Superpowers' separate worktree and branch-finishing skills. Require branch/dirty-state inspection, explicit isolation choice, unrelated-change preservation, no push/merge/delete/cleanup without approval, and a finish report with verification plus memory/docs state.
+**Changed:** New lifecycle skill, benchmark prompt, plan, validation, README/docs, architecture, roadmap, decisions, session state, and this ledger.
+**Decisions:** Use one pragmatic lifecycle skill requiring branch/dirty-state inspection, explicit isolation choice, unrelated-change preservation, no push/merge/delete/cleanup without approval, and a finish report.
 **Verification:** `./scripts/benchmark-runner.sh --list`, `./scripts/doctor.sh`, `./scripts/memory-audit.sh`, `./scripts/validate.sh`, `./scripts/check-benchmark-artifacts.sh`, `git diff --check`, and cache `diff -qr` passed before this note was finalized.
 
 ## 2026-05-26: Branch Workspace Lifecycle Benchmark Run
@@ -346,4 +339,11 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 **Changed:** New skills/scripts/plan, routing, validation, doctor, README, skills docs, architecture, roadmap, decisions, session state, and this ledger.
 **Decisions:** Treat local methodology gap as covered; remaining Superpowers advantages are external adoption/distribution and host-runtime execution, not missing CoderSteroids skill artifacts.
 **Verification:** Cross-agent export temp check, skill smoke test, doctor, memory audit, validation, benchmark artifact check, diff check, and cache diff passed.
-**Next:** Keep CoderSteroids stable; product work can resume later.
+
+## 2026-05-27: Release Distribution And Host Enforcement
+**Intent:** Proceed on the remaining gap: adoption/distribution/host runtime capabilities.
+**Completed:** Added release-ready repo files, install/distribution/host-enforcement/release docs, generated root agent instruction files, and added host-enforcement plus release-readiness scripts.
+**Changed:** License, changelog, contributing guide, AGENTS/CLAUDE/GEMINI/Cursor instructions, distribution docs, release docs, manifest metadata, validation, doctor, smoke test, roadmap, decisions, session state, and this ledger.
+**Decisions:** Treat adoption and marketplace submission as external outcomes; make the repository ready and verifiable instead of overclaiming runtime enforcement.
+**Verification:** Release readiness, host enforcement, cross-agent export, doctor, memory audit, validate, benchmark checks, diff checks, and cache checks passed.
+**Next:** Tag/release when ready.

@@ -16,6 +16,8 @@ The plugin is a Codex plugin with:
 - `scripts/check-field-depth-report.sh`: field-depth report structure validation.
 - `scripts/project-bootstrap.sh`: target-repository helper export and drift check.
 - `scripts/cross-agent-export.sh`: portable AGENTS.md/CLAUDE.md instruction export.
+- `scripts/host-enforcement-check.sh`: verifies artifact-backed host enforcement surfaces.
+- `scripts/release-readiness.sh`: checks public release and distribution prerequisites.
 - `scripts/skill-smoke-test.sh`: routing and skill-discoverability smoke test.
 
 ## Skill Responsibilities

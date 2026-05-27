@@ -15,7 +15,14 @@ fi
 
 required_files=(
   "$ROOT/README.md"
+  "$ROOT/LICENSE"
+  "$ROOT/CHANGELOG.md"
+  "$ROOT/CONTRIBUTING.md"
   "$ROOT/.codex-plugin/plugin.json"
+  "$ROOT/docs/install.md"
+  "$ROOT/docs/distribution.md"
+  "$ROOT/docs/host-enforcement.md"
+  "$ROOT/docs/release-checklist.md"
   "$ROOT/docs/roadmap.md"
   "$ROOT/docs/context7-setup.md"
   "$ROOT/docs/specs/plugin-methodology-validation.md"
@@ -127,6 +134,16 @@ test -x "$ROOT/scripts/project-bootstrap.sh" || {
 
 test -x "$ROOT/scripts/cross-agent-export.sh" || {
   echo "Cross-agent export script is not executable: $ROOT/scripts/cross-agent-export.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/host-enforcement-check.sh" || {
+  echo "Host enforcement check script is not executable: $ROOT/scripts/host-enforcement-check.sh"
+  exit 1
+}
+
+test -x "$ROOT/scripts/release-readiness.sh" || {
+  echo "Release readiness script is not executable: $ROOT/scripts/release-readiness.sh"
   exit 1
 }
 
