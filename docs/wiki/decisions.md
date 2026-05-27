@@ -337,11 +337,13 @@
 **Consequence:** The config rewrite helper was removed and the local config was restored. Runtime ordering is documented as host-controlled. Strict CoderSteroids-first behavior still requires disabling competing always-on methodology plugins; otherwise CoderSteroids must immediately re-route applicable work back to itself.
 
 ## 2026-05-27: Public Positioning For Promotion
-
 **Decision:** Position CoderSteroids as a Codex-first evidence and continuity layer for long-running coding-agent projects.
-
 **Context:** The user noted that Superpowers' README is much stronger and asked for a README improvement plus promotion strategy.
-
 **Alternatives:** Market CoderSteroids as a Superpowers replacement, keep the README as a technical inventory, or delay promotion until marketplace adoption.
-
 **Consequence:** The README now leads with problem/promise/workflow and avoids a direct competitor section. Public messaging should emphasize roadmap/wiki continuity, current-doc checks, source ledgers, observability-based diagnosis, and verification gates; competitor comparison belongs in strategy and benchmark docs.
+
+## 2026-05-27: Version Stamp Cross-Agent Exports
+**Decision:** Include the CoderSteroids plugin version in generated cross-agent instruction files.
+**Context:** The user noticed that the Claude export had no visible version. The same issue applied to AGENTS, Gemini, and Cursor exports because they share one template.
+**Alternatives:** Add a Claude-only version line, leave exports unversioned, or add versioning to the shared export template.
+**Consequence:** `scripts/cross-agent-export.sh` now reads `.codex-plugin/plugin.json` and stamps generated instructions with `Generated from CoderSteroids vX.Y.Z`. The export checker fails if the version stamp is missing.

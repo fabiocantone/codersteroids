@@ -10,6 +10,8 @@ CoderSteroids is Codex-first, but the repository includes portable exports for o
 - Cursor rule export: `.cursor/rules/codersteroids.mdc`
 - Target project helper export: `scripts/project-bootstrap.sh`
 
+Generated cross-agent instruction files include the CoderSteroids plugin version from `.codex-plugin/plugin.json` so target repositories can see which instruction snapshot they received.
+
 ## Release Readiness
 
 Run:

@@ -41,13 +41,19 @@ fi
 
 mkdir -p "$target"
 
+plugin_version="$(sed -n 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$ROOT/.codex-plugin/plugin.json" | head -n 1)"
+if test -z "$plugin_version"; then
+  echo "Could not read plugin version from .codex-plugin/plugin.json"
+  exit 1
+fi
+
 generated_marker="Generated from CoderSteroids"
 
 render_content() {
-  cat <<'CONTENT'
+  sed "s/@CODERSTEROIDS_VERSION@/$plugin_version/g" <<'CONTENT'
 # CoderSteroids Agent Instructions
 
-Generated from CoderSteroids. Preserve stronger user and repository instructions when they conflict with this file.
+Generated from CoderSteroids v@CODERSTEROIDS_VERSION@. Preserve stronger user and repository instructions when they conflict with this file.
 
 ## Instruction Priority
 
@@ -112,6 +118,11 @@ check_file() {
 
   grep -q "$generated_marker" "$file" || {
     echo "Export file missing CoderSteroids marker: $file"
+    exit 1
+  }
+
+  grep -q "Generated from CoderSteroids v$plugin_version" "$file" || {
+    echo "Export file missing CoderSteroids version $plugin_version: $file"
     exit 1
   }
 

@@ -16,6 +16,20 @@ This file preserves continuity across separate Codex chats. It is not a transcri
 
 **Next:** Prepare demo assets and release notes, then run a fresh install/new-chat test before public promotion.
 
+## 2026-05-27: Cross-Agent Export Version Stamp
+
+**Intent:** Add visible CoderSteroids version metadata to `CLAUDE.md` and the other generated cross-agent instruction files.
+
+**Completed:** Updated `scripts/cross-agent-export.sh` to read the plugin version from `.codex-plugin/plugin.json`, stamp generated files with `Generated from CoderSteroids v0.1.0`, and check the version during `--check`.
+
+**Changed:** `scripts/cross-agent-export.sh`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursor/rules/codersteroids.mdc`, distribution docs, and wiki memory.
+
+**Decisions:** Version all cross-agent exports from the shared template instead of adding a Claude-only exception.
+
+**Verification:** Run cross-agent export and validation after edits.
+
+**Next:** Continue promotion prep after versioned exports are committed.
+
 ## 2026-05-27: README And Promotion Strategy
 
 **Intent:** Improve CoderSteroids' public README and define a promotion strategy after user feedback that Superpowers presents itself better.

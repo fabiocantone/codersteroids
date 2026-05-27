@@ -1,6 +1,6 @@
 # CoderSteroids Agent Instructions
 
-Generated from CoderSteroids. Preserve stronger user and repository instructions when they conflict with this file.
+Generated from CoderSteroids v0.1.0. Preserve stronger user and repository instructions when they conflict with this file.
 
 ## Instruction Priority
 

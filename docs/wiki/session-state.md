@@ -94,6 +94,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: Reworked the public README after comparing Superpowers' README structure. Added `docs/promotion-strategy.md` with positioning, launch assets, channel plan, release checklist, launch post draft, and success metrics. Removed the direct "How It Differs From Superpowers" section from the README; competitor comparison now belongs in strategy and benchmark docs, not the public first impression.
 
+2026-05-27: Added plugin version stamping to cross-agent exports after the user noticed `CLAUDE.md` had no visible version. `scripts/cross-agent-export.sh` now reads `.codex-plugin/plugin.json`, writes `Generated from CoderSteroids v0.1.0` into AGENTS/CLAUDE/GEMINI/Cursor exports, and checks that exported files carry the current plugin version.
+
 ## Next Action
 
 Run a fresh install/new-chat test, then prepare demo assets and release notes for public promotion. If Superpowers still appears first in fresh chats, treat it as host-controlled order; disable `superpowers@openai-curated` only for strict CoderSteroids-first testing.
