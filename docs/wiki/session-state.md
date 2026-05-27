@@ -82,6 +82,8 @@ Use `docs/roadmap.md` and `docs/specs/plugin-methodology-validation.md`.
 
 2026-05-27: Converted the remaining external gap into release/distribution readiness. Added `LICENSE`, `CHANGELOG.md`, `CONTRIBUTING.md`, install/distribution/host-enforcement/release docs, generated `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursor/rules/codersteroids.mdc`, and added `scripts/host-enforcement-check.sh` plus `scripts/release-readiness.sh`.
 
+2026-05-27: Added explicit auto-activation and language behavior after user feedback. CoderSteroids now says to auto-apply routing for prompt rewriting/generation and other methodology tasks without requiring "Use CoderSteroids"; it also requires answering in the user's language by default.
+
 ## Next Action
 
 Keep CoderSteroids stable; tag/release when ready, then product-specific work can resume later.

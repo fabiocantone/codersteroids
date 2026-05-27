@@ -58,8 +58,11 @@ Generated from CoderSteroids. Preserve stronger user and repository instructions
 
 ## Operating Rules
 
+- Apply CoderSteroids automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables it.
+- Respond in the same language as the user's latest request unless the user asks otherwise.
 - For tiny local tasks, use the small-task fast path and verify directly.
 - For ambiguous product or architecture work, write a working spec before implementation.
+- For prompt rewriting, prompt generation, or handoff prompts, use CoderSteroids prompt briefing automatically.
 - For non-trivial work, keep a written plan and execute it through checkpoints.
 - Check current documentation and known issues before using external APIs, SDKs, frameworks, runtimes, or stack recommendations.
 - Preserve roadmap/wiki/session memory when the project provides it.
@@ -112,6 +115,16 @@ check_file() {
 
   grep -q "Verify before completion" "$file" || {
     echo "Export file missing verification rule: $file"
+    exit 1
+  }
+
+  grep -q "same language as the user's latest request" "$file" || {
+    echo "Export file missing language rule: $file"
+    exit 1
+  }
+
+  grep -q "prompt rewriting" "$file" || {
+    echo "Export file missing prompt rewriting auto-activation rule: $file"
     exit 1
   }
 }

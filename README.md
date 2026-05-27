@@ -4,6 +4,8 @@ CoderSteroids is a Codex plugin for coding agents that need continuity across se
 
 The goal is to prove one thesis: for long-running projects, an agent performs better when it reads a living roadmap, records decisions, verifies external API usage with Context7 or official docs, and updates a Markdown LLM Wiki after each task.
 
+CoderSteroids should auto-activate for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks. It should answer in the user's language unless the user asks otherwise.
+
 ## MVP Skills
 
 - `using-methodology`

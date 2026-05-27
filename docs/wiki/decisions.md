@@ -285,3 +285,13 @@
 **Alternatives:** Leave the gap as a note, publish without release docs, or try to claim runtime enforcement the plugin cannot guarantee.
 
 **Consequence:** CoderSteroids now has install/distribution docs, MIT license file matching the manifest, changelog, contribution guide, release checklist, generated AGENTS/CLAUDE/GEMINI/Cursor instruction files, and scripts that verify release readiness and host-enforcement surfaces.
+
+## 2026-05-27: Auto Activate Prompt Briefing And Preserve User Language
+
+**Decision:** Make CoderSteroids auto-activation explicit for prompt rewriting and require responses in the user's language by default.
+
+**Context:** The user observed that Superpowers activates without being named and responds in the language of the request, while CoderSteroids often needed explicit naming and tended to answer in English.
+
+**Alternatives:** Keep requiring "Use CoderSteroids", or only add the language rule to exported instructions.
+
+**Consequence:** `using-methodology`, `prompt-briefing`, the plugin manifest default prompt, cross-agent exports, and smoke tests now require automatic CoderSteroids use for prompt rewriting/generation and same-language responses unless the user asks otherwise.

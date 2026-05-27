@@ -32,9 +32,11 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use CoderSteroids for this task.",
+      "Apply CoderSteroids automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables it.",
       "Continue from the roadmap and wiki memory.",
-      "Research current docs before implementing."
+      "Research current docs before implementing.",
+      "When a user asks to rewrite or generate a prompt, use the CoderSteroids prompt-briefing workflow.",
+      "Respond in the same language as the user's latest request unless the user asks otherwise."
     ]
   }
 }

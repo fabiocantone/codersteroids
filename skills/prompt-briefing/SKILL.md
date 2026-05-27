@@ -11,11 +11,22 @@ Users should be able to write short, natural requests. The agent should expand t
 
 This skill is a prompt compiler: preserve the user's intent, add the methodology gates, expose assumptions, and ask for approval when the rewritten prompt will steer significant work.
 
+## Auto Activation
+
+Use this skill automatically when the user asks to write, improve, rewrite, generate, prepare, translate into a better prompt, or hand off a prompt for Codex, Claude, another model, a subagent, a reviewer, or a benchmark. The user should not need to say "Use CoderSteroids" for prompt rewriting.
+
+When generating a prompt for another agent, include "Use CoderSteroids" only if the target environment has CoderSteroids available. Otherwise include the portable CoderSteroids operating rules directly.
+
+## Language
+
+Write the explanation, assumptions, and approval request in the user's language. Keep the draft prompt in the user's language unless the target agent, repository, or user explicitly requires another language.
+
 ## When To Use
 
 Use this skill when:
 
 - The user asks for a prompt, handoff, Claude/Codex instruction, or subagent task.
+- The user asks to rewrite, improve, strengthen, structure, or generate a prompt.
 - The user gives a short brief for a non-trivial task.
 - The task needs project memory, docs lookup, benchmarks, logging, or verification discipline.
 - The next step may be run in a different chat, model, tool, or agent.

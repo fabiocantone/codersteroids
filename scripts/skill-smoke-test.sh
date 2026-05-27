@@ -41,4 +41,19 @@ grep -q 'release-readiness.sh' "$ROOT/README.md" || {
   exit 1
 }
 
+grep -q 'same language as the user' "$ROOT/skills/using-methodology/SKILL.md" || {
+  echo "using-methodology missing language matching rule"
+  exit 1
+}
+
+grep -q 'prompt rewriting' "$ROOT/skills/prompt-briefing/SKILL.md" || {
+  echo "prompt-briefing missing prompt rewriting auto-activation rule"
+  exit 1
+}
+
+grep -q 'Apply CoderSteroids automatically' "$ROOT/.codex-plugin/plugin.json" || {
+  echo "manifest missing auto-activation default prompt"
+  exit 1
+}
+
 echo "Skill smoke test passed."

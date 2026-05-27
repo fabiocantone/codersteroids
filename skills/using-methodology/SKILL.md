@@ -9,6 +9,16 @@ description: Use when starting work in a coding session, continuing existing wor
 
 CoderSteroids keeps agents from drifting. Before acting, identify the current goal, load relevant project memory, choose applicable skills, and preserve the roadmap.
 
+## Auto Activation
+
+Apply CoderSteroids routing automatically for coding, debugging, planning, review, research, prompt rewriting, handoff, benchmark, and project-memory tasks unless the user explicitly disables CoderSteroids or a higher-priority repo instruction conflicts.
+
+Do not require the user to write "Use CoderSteroids" when the request clearly matches one of the skill routes.
+
+## Language
+
+Respond in the same language as the user's latest request by default. Keep generated code, commands, file paths, API names, and quoted source text in their natural language. If the user requests a different output language, follow the user.
+
 ## Instruction Priority
 
 1. User's explicit instruction.
@@ -34,7 +44,7 @@ Before any non-trivial coding task:
 - External library/API/configuration: use `context7-research`.
 - Current web research, Google/search-engine use, browser inspection, known-issue research, or similar-project discovery: use `web-and-github-research`.
 - Names, tools, services, libraries, domains, or availability-dependent options: use `recommendation-verification`.
-- Short ambiguous request, prompt rewrite, Claude/Codex handoff, subagent task brief, or approval-before-execution prompt: use `prompt-briefing`.
+- Short ambiguous request, prompt rewrite, prompt generation, prompt improvement, Claude/Codex handoff, subagent task brief, or approval-before-execution prompt: use `prompt-briefing`.
 - Self-improvement, benchmark gap closure, methodology change, or plugin behavior evaluation: use `self-improvement-loop`.
 - Creating, editing, reviewing, installing, or validating skills/methodology instructions: use `skill-authoring-pressure-test`.
 - Testable behavior change, bugfix, regression fix, or refactor with observable behavior: use `test-first-development`.

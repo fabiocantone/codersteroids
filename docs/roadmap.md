@@ -59,6 +59,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - [x] Add public release readiness artifacts.
 - [x] Add host-enforcement check.
 - [x] Generate portable root instruction files.
+- [x] Add prompt-rewriting auto-activation and same-language response rules.
 
 ## Deferred Phases
 
@@ -88,6 +89,7 @@ Phase 8-10 artifact implementation complete; Codex plugin install smoke test, re
 - Subagent execution controller is implemented and structurally benchmarked, but real multi-agent execution still depends on host tooling.
 - Public adoption, issue volume, and multi-harness maturity remain outside the scope of a local plugin implementation.
 - Local methodology and release-readiness coverage is complete at the artifact/skill/script level. Remaining gaps are external outcomes: public adoption, marketplace submission, and host runtime compliance.
+- CoderSteroids now explicitly auto-activates for prompt rewriting/generation and answers in the user's language by default.
 
 ## Next Action
 

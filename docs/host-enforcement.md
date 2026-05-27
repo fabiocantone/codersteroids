@@ -15,6 +15,8 @@ CoderSteroids is partly enforceable through scripts and partly advisory through 
 ## Host-Dependent
 
 - Whether the model chooses the right skill.
+- Whether the model auto-activates CoderSteroids without the user naming it.
+- Whether the model preserves the user's language in every answer.
 - Whether the model follows all anti-laziness rules.
 - Whether subagents can be launched and isolated.
 - Whether external docs, Context7, browser, or GitHub tools are available.
